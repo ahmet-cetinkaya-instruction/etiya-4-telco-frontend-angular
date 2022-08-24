@@ -1,0 +1,34 @@
+@import '../../../../styles.css';
+
+.e-nav-container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 62px;
+
+    background: #EFE8E8;
+    border: 7px solid #F58220;
+    border-left: #EFE8E8;
+    border-right: #EFE8E8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.e-nav-img {
+    margin-left: 3%;
+    width: 213.54px;
+    height: 57.98px;
+}
+
+.e-nav-lang {
+    width: 25px;
+    height: 21px;
+
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 21px;color: #000000;
+
+    margin-right: 30px;
+}

@@ -1,0 +1,8 @@
+<p-toast class="etiya-custom-toast" position="bottom-right" key="etiya-custom" [baseZIndex]="5000">
+    <ng-template let-message pTemplate="message">
+        <div>
+            <h3>{{message.summary}}</h3>
+            <p>{{message.detail}}</p>
+        </div>        
+    </ng-template>
+<p-toast>

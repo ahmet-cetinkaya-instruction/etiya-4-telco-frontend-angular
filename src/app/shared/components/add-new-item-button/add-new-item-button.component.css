@@ -1,0 +1,47 @@
+.e-new-address{
+    background-color: #061F3E;
+  }
+  .e-new-address-btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+  }
+  .e-btn-clear {
+    box-sizing: border-box;
+    width: 118px;
+    height: 41px;
+    left: 1199px;
+    top: 842px;
+    background: rgba(245, 130, 32, 0.4);
+    border: 1px solid rgba(245, 130, 32, 0.8);
+    box-shadow: 4px 6px 2px rgba(0, 0, 0, 0.25), inset -1px 1px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+  }
+  .e-dropdown {
+    box-sizing: border-box;
+  width: 305.98px;
+  height: 51.17px;
+  left: 254.11px;
+  top: 332.06px;
+  
+  background: rgba(13, 43, 80, 0.8);
+  border: 1px solid #F58220;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  }
+  .e-dropdown select {
+   box-sizing: border-box;
+  width: 23.47px;
+  height: 49px;
+  left: 535.53px;
+  top: 333px;
+  color: #F58220;
+  background-image: url('../../../../assets/img/arrow.png')!important;
+  background-repeat: no-repeat!important;
+  background-position: center!important;
+  background: #061F3E;
+  border: 1px solid #83A6D1;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+  float: right;
+  }

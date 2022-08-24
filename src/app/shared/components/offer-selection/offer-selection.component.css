@@ -1,0 +1,92 @@
+.table.e-table {
+    color: #ffffff;
+    border: 1px solid #f58220 !important;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    width: 80%;
+}
+.table.e-table .table-title,
+.table-body {
+    background-color: #061f3e;
+    vertical-align: middle;
+}
+tr:nth-child(odd) {
+    background-color: #0d2b50;
+}
+.table.e-table .table-title th,
+.table.e-table tr td {
+    height: 35px;
+    border-left: 1px solid #f58220;
+}
+.table.e-table .table-title th:first-child,
+.table.e-table .table-body tr th {
+    border-left: 1px solid #f58220;
+}
+.table.e-table tr th {
+    border-left: 1px solid #f58220;
+}
+
+.table-hidden tbody {
+    overflow-y: scroll;
+    height: 240px;
+    display: block;
+}
+.table-hidden tr {
+    width: 100%;
+    display: inline-table;
+}
+.table-hidden thead th[data-th='third'] {
+    width: 400px;
+}
+.table-hidden tbody td[data-th='third'] {
+    width: calc(400px - 15px);
+}
+.table-hidden td[data-th='first'],
+.table-hidden th[data-th='first'] {
+    width: 400px;
+}
+.table-hidden td[data-th='second'],
+.table-hidden th[data-th='second'] {
+    width: 400px;
+}
+
+.table-body::-webkit-scrollbar {
+    width: 15px;
+}
+
+.table-body::-webkit-scrollbar-thumb {
+    background: #f58220;
+    border-radius: 20px;
+}
+
+.table-body::-webkit-scrollbar-track {
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-button {
+    display: block;
+    border: 1px solid #f58220;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment {
+    background-image: url('../../../../assets/img/caret-up.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    display: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    display: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:decrement {
+    background-image: url('../../../../assets/img/caret-down.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}

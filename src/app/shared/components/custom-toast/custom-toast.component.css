@@ -1,0 +1,53 @@
+::ng-deep .etiya-custom-toast .p-toast{
+    margin-bottom:4.8rem !important;
+    opacity: 1;
+    
+}
+
+::ng-deep .etiya-custom-toast .p-toast .p-toast-message .p-toast-message-content {
+    padding: 0.5rem;
+}
+
+::ng-deep .etiya-custom-toast .pi-info-circle:before {
+    content: '' !important;
+}
+
+::ng-deep .etiya-custom-toast .p-toast h3  {
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 25px;
+    color: #061F3E;
+}
+
+::ng-deep .etiya-custom-toast .p-toast p  {
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+
+    color: #f5f5f5;
+}
+
+::ng-deep .etiya-custom-toast .p-toast .p-toast-message {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+::ng-deep .etiya-custom-toast .p-toast .p-toast-message {
+    border: none;
+    background: #83a6d1;
+}
+
+::ng-deep .etiya-custom-toast .p-toast .p-toast-message.p-toast-message-info .p-toast-icon-close {
+    color: #000;
+    background: none;
+    
+}
+
+::ng-deep .etiya-custom-toast .p-toast .p-toast-message .p-toast-icon-close:hover {
+    background: none;
+}

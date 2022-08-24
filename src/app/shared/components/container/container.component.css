@@ -1,0 +1,22 @@
+@import '../../../../styles.css';
+
+.e-title-text-cntr {
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 33px;
+
+    color: #FFFFFF;
+}
+
+.e-cntr-box {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 890px;
+    border-right:none!important;
+    border-bottom:none!important;
+
+
+    border: 4px solid #F58220;
+}

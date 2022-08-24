@@ -1,0 +1,24 @@
+.e-check-box {
+    box-sizing: border-box;
+
+    width: 21px;
+    height: 19px;
+    left: 843px;
+    top: 631px;
+
+    background-color: #061F3E!important;
+    border: 1px solid #F58220!important;
+    border-radius: 3px;
+}
+
+.e-check-label {
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+
+
+    color: rgba(255, 255, 255, 0.8);
+}
+

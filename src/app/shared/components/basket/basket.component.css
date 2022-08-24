@@ -1,0 +1,154 @@
+.e-basket-container {
+    position: relative;
+}
+
+.e-basket {
+    box-sizing: border-box;
+    width: 308px;
+    height: 418px;
+
+    background: rgba(6, 31, 62, 0.85);
+    border: 2px solid #F58220;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.e-line-left {
+    position: absolute;
+    width: 80px;
+    height: 0px;
+    left: 10px;
+    top: 20px;
+
+    border: 1px solid #F58220;
+    background-color: #F58220;
+    transform: rotate(180deg);
+}
+
+.e-line-right {
+    position: absolute;
+    width: 80px;
+    height: 0px;
+    left: 210px;
+    top: 20px;
+
+    border: 1px solid #F58220;
+    background-color: #F58220;
+    transform: rotate(180deg);
+}
+
+.e-basket-label {
+    width: 110px;
+    height: 33px;
+
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 33px;
+    padding: 0rem;
+
+    color: #FFFFFF;
+}
+
+.scroll {
+
+    height: 271px;
+    width: 100%;
+    background: #16365F;
+    border: 1px solid #F58220;
+    border-left: none;
+    border-right: none;
+    overflow-y: scroll;
+    display: block;
+    color: white;
+
+
+}
+
+.e-basket-total-label {
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.e-basket-price-label {
+
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21px;
+
+
+    color: #F58220;
+}
+
+.basket-total-price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    border-bottom: 1px solid #F58220;
+}
+
+.scroll p {
+    margin: 0;
+    padding: 20px 10px;
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    border-bottom: 1px solid #F58220;
+    color: #FFFFFF;
+}
+
+.scroll::-webkit-scrollbar {
+    display: block;
+    background: #061f3e;
+    width: 15px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #f58220;
+    border-radius: 20px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: #061f3e;
+    border: 1px solid #F58220;
+}
+
+::-webkit-scrollbar-button {
+    display: block;
+    border: 1px solid #f58220;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background-image: url('../../../../assets/img/caret-up.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment {
+    display: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    background-image: url('../../../../assets/img/caret-down.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}

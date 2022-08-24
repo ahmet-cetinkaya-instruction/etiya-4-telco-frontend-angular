@@ -1,0 +1,125 @@
+/* table info css */
+.e-input {
+    width: 100%;;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid #F58220;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 17px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.e-form-text {
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+
+    color: #FFFFFF;
+
+    opacity: 0.6;
+}
+
+.e-input::placeholder {
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21px;
+    /* identical to box height */
+
+    letter-spacing: 0.17em;
+
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+.e-btn {
+    width: 100%;
+    height: 50px;
+    background-color: #F58220;
+
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 23px;
+
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+
+    border: 2px solid #F58220;
+    box-shadow: inset 0px 4px 6px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 17px;
+}
+
+.e-check {
+    box-sizing: border-box;
+
+
+    width: 21px;
+    height: 19px;
+    left: 843px;
+    top: 631px;
+
+    background: #061F3E;
+    border: 1px solid #F58220;
+    border-radius: 3px;
+}
+
+.e-check-label {
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.e-forgot-password {
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.e-form-container {
+    width: 40%;
+    margin-left: 30px;
+}
+
+.table.e-table .table-title{
+    background-color: #191847 ;
+}
+
+.table.e-table .table-body{
+    background-color: #2A5183;
+}
+
+.table.e-table{
+    color: #FFFFFF;
+    border: 2px solid #F58220!important;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+.table.e-table .table-title th,
+.table.e-table tr td {
+    height: 59px;
+    border-left: 2px solid black;
+}
+.table.e-table .table-title th:first-child,
+.table.e-table .table-body tr th{
+   border-left: 2px solid #F58220;
+}
+
+.table.e-table tr th {
+    border-left: 2px solid #F58220;
+}

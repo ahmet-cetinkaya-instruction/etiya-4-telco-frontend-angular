@@ -1,0 +1,84 @@
+/* warning toast */
+/* .e-warn-container {
+    margin-top: 15px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    height: 59px;
+    width: 100%;
+    background: #83a6d1;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .e-warn-img {
+    width: 91px;
+    height: 79px;
+  }
+  
+  .e-warn-text {
+    height: 45px;
+    font-family: 'Anybody';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin: 0;
+  } */
+
+  /* confirm toast */
+
+/* :host ::ng-deep .pi{
+    display: none;
+}
+
+:host ::ng-deep .p-toast-center {
+    width: 20rem;
+}
+
+:host ::ng-deep .p-toast .p-toast-message.p-toast-message-warn {
+    background: #fff;
+    border: 2px solid #f58220;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 25px;
+    color: #2a5183;
+}
+
+:host ::ng-deep .p-button.p-button-success, .p-button.p-button-success:enabled:hover,
+.p-button.p-button-secondary, .p-button.p-button-secondary:enabled:hover {
+    background: rgba(245, 130, 32, 0.75);
+    border-radius: 5px;
+    border: none;
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #ffffff;
+}
+
+:host ::ng-deep .p-button-label{
+    font-weight: 400;
+}
+
+:host ::ng-deep .p-button.p-button-success:enabled:focus, .p-button.p-button-secondary:enabled:focus{
+    box-shadow: none;
+}
+
+:host ::ng-deep .p-toast .p-toast-message .p-toast-message-content {
+    padding: 2rem 2rem 0;
+}
+
+:host ::ng-deep .p-toast-message-content {
+    display: block;
+} */
+
+/* custom toast */
+

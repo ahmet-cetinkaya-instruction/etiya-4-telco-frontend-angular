@@ -1,0 +1,39 @@
+<div class="login-wrapper">
+    <div class="login-background"></div>
+    <div style="justify-content: center;display:flex" class="login-container">
+        <div class="surface-card border-round w-full lg:w-6 login-general-container">
+            <div class="text-center mb-5">
+                <etiya-overlay-title [title]="'WELCOME'" class="login-title1"></etiya-overlay-title>
+                <etiya-overlay-title [title]="'TO'" class="login-title1"></etiya-overlay-title>
+                <etiya-overlay-title [title]="'ETİYA'" class="login-title2"></etiya-overlay-title>
+            </div>
+            <div class="col-7 col-md-12">
+                <p class="e-form-text">Please your enter Username and password to login</p>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div>
+                        <div class="form-group">
+                            <input [ngClass]="{'invalid-input':IsPropertyInvalid('userName')}" type="text"
+                                class="e-input-white" formControlName="userName" placeholder="Username" />
+                        </div>
+                        <div class="form-group">
+                            <input [ngClass]="{'invalid-input':IsPropertyInvalid('password')}" type="password"
+                                class="e-input-white" formControlName="password" placeholder="Password" />
+                        </div>
+                        <div class="form-check d-flex justify-content-between mb-4">
+                            <div>
+                                <input  (change)="fieldsChange($event)" type="checkbox" class="form-check-input e-check-box" id="exampleCheck1" />
+                                <label class="form-check-label e-check-label" for="exampleCheck1">Remember Me</label>
+                            </div>
+                            <div>
+                                <a (click)="forgotPassword()" class="e-forgot-password">Forgot password?</a>
+                            </div>
+
+                        </div>
+                        <button type="submit" class="e-btn-login">LOG IN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<p-toast></p-toast>

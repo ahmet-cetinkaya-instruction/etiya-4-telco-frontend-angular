@@ -1,0 +1,39 @@
+/* login input veya input white */
+
+.e-input-white {
+    width: 100%;;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid #F58220;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 17px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.e-input-white::placeholder {
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21px;
+
+    letter-spacing: 0.17em;
+
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.e-input-dark {
+    box-sizing: border-box;
+
+
+    width: 282px;
+    height: 30px;
+    margin-bottom: 20px;
+
+    background: #0D2B50;
+    border: 1px solid #F58220;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}

@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('../src/assets/styles/etiya-button.css');
+@import url('../src/assets/styles/etiya-table.css');
+@import url('../src/assets/styles/etiya-navbar.css');
+@import url('../src/assets/styles/etiya-check-box.css');
+@import url('../src/assets/styles/etiya-input.css');
+@import url('../src/assets/styles/etiya-title.css');
+@import url('../src/assets/styles/etiya-menu.css');
+@import url('../src/assets/styles/etiya-toast.css');
+@import url('../src/assets/styles/etiya-accordion.css');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap');
+
+
+
