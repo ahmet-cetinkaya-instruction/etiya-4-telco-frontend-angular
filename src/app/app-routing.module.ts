@@ -5,6 +5,7 @@ import { ShowcaseComponent } from './shared/pages/showcase/showcase.component';
 
 const routes: Routes = [
   {path:'showcase',component:ShowcaseComponent},
+
   {
     path: 'dashboard',
     children: [
