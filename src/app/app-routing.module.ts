@@ -7,9 +7,8 @@ const routes: Routes = [
   {path:'showcase',component:ShowcaseComponent},
   {
     path: 'dashboard',
-    component: CustomerDashboardComponent,
     children: [
-       {path: '', component: CustomerDashboardComponent, pathMatch: 'full'},
+      {path: '', component: CustomerDashboardComponent, pathMatch: 'full'},
       {
         path: 'customers',
         loadChildren: () =>
