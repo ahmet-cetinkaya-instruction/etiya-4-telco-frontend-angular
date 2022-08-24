@@ -27,6 +27,11 @@ export class CustomersService {
             (item) => item.id == searchCustomer.id
           );
         }
+        if (searchCustomer.customerId) {
+          filteredCustomers = filteredCustomers.filter(
+            (item) => item.customerId == searchCustomer.customerId
+          );
+        }
         if (searchCustomer.accountNumber) {
           filteredCustomers = filteredCustomers.filter((item) =>
             item.billingAccounts!.find(
@@ -59,7 +64,6 @@ export class CustomersService {
           );
         }
         subject.next(filteredCustomers)
-
       },
       error:(err)=>{
         subject.error(err)

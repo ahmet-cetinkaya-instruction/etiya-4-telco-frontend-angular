@@ -8,7 +8,7 @@
       <div class="col-3">
         <app-user-info></app-user-info>
 
-        <app-side-filter [filterTitle]="'SEARCH CUSTOMER'" [data]="customerList" (data1)="search($event)">
+        <app-side-filter [filterTitle]="'SEARCH CUSTOMER'" (filteredData)="search($event)">
         </app-side-filter>
       </div>
 
@@ -20,9 +20,6 @@
             <div *ngIf="lenght ==0; else tableInfo ">
               <app-not-found [btnText]="'CREATE CUSTOMER'"></app-not-found>
             </div>
-
-
-
             <ng-template #tableInfo>
               <div class="table-responsive">
                 <app-table-info class="e-table">
@@ -37,11 +34,11 @@
                     </tr>
                   </thead>
                   <tbody class="table-body">
-                    <div *ngIf="customerList1 && lenght !=0; then thenBlok else otherState">
+                    <div *ngIf="filteredCustomerList && lenght !=0; then filteredListState else otherState">
 
                     </div>
-                    <ng-template #thenBlok>
-                      <tr *ngFor="let customer of customerList1">
+                    <ng-template #filteredListState>
+                      <tr *ngFor="let customer of filteredCustomerList">
                         <th>{{customer.id}}</th>
                         <td>{{customer.firstName}}</td>
                         <td>{{customer.middleName}}</td>
@@ -60,18 +57,13 @@
                         <td>{{customer.customerId}}</td>
                       </tr>
                     </ng-template>
-
                   </tbody>
                 </app-table-info>
               </div>
-
             </ng-template>
-
           </app-container>
         </div>
-
       </div>
-
     </div>
 
 

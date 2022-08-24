@@ -8,7 +8,7 @@ import { CustomersService } from '../../services/customer/customers.service';
 })
 export class CustomerDashboardComponent implements OnInit {
   customerList! : Customer[];
-  customerList1! : Customer[];
+  filteredCustomerList! : Customer[];
   lenght!:number;
 
   constructor(private customersService: CustomersService) { }
@@ -20,18 +20,11 @@ export class CustomerDashboardComponent implements OnInit {
   getCustomersList(){
     this.customersService.getList().subscribe(response=>{
       this.customerList= response
-
     })
   }
 
-
   search(event:any){
-
-    console.log(event)
-    this.customerList1 = event
-    this.lenght = this.customerList1.length
-
+    this.filteredCustomerList = event
+    this.lenght = this.filteredCustomerList.length
   }
-
-
 }
