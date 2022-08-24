@@ -25,6 +25,7 @@ import { CustomToastComponent } from './components/custom-toast/custom-toast.com
 import { BasketComponent } from './components/basket/basket.component';
 import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
 import { OfferSelectionComponent } from './components/offer-selection/offer-selection.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -56,7 +57,8 @@ import { OfferSelectionComponent } from './components/offer-selection/offer-sele
     CommonModule,
     ToastModule,
     ButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   exports:[
     OverlayTitleComponent,

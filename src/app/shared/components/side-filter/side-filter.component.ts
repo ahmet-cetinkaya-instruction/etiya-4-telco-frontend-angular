@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { CustomersService } from 'src/app/features/customers/services/customer/customers.service';
 
 @Component({
   selector: 'app-side-filter',
@@ -7,9 +9,37 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SideFilterComponent implements OnInit {
   @Input() filterTitle!:string
-  constructor() { }
+  searchForm! : FormGroup;
+  @Input() data! :any[];
+  @Output() data1: any = new EventEmitter()
+  constructor(private formBuilder: FormBuilder, private customersService:CustomersService) { }
 
   ngOnInit(): void {
+    this.createSearchForm();
+
   }
 
+  createSearchForm(): void{
+    this.searchForm = this.formBuilder.group({
+      id: [''],
+      customerId: [''],
+      accountNumber: [''],
+      gsmNumber: [''],
+      firstName: [''],
+      lastname: [''],
+      orderNumber: ['']
+    })
+  }
+
+  search(){
+    console.log(this.data)
+    console.log(this.searchForm.value.id)
+
+
+    this.customersService.getListByFilter(this.searchForm.value).subscribe(data=>{
+      this.data1.emit(data)
+     })
+
+
+  }
 }
