@@ -6,7 +6,7 @@
     border: 2px solid #F58220;
     border-right: none !important;
   }
-  
+
   .e-layout-title {
     width: 278px;
     height: 33px;
@@ -18,7 +18,7 @@
     line-height: 33px;
     color: #FFFFFF;
   }
-  
+
   .horizontalLine {
     position: absolute;
     width: 3px;
@@ -29,7 +29,7 @@
     border-radius: 2px;
     transform: rotate(-90deg);
   }
-  
+
   .verticalLine {
     position: absolute;
     width: 3px;
@@ -40,8 +40,8 @@
     border-radius: 2px;
     transform: rotate(-180deg);
   }
-  
+
   .e-title-container {
     position: relative;
-   margin-top: 70px;
+   margin-top: -27px;
   }
