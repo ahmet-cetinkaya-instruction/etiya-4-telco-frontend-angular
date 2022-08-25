@@ -1,16 +1,54 @@
-<div class="e-contact-medium-container">
+<div class="e-address-info-container">
   <app-navbar></app-navbar>
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-lg-6 d-flex align-items-end">
-        <app-title-line [titleName]="'CREATE CUSTOMER'"></app-title-line>
       </div>
       <div class="col-12 col-lg-6 d-flex justify-content-end p-0">
         <app-user-info></app-user-info>
       </div>
     </div>
   </div>
+  <app-main-layout [layoutTitle]="'CREATE CUSTOMER'">
+    <div class="e-address-info-content">
+      <div class="d-flex justify-content-center customer-title mb-5">
+        <app-info-title [infoTitle]="'Address Info'"></app-info-title>
+      </div>
+      <div class="d-flex justify-content-center">
+          <div class="row w-100" style="width: 95% !important">
+            <app-table-info class="e-table">
+                  <thead>
+                  <tr class="table-title">
+                      <th class="col-2">City</th>
+                      <th class="col-2">Street Name</th>
+                      <th class="col-2">Hause/Flat Number</th>
+                      <th class="col-2">Address Description</th>
+                  </tr>
+                  </thead>
+                  <tbody class="table-body">
+                  <tr>
+                      <th>Null</th>
+                      <td>Null</td>
+                      <td>Null</td>
+                      <td>Null</td>
+                  </tr>
+                  </tbody>
+                </app-table-info>
+          </div>        
+      </div>
+      <div class="e-new-address">
+          <button etiyaButton="new-address" style="margin-left: 20px ;"> <img src="../../../../assets/img/add_new.png" alt="">Add New Address</button>
+      </div>
+      <div class="e-buttons">
+          <div class="row w-75">
+              <div class="col-12 col-lg-6 d-flex justify-content-lg-start"><button etiyaButton="clear" routerLink ="recipes">CANCEL</button></div>
+              <div class="col-12 col-lg-5 d-flex justify-content-lg-end"><button etiyaButton="clear-disabled">NEXT</button></div>
+          </div>
+      </div>
+    </div>
+  </app-main-layout>
 
+<<<<<<< HEAD
   <div class="e-customer-content1">
     <div class="d-flex justify-content-center customer-title mb-5">
       <app-info-title [infoTitle]="'Address Info'"></app-info-title>
@@ -48,3 +86,6 @@
     </div>
   </div>
 </div>
+=======
+</div>
+>>>>>>> 88a1c5236c20ebab97dbfbbe992bb1a453807cde

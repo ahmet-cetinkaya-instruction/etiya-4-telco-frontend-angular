@@ -4,18 +4,13 @@
   padding-bottom: 2rem;
 }
 .e-customer-content {
-  height: 774px;
-  margin-left: 30px;
-  top: 216px;
-  border: 2px solid #f58220;
-  border-right: none;
   color: #fff;
   font-family: "Anybody";
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
   line-height: 31px;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .customer-title {
