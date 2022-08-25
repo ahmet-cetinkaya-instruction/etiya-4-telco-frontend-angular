@@ -10,6 +10,7 @@ export class CheckBoxDirective {
   }
 
   ngOnInit(){
+    this.renderer.addClass(this.hostElement.nativeElement, `form-check-input`);
     this.renderer.addClass(this.hostElement.nativeElement, `e-check-box-${this.etiyaCheckBox}`);
   }
 }
