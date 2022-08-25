@@ -29,6 +29,7 @@ import { OfferSelectionComponent } from './components/offer-selection/offer-sele
 import { ReactiveFormsModule } from '@angular/forms';
 import { TitleLineComponent } from './components/title-line/title-line.component';
 import { ButtonDirective } from './directives/button.directive';
+import { InputDirective } from './directives/input.directive';
 
 
 
@@ -56,7 +57,8 @@ import { ButtonDirective } from './directives/button.directive';
     TabMenuComponent,
     OfferSelectionComponent,
     TitleLineComponent,
-    ButtonDirective
+    ButtonDirective,
+    InputDirective
   ],
   imports: [
     CommonModule,
@@ -87,7 +89,9 @@ import { ButtonDirective } from './directives/button.directive';
     TabMenuComponent,
     OfferSelectionComponent,
     TitleLineComponent,
-    ButtonDirective
+    ButtonDirective,
+    InputDirective
+
   ],
   providers:[MessageService]
 })
