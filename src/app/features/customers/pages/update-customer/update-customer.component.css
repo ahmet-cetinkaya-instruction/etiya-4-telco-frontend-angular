@@ -54,3 +54,9 @@
   float: right;
   
   }
+
+  .app-user-info{
+    width: 264px;
+    margin-left:35px;
+    margin-top: -20px;
+  }
