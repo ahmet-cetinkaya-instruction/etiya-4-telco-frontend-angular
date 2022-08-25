@@ -20,14 +20,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 77px;
+    height: 70px;
     
 }
 
 .e-settings-items img {
-    width: 70px;
-    height: 70px;
+    width: 42px;
+    height: 40px;
     
 }
 
@@ -45,6 +45,7 @@
     background: rgba(44, 90, 148, 0.5);
     border: 1px solid #F58220;
     border-radius: 0px;
-    float: right;
+    float: right!important;
+    margin-right: -11px;
     
 }
