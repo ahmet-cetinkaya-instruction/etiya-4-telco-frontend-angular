@@ -6,17 +6,19 @@
 
     <div class="row">
       <div class="col-3">
-        <app-user-info></app-user-info>
+        <div class="app-user-info">
+          <app-user-info></app-user-info>
+        </div>
 
         <app-side-filter [filterTitle]="'SEARCH CUSTOMER'" (filteredData)="search($event)">
         </app-side-filter>
       </div>
 
-      <div class="col-9 pt-0 aaaa">
+      <div class="col-9 pt-0">
         <app-settings-menu></app-settings-menu>
 
         <div class="e-search-container">
-          <app-container class="e-container">
+          <app-container>
             <div *ngIf="lenght ==0; else tableInfo ">
               <app-not-found [btnText]="'CREATE CUSTOMER'"></app-not-found>
             </div>

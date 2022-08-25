@@ -12,16 +12,12 @@
 
 .e-cntr-box {
     box-sizing: border-box;
-    width: 100%;
     height: 190vh;
     border-right: none !important;
     border-bottom: none !important;
-
     padding-left: 30px;
     padding-top: 30px;
-    padding-right: 15px;
-
-
+    margin-right: -10px;
     border: 4px solid #F58220;
     
 
