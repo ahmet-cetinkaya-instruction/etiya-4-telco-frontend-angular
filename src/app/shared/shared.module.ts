@@ -30,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TitleLineComponent } from './components/title-line/title-line.component';
 import { ButtonDirective } from './directives/button.directive';
 import { InputDirective } from './directives/input.directive';
+import { CheckBoxDirective } from './directives/check-box.directive';
 
 
 
@@ -58,7 +59,8 @@ import { InputDirective } from './directives/input.directive';
     OfferSelectionComponent,
     TitleLineComponent,
     ButtonDirective,
-    InputDirective
+    InputDirective,
+    CheckBoxDirective
   ],
   imports: [
     CommonModule,
