@@ -1,0 +1,27 @@
+
+::ng-deep body{
+  background-color: #061F3E!important;
+}
+
+.app-user-info{
+  width: 264px;
+  margin-left:35px;
+}
+
+.bar-menu{
+  margin-left: 30%;
+  margin-top: -55px;
+}
+
+::ng-deep.e-table{
+  margin-top: 55px;
+}
+
+.e-new-address{
+  margin-top: -15px;
+  margin-left: 30px;
+}
+
+::ng-deep .edit{
+  margin-left: -25555px;
+}
