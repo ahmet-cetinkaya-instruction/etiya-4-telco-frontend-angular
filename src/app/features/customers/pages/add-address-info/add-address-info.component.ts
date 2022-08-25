@@ -7,7 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-address-info.component.css']
 })
 export class AddAddressInfoComponent implements OnInit {
-  contactForm = new FormGroup({
+  addressForm = new FormGroup({
     city: new FormControl('', Validators.required),
     street: new FormControl('',Validators.required),
     flatNumber: new FormControl('', Validators.required),
