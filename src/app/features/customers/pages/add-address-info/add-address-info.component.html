@@ -1,4 +1,4 @@
-<div class="e-contact-medium-container">
+<div class="e-address-container">
   <app-navbar></app-navbar>
   <div class="container-fluid">
     <div class="row">
@@ -8,96 +8,75 @@
       <div class="col-12 col-lg-6 d-flex justify-content-end p-0">
         <app-user-info></app-user-info>
       </div>
-    </div>
-  </div>
+    </div> 
 
-  <div class="e-customer-content">
-    <div class="d-flex justify-content-center customer-title mb-5">
+  <div class="e-address-content">
+    <div class="d-flex justify-content-center address-title mb-5">
       <app-info-title [infoTitle]="'Address Info'"></app-info-title>
     </div>
     <div class="d-flex justify-content-center">
-      <div class="e-contact-form-container">
+      <div class="e-address-form-container">
         <div class="row e-form-close">X</div>
-        <form [formGroup]="contactForm" class="e-contact-form">
+        <form [formGroup]="addressForm">
           <div class="row">
-            <div class="col-12 col-lg-6">
-              <div class="row e-customer-input">
-                <div
-                  class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
-                >
-                  <label for="first-name"
-                    >City<span class="e-star">*</span>
+            <div class="col-12 col-lg-5">
+              <div class="row e-address-input">
+                <div class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center">
+                  <label for="city">City<span class="e-star">*</span>
                   </label>
                 </div>
-                <div
-                  class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
-                >
-                  <input
-                    type="text" etiyaInput="dark"
-                    class="e-contact-input"
-                    formControlName="city"
-                  />
+                <div class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center">
+                  <div class="e-dropdown">
+                    <select class="e-input-dark" name="gender" id="gender" formControlName="city">
+                      <option selected value="Istanbul">İstanbul</option>
+                      <option value="Ankara" >Ankara</option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6 d=flex justify-content-start mb-5">
-              <div class="row e-customer-input">
-                <div
-                  class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
-                >
-                  <label for="middle-name"
-                    >Hause/ Flat Number<span class="e-star">*</span>
+            <div class="col-12 col-lg-7 d=flex justify-content-start">
+              <div class="row e-address-input">
+                <div class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center">
+                  <label for="flatNumber">Hause/Flat Number<span class="e-star">*</span>
                   </label>
                 </div>
-                <div
-                  class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
-                >
-                  <input
-                    type="text" etiyaInput="dark"
-                    class="e-contact-input"
-                    formControlName="street"
-                  />
+                <div class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center">
+                  <input type="text" etiyaInput="dark" class="e-address-input-height" formControlName="street" />
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6 d=flex justify-content-start mb-5">
-              <div class="row e-customer-input">
-                <div
-                  class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
-                >
-                  <label for="last-name"
-                    >Street<span class="e-star">*</span>
+            <div class="col-12 col-lg-5 d=flex justify-content-start">
+              <div class="row e-address-input">
+                <div class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center">
+                  <label for="street">Street<span class="e-star">*</span>
                   </label>
                 </div>
-                <div
-                  class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
-                >
-                  <input
-                    type="text" etiyaInput="dark"
-                    class="e-contact-input"
-                    formControlName="flatNumber"
-                  />
+                <div class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center">
+                  <input type="text" etiyaInput="dark" class="e-address-input-height" formControlName="flatNumber" />
                 </div>
               </div>
             </div>
             <div class="col-12">
               <div class="row mb-1">
-                <label for="last-name"
-                  >Address Description<span class="e-star">*</span></label
-                >
-              </div>
-              <div class="row d-flex justify-content-center">
-                <textarea rows="5" class="e-address-desc" formControlName="description"></textarea>
+                <div class="col-12 d-flex justify-content-lg-start align-items-center">
+                  <label for="address-description">Address Description<span class="e-star">*</span>
+                  </label>
+                </div>
+                <div class="col-12 d-flex justify-content-lg-start align-items-center">
+                  <textarea class="e-address-desc" placeholder="" formControlName="description"></textarea>
+                </div>
               </div>
             </div>
           </div>
           <div class="row mt-2 d-flex justify-content-center">
             <div class="col-2">
-              <button etiyaButton="clear" style="width: 164px">SAVE</button>
+              <button etiyaButton="clear" style="width: 164px; font-weight: 700;">SAVE</button>
             </div>
           </div>
         </form>
       </div>
     </div>
   </div>
+</div>
 </div>
