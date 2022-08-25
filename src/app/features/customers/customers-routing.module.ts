@@ -5,6 +5,7 @@ import { AddContactMediumComponent } from './pages/add-contact-medium/add-contac
 import { CustomerDashboardComponent } from './pages/customer-dashboard/customer-dashboard.component';
 import { AddAddressInfoComponent } from './pages/add-address-info/add-address-info.component';
 import { ListAddressInfoComponent } from './pages/list-address-info/list-address-info.component';
+import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
 
 const routes: Routes = [
 
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:"contact-medium", component:AddContactMediumComponent},
   {path:"create-customer", component:CreateCustomerComponent},
   {path:"add-address-info", component:AddAddressInfoComponent},
-  {path:"list-address-info", component:ListAddressInfoComponent}
+  {path:"list-address-info", component:ListAddressInfoComponent},
+  {path:"update-customer", component:UpdateCustomerComponent}
 ];
 
 @NgModule({
