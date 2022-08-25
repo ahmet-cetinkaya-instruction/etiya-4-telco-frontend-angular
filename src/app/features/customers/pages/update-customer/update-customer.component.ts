@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   templateUrl: './update-customer.component.html',
@@ -7,10 +7,26 @@ import { FormGroup } from '@angular/forms';
 })
 export class UpdateCustomerComponent implements OnInit {
   updateCustomerForm!:FormGroup;
-  
-  constructor() { }
+
+  constructor(private formBuilder:FormBuilder) { }
+
 
   ngOnInit(): void {
+    this.createFormUpdateCustomer();
   }
+
+  createFormUpdateCustomer(){
+    this.updateCustomerForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      middleName: ['',Validators.required],
+      lastName: ['', Validators.required],
+      birthDate: ['', Validators.required],
+      gender: ['Kadın', Validators.required],
+      fatherName: ['', Validators.required],
+      motherName: ['', Validators.required],
+      nationalId: ['', Validators.required],
+    });
+  }
+  
 
 }
