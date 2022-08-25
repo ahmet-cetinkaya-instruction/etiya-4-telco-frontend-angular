@@ -1,5 +1,7 @@
 .e-contact-medium-container {
   background-color: #061f3e !important;
+  min-height: 100vh;
+  padding-bottom: 2rem;
 }
 .e-customer-content {
   height: 774px;
@@ -13,6 +15,7 @@
   font-weight: 400;
   font-size: 25px;
   line-height: 31px;
+  min-height: 100vh;
 }
 
 .customer-title {
@@ -61,4 +64,8 @@
 }
 .e-input-dark {
   margin: 0;
+}
+.e-star {
+  font-weight: bold;
+  font-size: 40px;
 }
