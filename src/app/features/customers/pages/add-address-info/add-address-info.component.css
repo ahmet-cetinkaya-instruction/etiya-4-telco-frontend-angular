@@ -1,155 +1,76 @@
-
-.add-address-info-bg {
-  background-image: url(../../../../../assets/img/search_background.png);
-  background-size: cover;
+.e-contact-medium-container {
+  background-color: #061f3e !important;
 }
-.address-detail-box {
-  width: 1328.31px;
-  height: 649.83px;
-  border-radius: 7px;
-  background: linear-gradient(0deg, rgba(42, 81, 131, 0.92), rgba(42, 81, 131, 0.92)),
-  linear-gradient(0deg, #F58220, #F58220);
-  border: 4px solid #F58220;
-
-  }
-
-
-  /* row's margin  */
-  .row-margin {
-    margin: 10px;
-
-  }
-  .close-item {
-  height: 37.86396026611328px;
-  width: 23.537057876586914px;
-  font-family: Anybody;
-  font-size: 36px;
+.e-customer-content {
+  height: 774px;
+  margin-left: 30px;
+  top: 216px;
+  border: 2px solid #f58220;
+  border-right: none;
+  color: #fff;
+  font-family: "Anybody";
+  font-style: normal;
   font-weight: 400;
-  line-height: 37px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #F58220;
-  }
-
-  .text-container span:first-child {
-    color: #FFFFFF;
-    height: 31.723857879638672px;
-  width: 58.330963134765625px;
-  font-family: Anybody;
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 25px;
   line-height: 31px;
-  letter-spacing: 0em;
-  text-align: left;
+}
 
-  }
+.customer-title {
+  display: flex;
+  justify-content: center;
+}
+.e-customer-input {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.e-dropdown {
+  box-sizing: border-box;
+  width: 299px;
+  height: 51.17px;
+  left: 254.11px;
+  top: 332.06px;
+  background: rgba(13, 43, 80, 0.8);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+.e-dropdown select {
+  box-sizing: border-box;
+  width: 299px;
+  height: 49px;
+  left: 535.53px;
+  top: 333px;
+  color: #f58220;
+  background-image: url("../../../../../assets/img/arrow.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: right !important;
+  background: #061f3e;
+  border: 1px solid #f58220;
 
-  /* first text-container-margin */
-
-  .margin {
-    margin-left: 1.5rem;
-    margin-right: -1.2rem;
-  }
-
-  .text-container span:nth-child(2) {
-    color:#FFFFFF;
-    font-size: 36px;
-  line-height: 66px;
-  width: 17.4px;
-  height: 67.54px;
-  }
-
-  .e-dropdown select {
-    box-sizing: border-box;
-    width: 282px;
-    height: 30px;
-    left: 535.53px;
-    top: 333px;
-    color: #F58220;
-    background-image: url(../../../../../assets/img/arrow.png)!important;
-    background-repeat: no-repeat!important;
-    background-position: right!important;
-    background: #061F3E;
-    border: 1px solid #F58220;
-    border-radius: 1px;
-    float: right;
-  }
-  /*
-  .e-info-title {
-    width: 273px;
-    height: 33px;
-    margin-left: 30px;
-    margin-top: 30px;
-    font-family: 'Anybody';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 33px;
-    color: #FFFFFF;
-  } */
-
-  .width-height {
-
-    width: 60rem;
-    height: 10rem;
-
-  }
-
-  .input-height {
-    height:45px;
-  }
-
-  .dropdown-height {
-    height:45px!important;
-  }
-
-
-  .e-title-line {
-    position: relative;
-  }
-
-  .e-customer-content {
-    height: 774px;
-    margin-left: 30px;
-    top: 216px;
-    border: 2px solid #f58220;
-    border-right: none;
-    color: #fff;
-    font-family: "Anybody";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 31px;
-  }
-
-  .e-search-title {
-    font-family: "Anybody";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 33px;
-    color: #ffffff;
-    padding-left: 42px !important;
-  }
-
-  .horizontalLine {
-    position: absolute;
-    width: 3px;
-    height: 223px;
-    left: 40px;
-    top: -120px;
-    background: #f58220;
-    border-radius: 2px;
-    transform: rotate(-90deg);
-  }
-
-  .verticalLine {
-    position: absolute;
-    width: 3px;
-    height: 167px;
-    left: 54px;
-    top: -50px;
-    background: #f58220;
-    border-radius: 2px;
-    transform: rotate(-180deg);
-  }
+  border-radius: 1px;
+  float: right;
+}
+.info {
+  overflow: hidden;
+}
+.e-contact-input {
+  height: 50px;
+}
+.e-input-dark {
+  margin: 0;
+}
+.e-address-desc {
+  width: 98%;
+  background-color: #0D2B50;
+  border: 1px solid #f58220;
+}
+.e-contact-form-container {
+  background-color: #2A5183;
+  width: 90%;
+  padding: 30px;
+}
+.e-form-close {
+  display: flex;
+  justify-content: end;
+  color: #F58220;
+}

@@ -7,16 +7,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-address-info.component.css']
 })
 export class AddAddressInfoComponent implements OnInit {
-  addressForm = new FormGroup({
-    houseFlatNumber: new FormControl('', Validators.required),
+  contactForm = new FormGroup({
+    city: new FormControl('', Validators.required),
     street: new FormControl('',Validators.required),
-    addressDescription: new FormControl('', Validators.required),
+    flatNumber: new FormControl('', Validators.required),
+    description: new FormControl('', Validators.required)
   });
-
-
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
