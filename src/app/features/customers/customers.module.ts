@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CreateCustomerComponent } from './pages/create-customer/create-customer.component';
 import { AddAddressInfoComponent } from './pages/add-address-info/add-address-info.component';
+import { ListAddressInfoComponent } from './pages/list-address-info/list-address-info.component';
 
 
 
@@ -20,7 +21,8 @@ import { AddAddressInfoComponent } from './pages/add-address-info/add-address-in
     CustomerDashboardComponent,
     AddContactMediumComponent,
     CreateCustomerComponent,
-    AddAddressInfoComponent
+    AddAddressInfoComponent,
+    ListAddressInfoComponent
 
   ],
   imports: [

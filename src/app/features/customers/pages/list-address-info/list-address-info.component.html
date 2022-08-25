@@ -1,0 +1,50 @@
+<div class="e-contact-medium-container">
+  <app-navbar></app-navbar>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-6 d-flex align-items-end">
+        <app-title-line [titleName]="'CREATE CUSTOMER'"></app-title-line>
+      </div>
+      <div class="col-12 col-lg-6 d-flex justify-content-end p-0">
+        <app-user-info></app-user-info>
+      </div>
+    </div>
+  </div>
+
+  <div class="e-customer-content">
+    <div class="d-flex justify-content-center customer-title mb-5">
+      <app-info-title [infoTitle]="'Address Info'"></app-info-title>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="row w-100" style="width: 95% !important">
+            <table class="e-table table table-bordered table-hidden">
+                <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Street Name</th>
+                    <th>Hause/Flat Number</th>
+                    <th>Address Description</th>
+                </tr>
+                </thead>
+                <tbody class="table-body">
+                <tr>
+                    <td>Null</td>
+                    <td>Null</td>
+                    <td>Null</td>
+                    <td>Null</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>        
+    </div>
+    <div class="e-new-address">
+        <button class="e-new-address-btn"> <img src="../../../../assets/img/add_new.png" alt="">Add New Address</button>
+    </div>
+    <div class="d-flex justify-content-center align-items-end">
+        <div class="row w-75">
+            <div class="col-12 col-lg-6 d-flex justify-content-lg-start"><button class="e-btn-clear" routerLink ="recipes">CANCEL</button></div>
+            <div class="col-12 col-lg-5 d-flex justify-content-lg-end"><button class="e-btn-clear-disabled">NEXT</button></div>
+        </div>
+    </div>
+  </div>
+</div>

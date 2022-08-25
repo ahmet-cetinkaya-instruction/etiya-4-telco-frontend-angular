@@ -27,6 +27,7 @@ import { BasketComponent } from './components/basket/basket.component';
 import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
 import { OfferSelectionComponent } from './components/offer-selection/offer-selection.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TitleLineComponent } from './components/title-line/title-line.component';
 import { ButtonDirective } from './directives/button.directive';
 
 
@@ -54,6 +55,7 @@ import { ButtonDirective } from './directives/button.directive';
     BasketComponent,
     TabMenuComponent,
     OfferSelectionComponent,
+    TitleLineComponent,
     ButtonDirective
   ],
   imports: [
@@ -84,8 +86,8 @@ import { ButtonDirective } from './directives/button.directive';
     BasketComponent,
     TabMenuComponent,
     OfferSelectionComponent,
+    TitleLineComponent,
     ButtonDirective
-
   ],
   providers:[MessageService]
 })
