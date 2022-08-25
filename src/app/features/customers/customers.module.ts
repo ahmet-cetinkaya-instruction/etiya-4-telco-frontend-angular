@@ -14,6 +14,7 @@ import { AddAddressInfoComponent } from './pages/add-address-info/add-address-in
 import { ListAddressInfoComponent } from './pages/list-address-info/list-address-info.component';
 import { CustomerAddressComponent } from './pages/customer-address/customer-address.component';
 import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
+import { CustomerBillingAccountComponent } from './pages/customer-billing-account/customer-billing-account/customer-billing-account.component';
 
 
 
@@ -27,7 +28,8 @@ import { UpdateCustomerComponent } from './pages/update-customer/update-customer
     AddAddressInfoComponent,
     ListAddressInfoComponent,
     CustomerAddressComponent,
-    UpdateCustomerComponent
+    UpdateCustomerComponent,
+    CustomerBillingAccountComponent
 
 
   ],

@@ -7,6 +7,7 @@ import { CustomerDashboardComponent } from './pages/customer-dashboard/customer-
 import { AddAddressInfoComponent } from './pages/add-address-info/add-address-info.component';
 import { ListAddressInfoComponent } from './pages/list-address-info/list-address-info.component';
 import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
+import { CustomerBillingAccountComponent } from './pages/customer-billing-account/customer-billing-account/customer-billing-account.component';
 
 const routes: Routes = [
 
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:"add-address-info", component:AddAddressInfoComponent},
   {path:"list-address-info", component:ListAddressInfoComponent},
   {path:"update-customer", component:UpdateCustomerComponent},
-  {path:"customer-address", component:CustomerAddressComponent}
+  {path:"customer-address", component:CustomerAddressComponent},
+  {path:"customer-bill", component:CustomerBillingAccountComponent}
 
 ];
 
