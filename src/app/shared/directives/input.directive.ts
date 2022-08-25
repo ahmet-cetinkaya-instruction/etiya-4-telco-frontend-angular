@@ -10,6 +10,6 @@ export class InputDirective {
   }
 
   ngOnInit(){
-    this.renderer.addClass(this.hostElement.nativeElement, `e-input-${this.etiyaInput}`);
+    this.renderer.addClass(this.hostElement.nativeElement,`e-input-${this.etiyaInput}`);
   }
 }

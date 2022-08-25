@@ -1,21 +1,35 @@
 ::ng-deep body {
   background-color: #061F3E !important;
 }
+.bar-menu{
+  margin-top: -35px;
+  margin-left: 350px;
+}
+
 
 .e-customer-content {
-  height: 500px;
-  margin-left: 30px;
-  top: 216px;
-  border: 2px solid #F58220;
-  border-radius: 10px;
-  border-right: none;
-  color: #fff;
+
+  box-sizing: border-box;
+  margin-left: 60px;
+  width: 1125px;
+  height: 380px;
+  margin-left: 120px;
+  background: rgba(13, 43, 80, 0.7);
+  border: 3px solid #F58220;
+  border-right:3px solid #F58220 ;
+  border-radius: 22px;
+}
+
+ label{
   font-family: 'Anybody';
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
-  line-height: 31px;
+  font-size: 26px;
+  line-height: 27px;  
+  color: #FFFFFF;
+  
 }
+
 
 .e-frame-container {
   position: relative;
@@ -43,14 +57,11 @@
   align-items: center;
 }
 
-.e-dropdown {
+.e-dropdown { 
   box-sizing: border-box;
   width: 299px;
   height: 51.17px;
-  left: 254.11px;
-  top: 332.06px;
   background: rgba(13, 43, 80, 0.8);
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
 
 }
@@ -59,12 +70,7 @@
   box-sizing: border-box;
   width: 299px;
   height: 49px;
-  left: 535.53px;
-  top: 333px;
   color: #F58220;
-  background-image: url('../../../../../assets/img/arrow.png') !important;
-  background-repeat: no-repeat !important;
-  background-position: right !important;
   background: #061F3E;
   border: 1px solid #F58220;
 

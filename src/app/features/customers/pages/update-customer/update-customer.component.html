@@ -9,17 +9,31 @@
             </div>
             <div class="col-12 col-lg-9 d-flex justify-content-end p-0">
                 <app-settings-menu></app-settings-menu>
+                
             </div>
-        </div>
-    </div>
+           
+          
 
+           
+        </div>
+        <div class="bar-menu">
+
+            <app-bar-menu ></app-bar-menu>
+        </div>
+        
+    </div>
+    
     <app-main-layout [layoutTitle]="'Customer Info'">
-        <div class="e-customer-content mb-5">
+       
+        <label class="ml-4 mt-2">Update Info </label>
+        
+        <div  class="p-5 " ></div>
+        <div class="  e-customer-content">
             <div class="d-flex justify-content-center">
-                <form [formGroup]="updateCustomerForm" class="w-75">
+                <form [formGroup]="updateCustomerForm" class="p-4">
                     <div class="row">
-                        <div class="col-12 col-lg-6">
-                            <div class="row e-customer-input">
+                        <!-- <div class="col-12 col-lg-6">
+                            <div class=" e-customer-input">
                                 <div class="col-12 p-0 col-lg-4 d-flex justify-content-lg-start align-items-center">
                                     <label for="first-name">First Name:</label>
                                 </div>
@@ -27,7 +41,8 @@
                                     <input type="text" etiyaInput="dark" formControlName="firstName" />
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+<!--                      
                         <div class="col-12 col-lg-6 d-flex justify-content-start">
                             <div class="row e-customer-input">
                                 <div class="col-12 p-0 col-lg-8 d-flex justify-content-lg-start align-items-center">
@@ -102,21 +117,90 @@
                                     <input type="text" etiyaInput="dark" formControlName="nationalId" />
                                 </div>
                             </div>
+                        </div> -->
+                        
+                        <div class="row d-flex justify-space-between align-items-center">
+                            <div class="col-6 ">
+                                
+                                <div class="form-group" >
+                                    <label class="  col-5" for="first-name">First Name:</label>
+                                    <input class="  col-7" type="text" etiyaInput="dark" formControlName="firstName" />
+                                </div>
+                                    
+                            </div>
+                            <div class="col-6 form-group ">
+                                <div class="form-group " >
+                                    <label class=" col-5 " for="middleName">Middle Name:</label>
+                                    <input class="col-7" type="text " etiyaInput="dark"  formControlName="middleName"/>
+                                </div>
+    
+                            </div>
+                            
+                            <div class="col-6">
+                                <div class="form-group" >
+                                    <label class="col-5" for="lastName">Last Name:</label>
+                                    <input class="col-7" type="text " etiyaInput="dark" formControlName="lastName" />
+                                </div>
+    
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group" >
+                                    <label class=" col-5" for="birthDate">Birth Name:</label>
+                                    <input class="col-7" type="text" etiyaInput="dark" formControlName="birthDate" />
+                                </div>
+    
+                            </div>
+                            <div class="col-6  ">
+                                <div class="form-group  d-flex justify-content-lg-start align-items-center" >
+                                    <label class="col-5" for="gender">Gender:</label>
+                                    <div class="e-dropdown col-7  p-0   ">
+                                        <select name="gender" id="gender" class="p-2" formControlName="gender">
+                                            <option selected value="Kadın">Kadın</option>
+                                            <option value="Erkek">Erkek</option>
+                                        </select>
+                                    </div>
+                                </div>
+                               
+    
+                            </div>
+                        
+                            <div class="col-6">
+                                <div class="form-group" >
+                                    <label class="col-5" for="fatherName"> Father Name:</label>
+                                    <input  class="col-7" type="text" etiyaInput="dark" formControlName="fatherName" />
+                                </div>
+    
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group" >
+                                    <label class="col-5" for="motherName">Mother Name:</label>
+                                    <input class="col-7"  type="text" etiyaInput="dark" formControlName="motherName" />
+                                </div>
+    
+                            </div>
+                            <div class="col-6 ">
+                                <div class="form-group" >
+                                    <label class="col-5" for="nationalId">Nationality ID:</label>
+                                    <input  class="col-7" type="text" etiyaInput="dark" formControlName="nationalId" />
+                                </div>
+    
+                            </div>
+                        </div>
+                       
+                    </div> 
+                    <div class="d-flex justify-content-center">
+                        <div style=" width: 1125px;" class="row  p-0 pt-4">
+                            <div class="col-6   d-flex justify-content-lg-start"><button etiyaButton="clear"
+                                    routerLink="recipes">CANCEL</button></div>
+                            <div class="col-6  d-flex justify-content-lg-end"><button
+                                    etiyaButton="clear">SAVE</button></div>
                         </div>
                     </div>
                 </form>
             </div>
 
-
         </div>
-        <div class="d-flex justify-content-center">
-            <div class="row w-75">
-                <div class="col-12 col-lg-6 d-flex justify-content-lg-start"><button etiyaButton="clear-disabled"
-                        routerLink="recipes">CANCEL</button></div>
-                <div class="col-12 col-lg-5 d-flex justify-content-lg-end"><button
-                        etiyaButton="clear-disabled">NEXT</button></div>
-            </div>
-        </div>
+     
     </app-main-layout>
 
 
