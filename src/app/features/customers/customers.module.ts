@@ -10,6 +10,7 @@ import { AddContactMediumComponent } from './pages/add-contact-medium/add-contac
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CreateCustomerComponent } from './pages/create-customer/create-customer.component';
+import { AddAddressInfoComponent } from './pages/add-address-info/add-address-info.component';
 
 
 
@@ -18,7 +19,8 @@ import { CreateCustomerComponent } from './pages/create-customer/create-customer
   declarations: [
     CustomerDashboardComponent,
     AddContactMediumComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
+    AddAddressInfoComponent
 
   ],
   imports: [

@@ -1,3 +1,4 @@
+import { AddAddressInfoComponent } from './../features/customers/pages/add-address-info/add-address-info.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OverlayTitleComponent } from './components/overlay-title/overlay-title.component';
@@ -80,7 +81,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CustomToastComponent,
     BasketComponent,
     TabMenuComponent,
-    OfferSelectionComponent
+    OfferSelectionComponent,
+
   ],
   providers:[MessageService]
 })
