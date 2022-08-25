@@ -87,7 +87,7 @@ add new adress */
     color: #FFFFFF;
 }
 
-.e-img-search {
+.e-btn-img-search {
     width: 36px;
 }
 
@@ -115,7 +115,7 @@ add new adress */
 }
 
 /* new adress butonu veya ekleme butonu */
-.e-new-address-btn {
+.e-btn-new-address {
     background-color: transparent;
     border: none;
     color: #fff;

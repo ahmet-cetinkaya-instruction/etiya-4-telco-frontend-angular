@@ -1,4 +1,4 @@
-import { AddAddressInfoComponent } from './../features/customers/pages/add-address-info/add-address-info.component';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OverlayTitleComponent } from './components/overlay-title/overlay-title.component';
@@ -27,6 +27,7 @@ import { BasketComponent } from './components/basket/basket.component';
 import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
 import { OfferSelectionComponent } from './components/offer-selection/offer-selection.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonDirective } from './directives/button.directive';
 
 
 
@@ -52,7 +53,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CustomToastComponent,
     BasketComponent,
     TabMenuComponent,
-    OfferSelectionComponent
+    OfferSelectionComponent,
+    ButtonDirective
   ],
   imports: [
     CommonModule,
@@ -82,6 +84,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BasketComponent,
     TabMenuComponent,
     OfferSelectionComponent,
+    ButtonDirective
 
   ],
   providers:[MessageService]
