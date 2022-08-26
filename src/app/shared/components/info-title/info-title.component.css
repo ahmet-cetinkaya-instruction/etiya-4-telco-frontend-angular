@@ -9,6 +9,9 @@
     font-size: 32px;
     line-height: 33px;
     color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
   }
   
   .e-title-container-info {

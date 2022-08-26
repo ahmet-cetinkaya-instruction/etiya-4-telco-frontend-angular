@@ -4,7 +4,7 @@
 
 .e-customer-content {
 height: 774px;
-margin-left: 30px;
+padding-left: 30px;
 top: 216px;
 border-right: none;
 color: #fff;
@@ -16,7 +16,6 @@ line-height: 31px;
 }
 .e-address-desc {
   display: flex;
-  margin-right: 60px;
   width: 100%;
   height: 181px;
   background: #0D2B50;
