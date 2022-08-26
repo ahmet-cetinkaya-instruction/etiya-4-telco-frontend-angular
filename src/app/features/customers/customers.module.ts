@@ -1,3 +1,4 @@
+import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomersRoutingModule } from './customers-routing.module';
@@ -20,9 +21,6 @@ import { ConfigurationProductComponent } from './pages/configuration-product/con
 import { SubmitOrderComponent } from './pages/submit-order/submit-order.component';
 import { CustomerContactMediumComponent } from './pages/customer-contact-medium/customer-contact-medium/customer-contact-medium.component';
 import { OfferSelectionComponent } from './pages/offer-selection/offer-selection.component';
-
-
-
 
 
 @NgModule({
@@ -51,7 +49,7 @@ import { OfferSelectionComponent } from './pages/offer-selection/offer-selection
     StoreModule.forRoot(customersReducers),
     SharedModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ]
 })
 export class CustomersModule { }

@@ -56,3 +56,21 @@ float: right;
 .info {
  overflow:hidden;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: url('../../../../../assets/img/Calendar.png') center/80% no-repeat;
+  color: white !important;
+  position: absolute;
+  right: -40px;
+  background-size: cover; 
+  z-index: 99;
+
+}
+
+input[type="date"]{
+  position: relative;
+  overflow: visible;
+}
+input::placeholder{
+  color: #fff;
+}
