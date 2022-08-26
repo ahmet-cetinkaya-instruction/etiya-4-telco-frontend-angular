@@ -36,6 +36,8 @@ const routes: Routes = [
   { path: "offer-selection", component: OfferSelectionComponent },
   { path: "configuration-product", component: ConfigurationProductComponent },
   { path: "add-customer-address", component: AddCustomerAddressComponent },
+  { path: "add-customer-address/update/:id", component: AddCustomerAddressComponent },
+
 
 ];
 
