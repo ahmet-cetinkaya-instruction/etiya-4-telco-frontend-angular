@@ -5,10 +5,8 @@ import { StoreModule } from '@ngrx/store';
 import { customersReducers } from './store/customer.reducer';
 import { CustomerDashboardComponent } from './pages/customer-dashboard/customer-dashboard.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-
 import { AddContactMediumComponent } from './pages/add-contact-medium/add-contact-medium.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { CreateCustomerComponent } from './pages/create-customer/create-customer.component';
 import { AddAddressInfoComponent } from './pages/add-address-info/add-address-info.component';
 import { ListAddressInfoComponent } from './pages/list-address-info/list-address-info.component';
@@ -20,6 +18,7 @@ import { CustomerInfoComponent } from './pages/customer-info/customer-info.compo
 import { UpdateCustContactMediumComponent } from './pages/update-cust-contact-medium/update-cust-contact-medium/update-cust-contact-medium.component';
 import { ConfigurationProductComponent } from './pages/configuration-product/configuration-product.component';
 import { SubmitOrderComponent } from './pages/submit-order/submit-order.component';
+import { CustomerContactMediumComponent } from './pages/customer-contact-medium/customer-contact-medium/customer-contact-medium.component';
 
 
 
@@ -39,7 +38,8 @@ import { SubmitOrderComponent } from './pages/submit-order/submit-order.componen
     CustomerInfoComponent,
     UpdateCustContactMediumComponent,
     ConfigurationProductComponent,
-    SubmitOrderComponent
+    SubmitOrderComponent,
+    CustomerContactMediumComponent
 
 
   ],
