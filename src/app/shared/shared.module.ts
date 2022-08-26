@@ -31,6 +31,7 @@ import { TitleLineComponent } from './components/title-line/title-line.component
 import { ButtonDirective } from './directives/button.directive';
 import { InputDirective } from './directives/input.directive';
 import { CheckBoxDirective } from './directives/check-box.directive';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -67,7 +68,9 @@ import { CheckBoxDirective } from './directives/check-box.directive';
     ToastModule,
     ButtonModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
+    
   ],
   exports:[
     OverlayTitleComponent,
