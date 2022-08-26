@@ -4,7 +4,7 @@ import { Directive, ElementRef, HostBinding, Input, OnInit, Renderer2 } from '@a
   selector: '[etiyaButton]'
 })
 export class ButtonDirective implements OnInit{
-  @Input() etiyaButton!:'login' | 'search' | 'clear-disabled' | 'clear' | 'img-search' | 'create' | 'create-logo' | 'new-address' | 'edit';
+  @Input() etiyaButton!:'login' | 'search' | 'clear-disabled' | 'clear' | 'img-search' | 'create' | 'create-logo' | 'new-address' | 'edit' | 'remove';
 
   constructor(private renderer: Renderer2,private hostElement: ElementRef) {
   }

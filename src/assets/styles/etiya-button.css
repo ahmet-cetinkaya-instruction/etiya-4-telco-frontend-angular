@@ -142,3 +142,13 @@ add new adress */
     border: 1px solid #F58220;
     margin-right: 15px;
 }
+
+.e-btn-remove {
+    box-sizing: border-box;
+    width: 41px;
+    height: 47px;
+    background: url("../../assets/img/remove-btn-img.png");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #F58220;
+}
