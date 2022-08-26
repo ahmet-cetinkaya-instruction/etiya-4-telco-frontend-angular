@@ -1,3 +1,4 @@
+import { CustomerInfoComponent } from './pages/customer-info/customer-info.component';
 import { CustomerAddressComponent } from './pages/customer-address/customer-address.component';
 import { CreateCustomerComponent } from './pages/create-customer/create-customer.component';
 import { NgModule } from '@angular/core';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:"customer-dashboard", component:CustomerDashboardComponent},
   {path:"contact-medium", component:AddContactMediumComponent},
   {path:"create-customer", component:CreateCustomerComponent},
+  {path:"customer-info", component:CustomerInfoComponent},
   {path:"add-address-info", component:AddAddressInfoComponent},
   {path:"list-address-info", component:ListAddressInfoComponent},
   {path:"update-customer", component:UpdateCustomerComponent},
