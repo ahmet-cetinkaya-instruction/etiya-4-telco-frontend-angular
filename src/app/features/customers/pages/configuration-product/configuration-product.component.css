@@ -3,7 +3,6 @@
 }
 
 .e-customer-content {
-  height: 774px;
   margin-left: 30px;
   top: 216px;
   border-right: none;
@@ -33,7 +32,7 @@
   height: 31.47px;
   max-width: 200px;
   text-align: left !important;
-  background: #0D2B50;
+  background:  #061F3E;
   border: 1px solid #F58220;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
@@ -64,4 +63,15 @@
   line-height: 23px;
 
   color: #FFFFFF;
+}
+
+::ng-deep .main-box{
+  height: auto !important;
+}
+
+.e-configuritaion-product-info2{
+  border: 1px solid #F58220;
+  padding: 10px;
+  border-radius: 9px;
+  background: rgba(13, 43, 80, 0.75);
 }

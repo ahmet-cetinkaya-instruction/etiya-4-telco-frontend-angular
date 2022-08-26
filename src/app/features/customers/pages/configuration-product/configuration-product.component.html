@@ -9,7 +9,7 @@
         </div>
     </div>
     <app-main-layout [layoutTitle]="'Configuration Product'">
-        <div class="e-customer-content mb-5">
+        <div class="e-customer-content">
             <div class="m-5">
                 <div class="e-configuration-product-container">
                     <div class="e-configuritaion-product-info p-2">
@@ -123,48 +123,67 @@
                         </div>
                     </div>
                 </div>
+                <div class="e-configuritaion-product-info2 mt-5">
+                    <div class="row ">
+                        <div class="col-2">
+                            <span>Prod Offer ID : </span>
+                        </div>
+                        <div class="col-10">
+                            <span>202610</span>
+                        </div>
+                        <div class="col-2">
+                            <span>Prod Offer Name : </span>
+                        </div>
+                        <div class="col-10">
+                            <span>Müşteri Modemi PR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start customer-title mb-5">
+                    <app-info-title [infoTitle]="'Address Info'"></app-info-title>
+                  </div>
+                <div class="d-flex justify-content-center align-items-center m-3">
+                    <div class="row w-100" style="width: 95% !important;">
+                        <app-table-info class="e-table">
+                            <thead>
+                                <tr class="table-title">
+                                    <th class="col-2">City</th>
+                                    <th class="col-2">Street Name</th>
+                                    <th class="col-2">House/Flat Number</th>
+                                    <th class="col-2">Address Description</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-body">
+                                <tr>
+
+                                    <th style="display:flex;">
+                                        <div style="margin-left:65px">
+                                            İstanbul
+                                        </div>
+                                    </th>
+                                    <td>12</td>
+                                    <td>c-12</td>
+                                    <td>Kucukcekmece Yeni Mahallesi Manolya Sitesi...</td>
+                                </tr>
+                            </tbody>
+                        </app-table-info>
+                    </div>
+
+                    <div class="e-new-address">
+                        <button etiyaButton="new-address"> <img src="../../../../assets/img/add_new.png" alt="">Add New
+                            Address</button>
+                    </div>
+                </div>
             </div>
             <div class="d-flex justify-content-center">
-                <div class="row w-100" style="width: 95% !important;">
-                  <app-table-info class="e-table">
-                    <thead>
-                      <tr class="table-title">
-                        <th class="col-2">City</th>
-                        <th class="col-2">Street Name</th>
-                        <th class="col-2">House/Flat Number</th>
-                        <th class="col-2">Address Description</th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-body">
-                      <tr>
-            
-                        <th style="display:flex;">
-                          <div>
-                            <button etiyaButton="edit"></button>
-                          </div>
-                          <div style="margin-left:65px">
-                            İstanbul
-                          </div>
-                        </th>
-                        <td>12</td>
-                        <td>c-12</td>
-                        <td>Kucukcekmece Yeni Mahallesi Manolya Sitesi...</td>
-                      </tr>
-                    </tbody>
-                  </app-table-info>
-                </div>
-              </div>
-              <div class="e-new-address">
-                <button etiyaButton="new-address"> <img src="../../../../assets/img/add_new.png" alt="">Add New Address</button>
-              </div>
-            <div class="d-flex justify-content-center">
-                <div class="row mt-5 w-75">
+                <div class="row m-0 w-100">
                     <div class="col-12 col-lg-6 d-flex justify-content-lg-start"><button etiyaButton="clear"
                             routerLink="recipes">Previous</button></div>
-                    <div class="col-12 col-lg-5 d-flex justify-content-lg-end"><button
-                            etiyaButton="clear">NEXT</button></div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-lg-end"><button etiyaButton="clear">NEXT</button>
+                    </div>
                 </div>
             </div>
+
         </div>
     </app-main-layout>
 </div>
