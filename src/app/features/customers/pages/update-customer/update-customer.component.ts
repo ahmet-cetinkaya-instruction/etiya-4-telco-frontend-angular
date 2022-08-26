@@ -21,10 +21,10 @@ export class UpdateCustomerComponent implements OnInit {
       middleName: ['',Validators.required],
       lastName: ['', Validators.required],
       birthDate: ['', Validators.required],
-      gender: ['Kadın', Validators.required],
+      gender: ['Female', Validators.required],
       fatherName: ['', Validators.required],
       motherName: ['', Validators.required],
-      nationalId: ['', Validators.required],
+      nationalityId: ['', Validators.required],
     });
   }
   

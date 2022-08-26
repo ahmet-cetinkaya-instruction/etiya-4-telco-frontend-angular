@@ -21,10 +21,10 @@ export class CreateCustomerComponent implements OnInit {
       middleName: [''],
       lastName: ['', Validators.required],
       birthDate: ['', Validators.required],
-      gender: ['Kadın', Validators.required],
+      gender: ['Female', Validators.required],
       fatherName: [''],
       motherName: [''],
-      nationalId: ['', Validators.required],
+      nationalityId: ['', Validators.required],
     });
   }
 }

@@ -77,8 +77,9 @@
 }
 .e-form-close {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   color: #F58220;
+  text-decoration: none;
 }
 .e-star {
   font-weight: bold;
