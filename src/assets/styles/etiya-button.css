@@ -119,10 +119,15 @@ add new adress */
     background-color: transparent;
     border: none;
     color: #fff;
-  }
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 25px;
+}
 
 
-  .e-btn-edit {
+.e-btn-edit {
     box-sizing: border-box;
     width: 42px;
     height: 47px;
