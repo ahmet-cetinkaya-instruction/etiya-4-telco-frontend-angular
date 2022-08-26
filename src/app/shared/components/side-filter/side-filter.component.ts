@@ -35,4 +35,7 @@ export class SideFilterComponent implements OnInit {
       this.filteredData.emit(data)
      })
   }
+  clear(){
+    this.createSearchForm();
+  }
 }

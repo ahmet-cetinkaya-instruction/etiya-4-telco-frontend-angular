@@ -1,42 +1,42 @@
 
   <div class="e-search-container">
-  
+
     <div class="e-title-container">
         <h3 class="e-search-title m-4">{{filterTitle}}</h3>
         <span class="verticalLine"></span> <span class="horizontalLine"></span>
         <h5 class="e-search-title-mini mt-5 ml-5">Search Filter</h5>
         <span class="mini-verticalLine"></span> <span class="mini-horizontalLine"></span>
     </div>
-  
-  
+
+
     <div class="e-input-container">
       <form [formGroup]="searchForm">
         <label class="e-label mt-4">ID NUMBER</label>
         <input type="text" etiyaInput="dark" formControlName="id" />
-  
+
         <label class="e-label">CUSTOMER ID</label>
         <input type="text" etiyaInput="dark" formControlName="customerId" />
-  
+
         <label class="e-label">ACCOUNT NUMBER</label>
         <input type="text" etiyaInput="dark" formControlName="accountNumber"/>
-  
+
         <label class="e-label">GSM NUMBER</label>
         <input type="text" etiyaInput="dark" formControlName="gsmNumber" />
-  
+
         <label class="e-label">FIRST NAME</label>
         <input type="text" etiyaInput="dark" formControlName="firstName"/>
-  
+
         <label class="e-label">LAST NAME</label>
         <input type="text" etiyaInput="dark" formControlName="lastname"/>
-  
+
         <label class="e-label">ORDER NUMBER</label>
         <input type="text" etiyaInput="dark" formControlName="orderNumber"/>
       </form>
-  
-  
+
+
     </div>
     <div class="e-btn-container">
-        <button type="button" etiyaButton="clear">CLEAR</button>
+        <button type="button" etiyaButton="clear" (click)="clear()">CLEAR</button>
         <button type="button" etiyaButton="search" (click)="search()">SEARCH<img etiyaButton="img-search"
                 src="../assets/img/search-btn-logo.png"></button>
     </div>
