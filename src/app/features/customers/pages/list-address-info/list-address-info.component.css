@@ -26,9 +26,9 @@
 }
 .e-buttons {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-between;
   position: absolute;
   bottom: 5rem;
   width: 100%;
+  padding: 0 4rem;
 }

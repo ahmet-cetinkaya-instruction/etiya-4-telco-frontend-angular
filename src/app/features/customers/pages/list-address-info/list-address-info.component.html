@@ -2,9 +2,7 @@
   <app-navbar></app-navbar>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12 col-lg-6 d-flex align-items-end">
-      </div>
-      <div class="col-12 col-lg-6 d-flex justify-content-end p-0">
+      <div class="d-flex justify-content-end p-0">
         <app-user-info></app-user-info>
       </div>
     </div>
@@ -37,13 +35,11 @@
           </div>        
       </div>
       <div class="e-new-address">
-          <button etiyaButton="new-address" style="margin-left: 20px ;"> <img src="../../../../assets/img/add_new.png" alt="">Add New Address</button>
+          <button etiyaButton="new-address" style="margin-left: 20px ;"> <img src="./assets/img/add_new.png" alt="">Add New Address</button>
       </div>
       <div class="e-buttons">
-          <div class="row w-75">
-              <div class="col-12 col-lg-6 d-flex justify-content-lg-start"><button etiyaButton="clear" routerLink ="recipes">CANCEL</button></div>
-              <div class="col-12 col-lg-5 d-flex justify-content-lg-end"><button etiyaButton="clear-disabled">NEXT</button></div>
-          </div>
+        <button etiyaButton="clear">CANCEL</button>
+        <button etiyaButton="clear-disabled">NEXT</button>          
       </div>
     </div>
   </app-main-layout>
