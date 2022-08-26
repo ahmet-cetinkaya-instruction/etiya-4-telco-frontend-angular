@@ -15,6 +15,8 @@ import { ListAddressInfoComponent } from './pages/list-address-info/list-address
 import { CustomerAddressComponent } from './pages/customer-address/customer-address.component';
 import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
 import { CustomerBillingAccountComponent } from './pages/customer-billing-account/customer-billing-account/customer-billing-account.component';
+import { CustomerBillingAccountDetailComponent } from './pages/customer-billing-account-detail/customer-billing-account-detail.component';
+import { CustomerInfoComponent } from './pages/customer-info/customer-info.component';
 import { UpdateCustContactMediumComponent } from './pages/update-cust-contact-medium/update-cust-contact-medium/update-cust-contact-medium.component';
 
 
@@ -31,6 +33,8 @@ import { UpdateCustContactMediumComponent } from './pages/update-cust-contact-me
     CustomerAddressComponent,
     UpdateCustomerComponent,
     CustomerBillingAccountComponent,
+    CustomerBillingAccountDetailComponent,
+    CustomerInfoComponent,
     UpdateCustContactMediumComponent
 
 

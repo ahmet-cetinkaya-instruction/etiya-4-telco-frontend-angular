@@ -100,7 +100,7 @@
     width: 3px;
     height: 137px;
     left: 241px;
-    top: -14px;
+    top: -34px;
     background: #F58220;
     border-radius: 2px;
     transform: rotate(90deg)
@@ -109,9 +109,9 @@
 .verticalLine {
     position: absolute !important;
     width: 3px;
-    height: 70px;
+    height: 94px;
     left: 295px;
-    top: 1px ;
+    top: -38px;
     background: #F58220;
     border-radius: 2px;
 }

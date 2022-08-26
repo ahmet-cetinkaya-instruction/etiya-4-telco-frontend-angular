@@ -1,3 +1,4 @@
+import { CustomerInfoComponent } from './pages/customer-info/customer-info.component';
 import { CustomerAddressComponent } from './pages/customer-address/customer-address.component';
 import { CreateCustomerComponent } from './pages/create-customer/create-customer.component';
 import { NgModule } from '@angular/core';
@@ -8,6 +9,7 @@ import { AddAddressInfoComponent } from './pages/add-address-info/add-address-in
 import { ListAddressInfoComponent } from './pages/list-address-info/list-address-info.component';
 import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
 import { CustomerBillingAccountComponent } from './pages/customer-billing-account/customer-billing-account/customer-billing-account.component';
+import { CustomerBillingAccountDetailComponent } from './pages/customer-billing-account-detail/customer-billing-account-detail.component';
 import { UpdateCustContactMediumComponent } from './pages/update-cust-contact-medium/update-cust-contact-medium/update-cust-contact-medium.component';
 
 const routes: Routes = [
@@ -15,12 +17,14 @@ const routes: Routes = [
   {path:"customer-dashboard", component:CustomerDashboardComponent},
   {path:"contact-medium", component:AddContactMediumComponent},
   {path:"create-customer", component:CreateCustomerComponent},
+  {path:"customer-info", component:CustomerInfoComponent},
   {path:"add-address-info", component:AddAddressInfoComponent},
   {path:"list-address-info", component:ListAddressInfoComponent},
   {path:"update-customer", component:UpdateCustomerComponent},
   {path:"customer-address", component:CustomerAddressComponent},
   {path:"customer-bill", component:CustomerBillingAccountComponent},
-  {path:"customer-contact-form", component:UpdateCustContactMediumComponent}
+  {path:"customer-contact-form", component:UpdateCustContactMediumComponent},
+  {path:"customer-billing-account-detail", component:CustomerBillingAccountDetailComponent},
 
 ];
 

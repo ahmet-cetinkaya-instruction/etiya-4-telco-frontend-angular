@@ -1,0 +1,19 @@
+::ng-deep body {
+    background-color: #061F3E !important;
+  }
+
+  .bar-menu{
+    margin-top: -35px;
+    margin-left: 350px;
+  }
+
+  .app-user-info {
+    width: 264px;
+    margin-left: 35px;
+    margin-top: -20px;
+  }
+
+  ::ng-deep .e-btn-new-address{
+    border: 1px solid #F58220!important;
+    margin-top: 10px;
+  }

@@ -13,4 +13,8 @@
 
 }
 
+::ng-deep .e-input-dark{
+  margin-left: 15px;
+}
+
 
