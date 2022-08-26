@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./offer-selection.component.css']
 })
 export class OfferSelectionComponent implements OnInit {
-
+  offers:number[] = [1,2,3,4,5,6,7,8,9,10];
   constructor() { }
 
   ngOnInit(): void {

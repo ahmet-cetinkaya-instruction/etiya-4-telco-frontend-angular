@@ -1,13 +1,13 @@
 <div class="e-tabs">
-    <input type="radio" name="tabs" id="tabone" checked="checked" />
-    <label style="border-radius: 21px 0 0 0" for="tabone">Catalog</label>
-    <div class="e-tab">
-        <h3>Tab One Content - Catalog</h3>
-    </div>
+  <input type="radio" name="tabs" id="tabone" checked="checked" />
+  <label style="border-radius: 21px 0 0 0" for="tabone">Catalog</label>
+  <div class="e-tab">
+    <ng-content select="[one]"></ng-content>
+  </div>
 
-    <input type="radio" name="tabs" id="tabtwo" />
-    <label style="border-radius: 0 21px 0 0" for="tabtwo">Compaign</label>
-    <div class="e-tab">
-        <h3>Tab Two Content - Compaign</h3>
-    </div>
+  <input type="radio" name="tabs" id="tabtwo" />
+  <label style="border-radius: 0 21px 0 0" for="tabtwo">Compaign</label>
+  <div class="e-tab">
+    <ng-content select="[two]"></ng-content>
+  </div>
 </div>

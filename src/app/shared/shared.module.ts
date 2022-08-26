@@ -25,13 +25,13 @@ import { MessageService } from 'primeng/api';
 import { CustomToastComponent } from './components/custom-toast/custom-toast.component';
 import { BasketComponent } from './components/basket/basket.component';
 import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
-import { OfferSelectionComponent } from './components/offer-selection/offer-selection.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TitleLineComponent } from './components/title-line/title-line.component';
 import { ButtonDirective } from './directives/button.directive';
 import { InputDirective } from './directives/input.directive';
 import { CheckBoxDirective } from './directives/check-box.directive';
 import { RouterModule } from '@angular/router';
+import { TableScrollComponent } from './components/table-scroll/table-scroll.component';
 
 
 
@@ -57,11 +57,11 @@ import { RouterModule } from '@angular/router';
     CustomToastComponent,
     BasketComponent,
     TabMenuComponent,
-    OfferSelectionComponent,
     TitleLineComponent,
     ButtonDirective,
     InputDirective,
-    CheckBoxDirective
+    CheckBoxDirective,
+    TableScrollComponent
   ],
   imports: [
     CommonModule,
@@ -92,10 +92,10 @@ import { RouterModule } from '@angular/router';
     CustomToastComponent,
     BasketComponent,
     TabMenuComponent,
-    OfferSelectionComponent,
     TitleLineComponent,
     ButtonDirective,
-    InputDirective
+    InputDirective,
+    TableScrollComponent
 
   ],
   providers:[MessageService]

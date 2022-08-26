@@ -1,0 +1,83 @@
+::ng-deep .table.e-table {
+  color: #ffffff;
+  border: 1px solid #f58220 !important;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 80%;
+}
+::ng-deep .table.e-table .table-title,
+::ng-deep .table-body {
+  background-color: #061f3e;
+  vertical-align: middle;
+}
+::ng-deep tr:nth-child(odd) {
+  background-color: #0d2b50;
+}
+::ng-deep .table.e-table .table-title th,
+::ng-deep .table.e-table tr td {
+  height: 35px;
+  border-left: 1px solid #f58220;
+}
+::ng-deep .table.e-table .table-title th:first-child,
+::ng-deep .table.e-table .table-body tr th {
+  border-left: 1px solid #f58220;
+}
+::ng-deep .table.e-table tr th {
+  border-left: 1px solid #f58220;
+}
+::ng-deep .table-hidden tbody {
+  overflow-y: scroll;
+  height: 240px;
+  display: block;
+}
+::ng-deep .table-hidden tr {
+  width: 100%;
+  display: inline-table;
+}
+::ng-deep .table-hidden thead th[data-th="third"] {
+  width: 400px;
+}
+::ng-deep .table-hidden tbody td[data-th="third"] {
+  width: calc(400px - 15px);
+}
+::ng-deep .table-hidden td[data-th="first"],
+.table-hidden th[data-th="first"] {
+  width: 400px;
+}
+::ng-deep .table-hidden td[data-th="second"],
+.table-hidden th[data-th="second"] {
+  width: 400px;
+}
+::ng-deep .table-body::-webkit-scrollbar {
+  width: 15px;
+}
+::ng-deep .table-body::-webkit-scrollbar-thumb {
+  background: #f58220;
+  border-radius: 20px;
+}
+::ng-deep .table-body::-webkit-scrollbar-track {
+  border-radius: 20px;
+}
+::ng-deep ::-webkit-scrollbar-button {
+  display: block;
+  border: 1px solid #f58220;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+::ng-deep ::-webkit-scrollbar-button:vertical:start:increment {
+  background-image: url("../../../../assets/img/caret-up.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+::ng-deep ::-webkit-scrollbar-button:vertical:start:decrement {
+  display: none;
+}
+::ng-deep ::-webkit-scrollbar-button:vertical:end:increment {
+  display: none;
+}
+::ng-deep ::-webkit-scrollbar-button:vertical:end:decrement {
+  background-image: url("../../../../assets/img/caret-down.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}

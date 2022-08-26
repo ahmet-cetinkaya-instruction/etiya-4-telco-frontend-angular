@@ -11,7 +11,29 @@
     <div class="e-offer-selection-content">
       <div class="row">
         <div class="col-8 e-offer-selection-center">
-          <app-tab-menu></app-tab-menu>
+          <app-tab-menu>
+            <div one>
+              <app-table-scroll>
+                <thead>
+                  <tr class="table-title">
+                    <th data-th="first">Compaign ID</th>
+                    <th data-th="second">Prod Offer ID</th>
+                    <th data-th="third">Prod Offer Name</th>
+                  </tr>
+                </thead>
+                <tbody class="table-body">
+                  <tr *ngFor="let item of offers">
+                      <td data-th="first"></td>
+                      <td data-th="second"></td>
+                      <td data-th="third"></td>
+                  </tr>
+                </tbody>
+              </app-table-scroll>
+            </div>
+            <div two>
+              <h3>Compaign</h3>
+            </div>
+          </app-tab-menu>
         </div>
         <div class="col-4 e-offer-selection-center">
           <app-basket></app-basket>
