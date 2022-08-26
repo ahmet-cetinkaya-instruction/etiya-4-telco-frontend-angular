@@ -11,6 +11,7 @@ import { UpdateCustomerComponent } from './pages/update-customer/update-customer
 import { CustomerBillingAccountComponent } from './pages/customer-billing-account/customer-billing-account/customer-billing-account.component';
 import { CustomerBillingAccountDetailComponent } from './pages/customer-billing-account-detail/customer-billing-account-detail.component';
 import { UpdateCustContactMediumComponent } from './pages/update-cust-contact-medium/update-cust-contact-medium/update-cust-contact-medium.component';
+import { CustomerContactMediumComponent } from './pages/customer-contact-medium/customer-contact-medium/customer-contact-medium.component';
 
 const routes: Routes = [
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:"customer-bill", component:CustomerBillingAccountComponent},
   {path:"customer-contact-form", component:UpdateCustContactMediumComponent},
   {path:"customer-billing-account-detail", component:CustomerBillingAccountDetailComponent},
+  {path:"customer-contact-medium", component:CustomerContactMediumComponent}
 
 ];
 

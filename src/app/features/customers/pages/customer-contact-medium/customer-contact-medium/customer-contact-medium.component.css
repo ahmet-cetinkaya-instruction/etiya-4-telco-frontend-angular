@@ -1,0 +1,118 @@
+::ng-deep body {
+  background-color: #061F3E !important;
+}
+.bar-menu{
+  margin-top: -35px;
+  margin-left: 350px;
+}
+.e-create-customer-table {
+  background: url('../../../../../../assets/img/background.png');
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.e-customer-content {
+  box-sizing: border-box;
+  margin-left: 60px;
+  width: 1125px;
+  height: 220px;
+  margin-left: 120px;
+  background: rgba(13, 43, 80, 0.7);
+  border: 2px solid #F58220;
+  border-radius: 22px;
+  
+}
+
+ label{
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 27px;  
+  color: #FFFFFF;
+  
+}
+
+
+.e-frame-container {
+  position: relative;
+}
+
+.e-form-frame {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 43, 80, 0.7);
+  border: 2px solid #F58220;
+  border-radius: 22px;
+}
+
+.customer-title {
+  display: flex;
+  justify-content: center;
+
+}
+
+.e-customer-input {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.app-user-info {
+  width: 264px;
+  margin-left: 35px;
+  margin-top: -20px;
+}
+::ng-deep body {
+  background-color: #061F3E !important;
+}
+
+.app-user-info {
+  width: 264px;
+  margin-left: 35px;
+}
+
+.bar-menu {
+  margin-left: 30%;
+  margin-top: -55px;
+}
+
+.e-customer-content {
+
+  box-sizing: border-box;
+  margin-left: 60px;
+  width: 1300px;
+  height: 250px;
+  background: rgba(13, 43, 80, 0.7);
+  border: 3px solid #F58220;
+  border-right: 3px solid #F58220;
+  border-radius: 22px;
+}
+
+.e-frame-label {
+  margin-top: 25px;
+  width: 100%;
+  height: 31px;
+
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 31px;
+  color: #FFFFFF;
+  margin-left: 90px;
+}
+::ng-deep .e-btn-edit{
+  float: right;
+}
+::ng-deep .e-btn-remove{
+  float: right;
+  margin-right: 15px;
+}
+::ng-deep .e-btn-remove:hover{
+  border: 6px solid #F58220;
+}
+::ng-deep .e-btn-edit:hover{
+  border: 6px solid #F58220;
+}
