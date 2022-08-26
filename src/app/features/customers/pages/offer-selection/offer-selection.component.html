@@ -1,0 +1,35 @@
+<div class="e-offer-selection-container">
+  <app-navbar></app-navbar>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="d-flex justify-content-end p-0">
+        <app-user-info></app-user-info>
+      </div>
+    </div>
+  </div>
+  <app-main-layout [layoutTitle]="'Offer Selection'">
+    <div class="e-offer-selection-content">
+      <div class="row">
+        <div class="col-8 e-offer-selection-center">
+          <app-tab-menu></app-tab-menu>
+        </div>
+        <div class="col-4 e-offer-selection-center">
+          <app-basket></app-basket>
+        </div>
+      </div>
+
+      <div class="e-buttons">
+        <div class="row">
+            <div class="col-8 d-flex justify-content-end">
+                        <button etiyaButton="clear">CANCEL</button>
+
+            </div>
+            <div class="col-4 d-flex justify-content-end">
+                <button etiyaButton="clear-disabled">NEXT</button>
+
+            </div>
+        </div>
+      </div>
+    </div>
+  </app-main-layout>
+</div>

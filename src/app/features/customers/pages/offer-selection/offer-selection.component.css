@@ -1,0 +1,20 @@
+.e-offer-selection-container {
+  background-color: #061f3e !important;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+.e-offer-selection-content {
+  min-height: 100%;
+  position: relative;
+}
+.e-buttons {
+  position: absolute;
+  bottom: 5rem;
+  width: 100%;
+  padding: 0 4rem;
+}
+.e-offer-selection-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
