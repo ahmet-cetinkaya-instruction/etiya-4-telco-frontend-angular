@@ -9,23 +9,23 @@
   </div>
   <app-main-layout [layoutTitle]="'CREATE CUSTOMER'">
     <div class="e-customer-content">
-      <div class="d-flex justify-content-center customer-title mb-5">
+      <div class="e-contact-center mb-5">
         <app-info-title [infoTitle]="'Contact Medium'"></app-info-title>
       </div>
-      <div class="d-flex justify-content-center">
+      <div class="e-contact-center">
         <form [formGroup]="contactForm" class="e-contact-form">
           <div class="row">
             <div class="col-12 col-lg-6">
               <div class="row e-customer-input">
                 <div
-                  class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
+                  class="col-12 col-lg-4 e-contact-col-center"
                 >
                   <label for="first-name"
                     >Email<span class="e-star">*</span>
                   </label>
                 </div>
                 <div
-                  class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
+                  class="col-12 col-lg-8 e-contact-col-center"
                 >
                   <input
                     type="text"
@@ -36,15 +36,15 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6 d=flex justify-content-start mb-5">
+            <div class="col-12 col-lg-6 mb-5">
               <div class="row e-customer-input">
                 <div
-                  class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
+                  class="col-12 col-lg-4 e-contact-col-center"
                 >
                   <label for="middle-name">Home Phone </label>
                 </div>
                 <div
-                  class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
+                  class="col-12 col-lg-8 e-contact-col-center"
                 >
                   <input
                     type="text"
@@ -55,17 +55,17 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6 d=flex justify-content-start mb-5">
+            <div class="col-12 col-lg-6 mb-5">
               <div class="row e-customer-input">
                 <div
-                  class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
+                  class="col-12 col-lg-4 e-contact-col-center"
                 >
                   <label for="last-name"
                     >Mobile Phone<span class="e-star">*</span>
                   </label>
                 </div>
                 <div
-                  class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
+                  class="col-12 col-lg-8 e-contact-col-center"
                 >
                   <input
                     type="text"
@@ -76,15 +76,15 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6 d=flex justify-content-start mb-5">
+            <div class="col-12 col-lg-6 mb-5">
               <div class="row e-customer-input">
                 <div
-                  class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
+                  class="col-12 col-lg-4 e-contact-col-center"
                 >
                   <label for="birth-date">Fax </label>
                 </div>
                 <div
-                  class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
+                  class="col-12 col-lg-8 e-contact-col-center"
                 >
                   <input
                     type="text"
@@ -96,14 +96,14 @@
               </div>
             </div>
           </div>
-          <div class="row mt-2 d-flex justify-content-center">
+          <div class="row mt-2 e-contact-center">
             <div class="col-2">
               <button etiyaButton="clear" style="width: 164px">Create</button>
             </div>
           </div>
         </form>
       </div>
-      <div class="d-flex justify-content-center">
+      <div class="e-contact-center">
         <div class="row w-75" style="margin-top: 100px">
           <div class="col-12 col-lg-6 d-flex justify-content-lg-start">
             <button etiyaButton="clear" routerLink="recipes">Previous</button>

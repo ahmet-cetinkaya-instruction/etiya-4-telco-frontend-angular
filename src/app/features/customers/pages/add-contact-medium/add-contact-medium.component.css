@@ -13,7 +13,7 @@
   min-height: 100%;
 }
 
-.customer-title {
+.e-contact-center {
   display: flex;
   justify-content: center;
 }
@@ -63,4 +63,8 @@
 .e-star {
   font-weight: bold;
   font-size: 40px;
+}
+.e-contact-col-center{
+  display: flex;
+  align-items: center;
 }
