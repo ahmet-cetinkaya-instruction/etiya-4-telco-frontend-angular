@@ -20,6 +20,7 @@ import { ConfigurationProductComponent } from './pages/configuration-product/con
 import { SubmitOrderComponent } from './pages/submit-order/submit-order.component';
 import { CustomerContactMediumComponent } from './pages/customer-contact-medium/customer-contact-medium/customer-contact-medium.component';
 import { OfferSelectionComponent } from './pages/offer-selection/offer-selection.component';
+import { AddCustomerAddressComponent } from './pages/add-customer-address/add-customer-address.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { OfferSelectionComponent } from './pages/offer-selection/offer-selection
     ConfigurationProductComponent,
     SubmitOrderComponent,
     CustomerContactMediumComponent,
-    OfferSelectionComponent
+    OfferSelectionComponent,
+    AddCustomerAddressComponent
 
 
   ],

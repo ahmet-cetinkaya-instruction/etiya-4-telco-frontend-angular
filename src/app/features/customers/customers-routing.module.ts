@@ -16,6 +16,7 @@ import { SubmitOrderComponent } from './pages/submit-order/submit-order.componen
 import { CustomerContactMediumComponent } from './pages/customer-contact-medium/customer-contact-medium/customer-contact-medium.component';
 import { OfferSelectionComponent } from './pages/offer-selection/offer-selection.component';
 import { ConfigurationProductComponent } from './pages/configuration-product/configuration-product.component';
+import { AddCustomerAddressComponent } from './pages/add-customer-address/add-customer-address.component';
 
 const routes: Routes = [
 
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: "customer-contact-medium", component: CustomerContactMediumComponent },
   { path: "offer-selection", component: OfferSelectionComponent },
   { path: "configuration-product", component: ConfigurationProductComponent },
+  { path: "add-customer-address", component: AddCustomerAddressComponent },
 
 ];
 
