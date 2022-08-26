@@ -118,6 +118,11 @@ add new adress */
 .e-btn-new-address {
     background-color: transparent;
     border: none;
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 25px;
     color: #fff;
     font-family: 'Anybody';
     font-style: normal;
