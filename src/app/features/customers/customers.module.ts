@@ -1,4 +1,3 @@
-import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomersRoutingModule } from './customers-routing.module';
