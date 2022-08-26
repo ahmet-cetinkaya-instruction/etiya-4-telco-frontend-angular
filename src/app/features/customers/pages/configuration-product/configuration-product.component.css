@@ -1,0 +1,67 @@
+::ng-deep body {
+  background-color: #061F3E !important;
+}
+
+.e-customer-content {
+  height: 774px;
+  margin-left: 30px;
+  top: 216px;
+  border-right: none;
+  color: #fff;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 31px;
+}
+
+.e-configuration-product-container {
+  background: rgba(13, 43, 80, 0.75);
+  border: 1px solid #F58220;
+  border-radius: 9px;
+}
+
+.e-configuritaion-product-info {
+  border-bottom: 1px solid #F58220;
+
+}
+
+
+.e-configuration-product-input {
+
+  box-sizing: border-box;
+  height: 31.47px;
+  max-width: 200px;
+  text-align: left !important;
+  background: #0D2B50;
+  border: 1px solid #F58220;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+
+.e-confirugration-product-label {
+  height: 20.68px;
+  min-width: none;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 23px;
+  padding: 0px !important;
+  margin: 0px;
+  text-align: left !important;
+  color: #FFFFFF;
+}
+
+.e-configuritaion-product-info span {
+  width: 532px;
+  height: 33.27px;
+
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 23px;
+
+  color: #FFFFFF;
+}

@@ -11,27 +11,29 @@ import { UpdateCustomerComponent } from './pages/update-customer/update-customer
 import { CustomerBillingAccountComponent } from './pages/customer-billing-account/customer-billing-account/customer-billing-account.component';
 import { CustomerBillingAccountDetailComponent } from './pages/customer-billing-account-detail/customer-billing-account-detail.component';
 import { UpdateCustContactMediumComponent } from './pages/update-cust-contact-medium/update-cust-contact-medium/update-cust-contact-medium.component';
+
 import { SubmitOrderComponent } from './pages/submit-order/submit-order.component';
 import { CustomerContactMediumComponent } from './pages/customer-contact-medium/customer-contact-medium/customer-contact-medium.component';
 import { OfferSelectionComponent } from './pages/offer-selection/offer-selection.component';
-
+import { ConfigurationProductComponent } from './pages/configuration-product/configuration-product.component';
 
 const routes: Routes = [
 
-  {path:"customer-dashboard", component:CustomerDashboardComponent},
-  {path:"contact-medium", component:AddContactMediumComponent},
-  {path:"create-customer", component:CreateCustomerComponent},
-  {path:"customer-info", component:CustomerInfoComponent},
-  {path:"add-address-info", component:AddAddressInfoComponent},
-  {path:"list-address-info", component:ListAddressInfoComponent},
-  {path:"update-customer", component:UpdateCustomerComponent},
-  {path:"customer-address", component:CustomerAddressComponent},
-  {path:"customer-bill", component:CustomerBillingAccountComponent},
-  {path:"customer-contact-form", component:UpdateCustContactMediumComponent},
-  {path:"customer-billing-account-detail", component:CustomerBillingAccountDetailComponent},
-  {path:"submit-order", component:SubmitOrderComponent},
-  {path:"customer-contact-medium", component:CustomerContactMediumComponent},
-  {path:"offer-selection", component:OfferSelectionComponent}
+  { path: "customer-dashboard", component: CustomerDashboardComponent },
+  { path: "contact-medium", component: AddContactMediumComponent },
+  { path: "create-customer", component: CreateCustomerComponent },
+  { path: "customer-info", component: CustomerInfoComponent },
+  { path: "add-address-info", component: AddAddressInfoComponent },
+  { path: "list-address-info", component: ListAddressInfoComponent },
+  { path: "update-customer", component: UpdateCustomerComponent },
+  { path: "customer-address", component: CustomerAddressComponent },
+  { path: "customer-bill", component: CustomerBillingAccountComponent },
+  { path: "customer-contact-form", component: UpdateCustContactMediumComponent },
+  { path: "customer-billing-account-detail", component: CustomerBillingAccountDetailComponent },
+  { path: "submit-order", component: SubmitOrderComponent },
+  { path: "customer-contact-medium", component: CustomerContactMediumComponent },
+  { path: "offer-selection", component: OfferSelectionComponent },
+  { path: "configuration-product", component: ConfigurationProductComponent },
 
 ];
 
