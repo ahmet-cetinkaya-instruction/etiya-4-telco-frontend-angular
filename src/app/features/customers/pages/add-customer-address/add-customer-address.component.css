@@ -105,3 +105,6 @@
     height: 50px;
   }
 
+  ::ng-deep .main-box{
+    height: auto !important;
+  }

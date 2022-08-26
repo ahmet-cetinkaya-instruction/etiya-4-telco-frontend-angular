@@ -102,3 +102,7 @@
   background-color: #0D2B50;
   height: 50px;
 }
+
+::ng-deep .main-box{
+  height: auto !important;
+}

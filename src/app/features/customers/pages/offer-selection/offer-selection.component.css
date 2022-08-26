@@ -5,13 +5,9 @@
 }
 .e-offer-selection-content {
   min-height: 100%;
-  position: relative;
 }
 .e-buttons {
-  position: absolute;
-  bottom: 5rem;
-  width: 100%;
-  padding: 0 4rem;
+  padding: 2rem 4rem;
 }
 .e-offer-selection-center{
   display: flex;
@@ -52,12 +48,8 @@ border-radius: 2px;
   font-weight: 400;
   font-size: 20px;
   line-height: 21px;
-  background-image: url("../../../../../assets/img/arrow.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: right !important;
   background: rgba(13, 43, 80, 0.8);
   border: 1px solid #f58220;
-
   border-radius: 1px;
   float: right;
 }
@@ -99,4 +91,7 @@ margin-bottom: 20px;
 ::ng-deep .e-table{
   width: 710px !important;
   height: 262px;
+}
+::ng-deep .main-box{
+  height: auto !important;
 }
