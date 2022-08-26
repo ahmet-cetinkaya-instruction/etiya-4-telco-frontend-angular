@@ -19,6 +19,7 @@ import { CustomerBillingAccountDetailComponent } from './pages/customer-billing-
 import { CustomerInfoComponent } from './pages/customer-info/customer-info.component';
 import { UpdateCustContactMediumComponent } from './pages/update-cust-contact-medium/update-cust-contact-medium/update-cust-contact-medium.component';
 import { ConfigurationProductComponent } from './pages/configuration-product/configuration-product.component';
+import { SubmitOrderComponent } from './pages/submit-order/submit-order.component';
 
 
 
@@ -37,7 +38,8 @@ import { ConfigurationProductComponent } from './pages/configuration-product/con
     CustomerBillingAccountDetailComponent,
     CustomerInfoComponent,
     UpdateCustContactMediumComponent,
-    ConfigurationProductComponent
+    ConfigurationProductComponent,
+    SubmitOrderComponent
 
 
   ],
