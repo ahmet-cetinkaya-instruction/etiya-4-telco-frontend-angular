@@ -9,9 +9,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class AddContactMediumComponent implements OnInit {
   contactForm = new FormGroup({
     email: new FormControl('', Validators.required),
-    homePhone: new FormControl('',Validators.required),
+    homePhone: new FormControl(''),
     mobilePhone: new FormControl('', Validators.required),
-    fax: new FormControl('', Validators.required)
+    fax: new FormControl('')
   });
   constructor() { }
 

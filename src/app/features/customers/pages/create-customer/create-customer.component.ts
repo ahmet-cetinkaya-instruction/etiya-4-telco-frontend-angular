@@ -18,12 +18,12 @@ export class CreateCustomerComponent implements OnInit {
   createFormUpdateCustomer(){
     this.profileForm = this.formBuilder.group({
       firstName: ['', Validators.required],
-      middleName: ['',Validators.required],
+      middleName: [''],
       lastName: ['', Validators.required],
       birthDate: ['', Validators.required],
       gender: ['Kadın', Validators.required],
-      fatherName: ['', Validators.required],
-      motherName: ['', Validators.required],
+      fatherName: [''],
+      motherName: [''],
       nationalId: ['', Validators.required],
     });
   }
