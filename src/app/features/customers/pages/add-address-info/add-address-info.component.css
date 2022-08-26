@@ -84,3 +84,20 @@
   font-weight: bold;
   font-size: 40px;
 }
+.e-btn-clear {
+  width: 164px;
+  font-weight: 700;
+}
+.e-address-col-center{
+  display: flex;
+  align-items: center;
+}
+::ng-deep .e-info-title{
+  display: flex;
+  justify-content: center;
+  margin: 0!important;
+}
+.e-input-dark {
+  background-color: #0D2B50;
+  height: 50px;
+}

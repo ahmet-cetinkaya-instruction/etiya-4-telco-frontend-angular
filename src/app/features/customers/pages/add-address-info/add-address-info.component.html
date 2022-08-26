@@ -9,7 +9,7 @@
   </div>
   <app-main-layout [layoutTitle]="'CREATE CUSTOMER'">
     <div class="e-address-content">
-      <div class="d-flex justify-content-center address-title mb-5">
+      <div class="address-title mb-5">
         <app-info-title [infoTitle]="'Address Info'"></app-info-title>
       </div>
       <div class="d-flex justify-content-center">
@@ -17,15 +17,15 @@
           <div class="row e-form-close">X</div>
           <form [formGroup]="addressForm">
             <div class="row">
-              <div class="col-12 col-lg-5">
+              <div class="col-12 col-xl-5">
                 <div class="row e-address-input">
                   <div
-                    class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
+                    class="col-12 col-lg-4 e-address-col-center"
                   >
                     <label for="city">City<span class="e-star">*</span> </label>
                   </div>
                   <div
-                    class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
+                    class="col-12 col-lg-8 e-address-col-center"
                   >
                     <div class="e-dropdown">
                       <select
@@ -41,43 +41,41 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-lg-7 d=flex justify-content-start">
+              <div class="col-12 col-xl-7">
                 <div class="row e-address-input">
                   <div
-                    class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
+                    class="col-12 col-lg-4 e-address-col-center"
                   >
                     <label for="flatNumber"
                       >Hause/Flat Number<span class="e-star">*</span>
                     </label>
                   </div>
                   <div
-                    class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
+                    class="col-12 col-lg-8 e-address-col-center"
                   >
                     <input
                       type="text"
                       etiyaInput="dark"
-                      class="e-address-input-height"
                       formControlName="street"
                     />
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-lg-5 d=flex justify-content-start">
+              <div class="col-12 col-xl-5">
                 <div class="row e-address-input">
                   <div
-                    class="col-12 col-lg-4 d-flex justify-content-lg-start align-items-center"
+                    class="col-12 col-lg-4 e-address-col-center"
                   >
                     <label for="street"
                       >Street<span class="e-star">*</span>
                     </label>
                   </div>
                   <div
-                    class="col-12 col-lg-8 d-flex justify-content-lg-start align-items-center"
+                    class="col-12 col-lg-8 e-address-col-center"
                   >
                     <input
                       type="text"
                       etiyaInput="dark"
-                      class="e-address-input-height"
                       formControlName="flatNumber"
                     />
                   </div>
@@ -86,14 +84,14 @@
               <div class="col-12">
                 <div class="row mb-1">
                   <div
-                    class="col-12 d-flex justify-content-lg-start align-items-center"
+                    class="col-12 e-address-col-center"
                   >
                     <label for="address-description"
                       >Address Description<span class="e-star">*</span>
                     </label>
                   </div>
                   <div
-                    class="col-12 d-flex justify-content-lg-start align-items-center"
+                    class="col-12 e-address-col-center"
                   >
                     <textarea
                       class="e-address-desc"
@@ -108,7 +106,6 @@
               <div class="col-2">
                 <button
                   etiyaButton="clear"
-                  style="width: 164px; font-weight: 700"
                 >
                   SAVE
                 </button>
