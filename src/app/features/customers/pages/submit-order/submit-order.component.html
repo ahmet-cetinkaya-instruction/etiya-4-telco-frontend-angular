@@ -47,11 +47,18 @@
         <label class="e-frame-label">139.80 TL</label>
       </div>
     </div>
+    <div class="d-flex justify-content-center">
+      <div style="width: 1125px" class="row p-0 pt-4">
+        <div class="col-6 d-flex justify-content-lg-start">
+          <button [etiyaButton]="'clear'">Previous</button>
+        </div>
+        <div class="col-6 d-flex justify-content-lg-end">
+          <button [etiyaButton]="'clear'">Submit</button>
+        </div>
+      </div>
+    </div>
 
   </div>
-  
-  <div style="justify-content:space-around; display: flex; align-items:center">
-    <button [etiyaButton]="'clear'">Previous</button>
-    <button [etiyaButton]="'clear'">Submit</button>
-  </div>
+
+
 </app-main-layout>
