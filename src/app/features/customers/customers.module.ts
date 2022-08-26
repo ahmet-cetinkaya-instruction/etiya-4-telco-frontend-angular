@@ -19,6 +19,7 @@ import { UpdateCustContactMediumComponent } from './pages/update-cust-contact-me
 import { ConfigurationProductComponent } from './pages/configuration-product/configuration-product.component';
 import { SubmitOrderComponent } from './pages/submit-order/submit-order.component';
 import { CustomerContactMediumComponent } from './pages/customer-contact-medium/customer-contact-medium/customer-contact-medium.component';
+import { OfferSelectionComponent } from './pages/offer-selection/offer-selection.component';
 
 
 
@@ -39,7 +40,8 @@ import { CustomerContactMediumComponent } from './pages/customer-contact-medium/
     UpdateCustContactMediumComponent,
     ConfigurationProductComponent,
     SubmitOrderComponent,
-    CustomerContactMediumComponent
+    CustomerContactMediumComponent,
+    OfferSelectionComponent
 
 
   ],

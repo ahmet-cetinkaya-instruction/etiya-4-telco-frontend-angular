@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService, PrimeNGConfig } from 'primeng/api';
 import { LocalStorageService } from 'src/app/core/storage/services/local-storage/local-storage.service';
-import { AuthService } from '../../services/auth/auth.service';
+import { AuthService } from '../../../../core/auth/services/auth/auth.service';
 
 @Component({
   templateUrl: './login.component.html',

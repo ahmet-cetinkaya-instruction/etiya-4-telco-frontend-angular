@@ -13,6 +13,7 @@ import { CustomerBillingAccountDetailComponent } from './pages/customer-billing-
 import { UpdateCustContactMediumComponent } from './pages/update-cust-contact-medium/update-cust-contact-medium/update-cust-contact-medium.component';
 import { SubmitOrderComponent } from './pages/submit-order/submit-order.component';
 import { CustomerContactMediumComponent } from './pages/customer-contact-medium/customer-contact-medium/customer-contact-medium.component';
+import { OfferSelectionComponent } from './pages/offer-selection/offer-selection.component';
 
 
 const routes: Routes = [
@@ -29,8 +30,8 @@ const routes: Routes = [
   {path:"customer-contact-form", component:UpdateCustContactMediumComponent},
   {path:"customer-billing-account-detail", component:CustomerBillingAccountDetailComponent},
   {path:"submit-order", component:SubmitOrderComponent},
-  {path:"customer-contact-medium", component:CustomerContactMediumComponent}
-
+  {path:"customer-contact-medium", component:CustomerContactMediumComponent},
+  {path:"offer-selection", component:OfferSelectionComponent}
 
 ];
 
