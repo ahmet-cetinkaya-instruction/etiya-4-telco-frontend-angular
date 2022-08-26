@@ -8,6 +8,7 @@ import { AddAddressInfoComponent } from './pages/add-address-info/add-address-in
 import { ListAddressInfoComponent } from './pages/list-address-info/list-address-info.component';
 import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
 import { CustomerBillingAccountComponent } from './pages/customer-billing-account/customer-billing-account/customer-billing-account.component';
+import { CustomerBillingAccountDetailComponent } from './pages/customer-billing-account-detail/customer-billing-account-detail.component';
 
 const routes: Routes = [
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:"list-address-info", component:ListAddressInfoComponent},
   {path:"update-customer", component:UpdateCustomerComponent},
   {path:"customer-address", component:CustomerAddressComponent},
-  {path:"customer-bill", component:CustomerBillingAccountComponent}
+  {path:"customer-bill", component:CustomerBillingAccountComponent},
+  {path:"customer-billing-account-detail", component:CustomerBillingAccountDetailComponent},
 
 ];
 

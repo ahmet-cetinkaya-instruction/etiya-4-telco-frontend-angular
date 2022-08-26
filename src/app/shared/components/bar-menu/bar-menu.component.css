@@ -12,18 +12,19 @@
     line-height: 17px;
     background: #83A6D1;
     border: 3px solid #FFFFFF;
-  }
-  .first-bar-button button{
-    background: #0D2B50;
-    border: 3px solid #FFFFFF;
+    color: #0D2B50!important;    
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px 0px 0px 10px;
-    color: #fff;
+    
   }
-  .last-bar-button  button{
-    width: 186px;
-    height: 35px;
-    background: #83A6D1;
-    border: 3px solid #FFFFFF;
+
+  .first-bar-button{    
+    border-radius: 10px 0px 0px 10px;
+  }
+  .last-bar-button{
     border-radius: 0px 10px 10px 0px;
   }
+
+  .e-bar-buttons button:hover{
+    background-color: #0D2B50!important;
+    color: #FFFFFF!important;
+  } 
