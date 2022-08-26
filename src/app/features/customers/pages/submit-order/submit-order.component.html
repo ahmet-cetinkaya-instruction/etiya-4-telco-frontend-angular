@@ -1,1 +1,57 @@
-<p>submit-order works!</p>
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-6"></div>
+    <div class="col-12 col-lg-6 d-flex justify-content-end p-0">
+      <app-user-info></app-user-info>
+    </div>
+  </div>
+</div>
+<app-main-layout [layoutTitle]="'Submit Order'">
+  <div class="container overflow-hidden">
+    <div class="row">
+      <div class="col-4">
+        <label class="e-frame-label">Order ID:</label>
+      </div>
+      <div class="col-8">
+        <label class="e-frame-label">02291123</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <label class="e-frame-label">Order Items:</label>
+      </div>
+      <div class="col-8">
+        <div class="order-items">
+          <p><span>71233</span>8 mbps’ye kadar /4gb kotalı adsl Internet</p>
+          <p><span>202610</span>Müşteri Modemi PR</p>
+          <p><span>202610</span>Müşteri Modemi PR</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <label class="e-frame-label">Service Address:</label>
+      </div>
+      <div class="col-8">
+        <label class="e-frame-label"
+          >City , Street Name , House/Flat number , Address Description</label
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <label class="e-frame-label">Total Amount:</label>
+      </div>
+      <div class="col-8">
+        <label class="e-frame-label">139.80 TL</label>
+      </div>
+    </div>
+
+  </div>
+  
+  <div style="justify-content:space-around; display: flex; align-items:center">
+    <button [etiyaButton]="'clear'">Previous</button>
+    <button [etiyaButton]="'clear'">Submit</button>
+  </div>
+</app-main-layout>
