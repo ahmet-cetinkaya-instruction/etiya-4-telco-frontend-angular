@@ -109,7 +109,7 @@
           <div class="col-12 col-lg-6 d-flex justify-content-lg-start"><button etiyaButton="clear"
               routerLink="/dashboard/customers/customer-dashboard">CANCEL</button></div>
           <div *ngIf="!profileForm.invalid" class="col-12 col-lg-5 d-flex justify-content-lg-end"><button
-              etiyaButton="clear" routerLink="/dashboard/customers/list-address-info">NEXT</button></div>
+              etiyaButton="clear" (click)="goNextPage()">NEXT</button></div>
           <div *ngIf="profileForm.invalid" class="col-12 col-lg-5 d-flex justify-content-lg-end"><button
               etiyaButton="clear-disabled" disabled>NEXT</button></div>
         </div>
