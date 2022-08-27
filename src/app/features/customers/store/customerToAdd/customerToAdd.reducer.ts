@@ -27,7 +27,7 @@ const initialState: Customer = {
 export const customerToAddReducer = createReducer(
   initialState,
   on(setDemographicInfo, (state, action) => {
-    return { ...state, customerToAdd: { ...action } };
+    return { ...state, ...action };
   }),
   on(addAddressInfo, (state, action) => {
     const newState: Customer = {

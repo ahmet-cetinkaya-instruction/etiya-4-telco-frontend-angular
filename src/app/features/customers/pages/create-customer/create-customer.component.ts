@@ -9,6 +9,7 @@ import {
 import { Customer } from '../../models/customer';
 import { CustomersService } from '../../services/customer/customers.service';
 import { Router } from '@angular/router';
+import { CustomerDemographicInfo } from '../../models/customerDemographicInfo';
 
 @Component({
   templateUrl: './create-customer.component.html',
@@ -17,7 +18,7 @@ import { Router } from '@angular/router';
 export class CreateCustomerComponent implements OnInit {
   profileForm!: FormGroup;
   createCustomerModel$!: Observable<Customer>;
-
+  customer!: Customer;
   constructor(
     private formBuilder: FormBuilder,
     private customerService: CustomersService,
@@ -27,26 +28,22 @@ export class CreateCustomerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.createFormUpdateCustomer();
+    this.createCustomerModel$.subscribe(state => {
+      this.customer = state;
+      this.createFormUpdateCustomer();
+    });
   }
 
   createFormUpdateCustomer() {
     this.profileForm = this.formBuilder.group({
-      firstName: [
-        this.createCustomerModel$.pipe(
-          map(state => {
-            return state.firstName;
-          })
-        ),
-        Validators.required,
-      ],
-      middleName: [''],
-      lastName: ['', Validators.required],
-      birthDate: ['', Validators.required],
-      gender: ['Female', Validators.required],
-      fatherName: [''],
-      motherName: [''],
-      nationalityId: ['', Validators.required],
+      firstName: [this.customer.firstName, Validators.required],
+      middleName: [this.customer.middleName],
+      lastName: [this.customer.lastName, Validators.required],
+      birthDate: [this.customer.birthDate, Validators.required],
+      gender: [this.customer.gender ?? 'Female', Validators.required],
+      fatherName: [this.customer.fatherName],
+      motherName: [this.customer.motherName],
+      nationalityId: [this.customer.nationalityId, Validators.required],
     });
   }
   goNextPage() {
