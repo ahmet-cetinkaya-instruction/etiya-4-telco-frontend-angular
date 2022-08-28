@@ -1,6 +1,7 @@
 import { Customer } from './../../models/customer';
 import { Component, OnInit } from '@angular/core';
 import { CustomersService } from '../../services/customer/customers.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './customer-dashboard.component.html',
@@ -11,7 +12,7 @@ export class CustomerDashboardComponent implements OnInit {
   filteredCustomerList! : Customer[];
   lenght!:number;
 
-  constructor(private customersService: CustomersService) { }
+  constructor(private customersService: CustomersService, private router:Router) { }
 
   ngOnInit(): void {
     this.getCustomersList();
@@ -26,5 +27,9 @@ export class CustomerDashboardComponent implements OnInit {
   search(event:any){
     this.filteredCustomerList = event
     this.lenght = this.filteredCustomerList.length
+  }
+
+  getCustomerId(customer:Customer){
+    this.router.navigateByUrl(`/customer-info/${customer.id}`)
   }
 }

@@ -51,7 +51,7 @@
                     </ng-template>
                     <ng-template #otherState>
                       <tr *ngFor="let customer of customerList">
-                        <th>{{customer.id}}</th>
+                        <th><a (click)="getCustomerId(customer)">{{customer.id}}</a></th>
                         <td>{{customer.firstName}}</td>
                         <td>{{customer.middleName}}</td>
                         <td>{{customer.lastName}}</td>

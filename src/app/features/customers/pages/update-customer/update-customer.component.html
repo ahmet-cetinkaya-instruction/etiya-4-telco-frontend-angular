@@ -22,7 +22,7 @@
     <div class="p-5"></div>
     <div class="e-customer-content">
       <div class="d-flex justify-content-center">
-        <form [formGroup]="updateCustomerForm" class="p-4">
+        <form *ngIf="updateCustomerForm" [formGroup]="updateCustomerForm" class="p-4">
           <div class="row">
             <div class="row d-flex justify-space-between align-items-center">
               <div class="col-6">

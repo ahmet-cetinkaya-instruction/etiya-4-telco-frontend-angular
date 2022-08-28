@@ -93,4 +93,14 @@ export class CustomersService {
   setDemographicInfo(props: CustomerDemographicInfo) {
     this.store.dispatch(setDemographicInfo(props));
   }
+
+  getCustomerById(selectedId:number):Observable<Customer[]>{
+    return this.httpClient.get<Customer[]>(this.apiControllerUrl+("?customerId=")+selectedId)
+  }
+
+  getCustomerById2(selectedId:number):Observable<Customer>{
+    return this.httpClient.get<Customer>(this.apiControllerUrl+("?customerId=")+selectedId)
+  }
+
+
 }
