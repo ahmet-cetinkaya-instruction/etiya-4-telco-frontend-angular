@@ -55,6 +55,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  
 }
 
 .e-dropdown { 
@@ -83,4 +84,14 @@
   width: 264px;
   margin-left: 35px;
   margin-top: -20px;
+}
+
+::ng-deep .e-input-dark{
+  
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+
 }

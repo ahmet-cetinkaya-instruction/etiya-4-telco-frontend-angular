@@ -98,9 +98,7 @@ export class CustomersService {
     return this.httpClient.get<Customer[]>(this.apiControllerUrl+("?customerId=")+selectedId)
   }
 
-  getCustomerById2(selectedId:number):Observable<Customer>{
-    return this.httpClient.get<Customer>(this.apiControllerUrl+("?customerId=")+selectedId)
-  }
+ 
 
 
 }
