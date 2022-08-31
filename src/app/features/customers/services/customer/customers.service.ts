@@ -94,8 +94,21 @@ export class CustomersService {
     this.store.dispatch(setDemographicInfo(props));
   }
 
-  getCustomerById(selectedId:number):Observable<Customer[]>{
-    return this.httpClient.get<Customer[]>(this.apiControllerUrl+("?customerId=")+selectedId)
+  getCustomerById(selectedId:number):Observable<Customer>{
+    const subject = new Subject<Customer>();  //backend simülasyonu
+    this.httpClient.get<Customer[]>(this.apiControllerUrl+("?customerId=")+selectedId).subscribe({
+      next:(response) => {
+        const customer: Customer = response[0]
+        subject.next(customer);
+      },
+      error:(err) =>{
+        subject.error(err);
+      },
+      complete:() =>{
+        subject.complete();
+      }      
+    })
+    return subject.asObservable()
   }
 
  

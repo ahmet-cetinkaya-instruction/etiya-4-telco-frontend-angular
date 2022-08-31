@@ -24,31 +24,31 @@
     <div class="d-flex justify-content-center overflow-hidden">
 
         <div class="e-customer-content">
-            <div class="container" *ngFor="let cust of customer">
+            <div class="container">
                 <div class="row">
                     <div class="col-2">
                         <label class="e-frame-label">First Name:</label>
                     </div>
                     <div class="col-4">
-                        <label class="e-frame-label">{{cust.firstName}}</label>
+                        <label class="e-frame-label">{{customer.firstName}}</label>
                     </div>
                     <div class="col-2">
                         <label class="e-frame-label">Middle Name:</label>
                     </div>
                     <div class="col-4">
-                        <label class="e-frame-label">{{cust.middleName}}</label>
+                        <label class="e-frame-label">{{customer.middleName}}</label>
                     </div>
                     <div class="col-2">
                         <label class="e-frame-label">Last Name:</label>
                     </div>
                     <div class="col-4">
-                        <label class="e-frame-label">{{cust.lastName}}</label>
+                        <label class="e-frame-label">{{customer.lastName}}</label>
                     </div>
                     <div class="col-2">
                         <label class="e-frame-label">Birth Date:</label>
                     </div>
                     <div class="col-4">
-                        <label class="e-frame-label">{{cust.birthDate}}</label>
+                        <label class="e-frame-label">{{customer.birthDate}}</label>
                     </div>
                 </div>
 
@@ -57,31 +57,31 @@
                         <label class="e-frame-label">Gender:</label>
                     </div>
                     <div class="col-4">
-                        <label class="e-frame-label">{{cust.gender}}</label>
+                        <label class="e-frame-label">{{customer.gender}}</label>
                     </div>
                     <div class="col-2">
                         <label class="e-frame-label">Father Name:</label>
                     </div>
                     <div class="col-4">
-                        <label class="e-frame-label">{{cust.fatherName}}</label>
+                        <label class="e-frame-label">{{customer.fatherName}}</label>
                     </div>
                     <div class="col-2">
                         <label class="e-frame-label">Mother Name</label>
                     </div>
                     <div class="col-4">
-                        <label class="e-frame-label">{{cust.motherName}}</label>
+                        <label class="e-frame-label">{{customer.motherName}}</label>
                     </div>
                     <div class="col-2">
                         <label class="e-frame-label">Nationality ID:</label>
                     </div>
                     <div class="col-4">
-                        <label class="e-frame-label">{{cust.nationalityId}}</label>
+                        <label class="e-frame-label">{{customer.nationalityId}}</label>
                     </div>
                     
                 
                 </div>
                 <button etiyaButton="remove"></button>
-                <button etiyaButton="edit" (click)="getCustomerId(cust)" routerLink="/dashboard/customers/update-customer"></button>
+                <button etiyaButton="edit" (click)="getCustomerId(customer)" routerLink="/dashboard/customers/update-customer"></button>
             </div>
         </div>
     </div>

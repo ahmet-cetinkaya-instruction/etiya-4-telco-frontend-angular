@@ -9,7 +9,7 @@ import { CustomersService } from '../../services/customer/customers.service';
 })
 export class CustomerInfoComponent implements OnInit {
   selectedCustomerId!:number
-  customer!:Customer[]
+  customer!:Customer;
   constructor(private activatedRoute:ActivatedRoute,private customerService:CustomersService, private router:Router) { }
 
   ngOnInit(): void {

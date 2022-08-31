@@ -50,11 +50,9 @@ export class UpdateCustomerComponent implements OnInit {
     } else {
       this.customerService
         .getCustomerById(this.selectedCustomerId)
-        .subscribe((data) => {
-          data.forEach((data) => {
+        .subscribe((data) => {          
             this.customer=data
-            this.createFormUpdateCustomer();
-          });
+            this.createFormUpdateCustomer();          
         });
     }
   }
