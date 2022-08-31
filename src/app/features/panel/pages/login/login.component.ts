@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
         this.loginCount =0;
         console.log(response)
         setTimeout(() => {          
-          this.router.navigateByUrl('showcase')         
+          this.router.navigateByUrl('customer-dashboard')         
         }, 1000);
       },error:(err) =>{
         this.loginCount +=1;
