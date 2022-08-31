@@ -17,7 +17,7 @@
           <div class="row">
             <a class="e-form-close" routerLink="/list-address-info">X</a>
           </div>
-          <form [formGroup]="addressForm">
+          <form *ngIf="addressForm" [formGroup]="addressForm">
             <div class="row">
               <div class="col-12 col-xl-5">
                 <div class="row e-address-input">

@@ -28,6 +28,7 @@ export class AddCustomerAddressComponent implements OnInit {
   ngOnInit(): void {
     this.createAddressForm();
     this.getAddressList();
+    this.getCustomerById();
   }
 
   
