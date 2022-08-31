@@ -34,6 +34,7 @@ export class AddCustomerAddressComponent implements OnInit {
   
   createAddressForm(){
     this.addressForm = this.formBuilder.group({
+      id:[Math.floor(Math.random()*1000)],
       city: ['', Validators.required],
       street: ['', Validators.required],
       flatNumber: ['', Validators.required],
