@@ -141,8 +141,10 @@ export class CustomersService {
   addAddress(address:any,customer:Customer):Observable<Customer>{
     const newCustomer:Customer = {
       ...customer,
-      addresses: [customer.addresses, address]
+      addresses: customer.addresses || []
     }
+    newCustomer.addresses?.push(address)
+    console.log(newCustomer)
     return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`,newCustomer)
   }
 

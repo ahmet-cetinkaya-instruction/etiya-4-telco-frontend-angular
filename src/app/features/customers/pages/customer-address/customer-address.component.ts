@@ -10,7 +10,7 @@ import { CustomersService } from '../../services/customer/customers.service';
 export class CustomerAddressComponent implements OnInit {
   
   selectedCustomerId!: number;
-  customerAddress!: Address[];
+  customerAddress: Address[] =[];
 
   constructor(private activatedRoute:ActivatedRoute, 
     private customerService:CustomersService,
