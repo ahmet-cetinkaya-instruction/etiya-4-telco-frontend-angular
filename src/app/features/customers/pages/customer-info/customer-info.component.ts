@@ -18,7 +18,7 @@ export class CustomerInfoComponent implements OnInit {
 
   getCustomerById(){
     this.activatedRoute.params.subscribe(params =>{
-      if(params['customerId']) this.selectedCustomerId=params['customerId'];
+      if(params['id']) this.selectedCustomerId=params['id'];
     })
     if(this.selectedCustomerId==undefined){
       //toast

@@ -33,26 +33,33 @@
           </tr>
         </thead>
         <tbody class="table-body">
-          <tr>
-
-            <th style="display:flex;">
-              <div>
-                <button etiyaButton="edit"></button>
-              </div>
-              <div style="margin-left:65px">
-                İstanbul
-              </div>
-            </th>
-            <td>12</td>
-            <td>c-12</td>
-            <td>Kucukcekmece Yeni Mahallesi Manolya Sitesi...</td>
+          <tr *ngIf="!customerAddress|| customerAddress.length==0; else customerAddressList">
+            <th>Null</th>
+            <td>Null</td>
+            <td>Null</td>
+            <td>Null</td>
           </tr>
+          <ng-template #customerAddressList>
+            <tr *ngFor="let adr of customerAddress">
+              <th style="display:flex;">
+                <div>
+                  <button etiyaButton="edit"></button>
+                </div>
+                <div style="margin-left:65px">
+                  {{adr.city.name}}
+                </div>
+              </th>
+              <td>{{adr.street}}</td>
+              <td>{{adr.flatNumber}}</td>
+              <td>{{adr.description}}</td>
+            </tr>
+          </ng-template>
         </tbody>
       </app-table-info>
     </div>
   </div>
   <div class="e-new-address">
-    <button etiyaButton="new-address" routerLink="/dashboard/customers/add-customer-address"> <img src="../../../../assets/img/add_new.png" alt="">Add New Address</button>
+    <button etiyaButton="new-address" (click)="addAddressBySelectedId()"> <img src="../../../../assets/img/add_new.png" alt="">Add New Address</button>
   </div>
 
 </app-main-layout>

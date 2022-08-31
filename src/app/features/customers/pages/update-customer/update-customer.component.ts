@@ -4,7 +4,8 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
 
 import { Customer } from '../../models/customer';
 import { CustomersService } from '../../services/customer/customers.service';
@@ -21,7 +22,9 @@ export class UpdateCustomerComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private customerService: CustomersService
+    private customerService: CustomersService,
+    private router:Router,
+    private messageService:MessageService
   ) {}
 
   ngOnInit(): void {
@@ -43,7 +46,7 @@ export class UpdateCustomerComponent implements OnInit {
 
   getCustomerById() {
     this.activatedRoute.params.subscribe((params) => {
-      if (params['customerId']) this.selectedCustomerId = params['customerId'];
+      if (params['id']) this.selectedCustomerId = params['id'];
     });
     if (this.selectedCustomerId == undefined) {
       //toast
@@ -55,5 +58,21 @@ export class UpdateCustomerComponent implements OnInit {
             this.createFormUpdateCustomer();          
         });
     }
+  }
+
+  update() {
+    if (this.updateCustomerForm.invalid) {
+      this.messageService.add({detail:'Please fill required areas'
+      ,severity:'danger',summary:'Error',key:'etiya-custom'}) 
+      return;
+    }
+    const customer:Customer = Object.assign({id:this.customer.id}, this.updateCustomerForm.value); 
+      this.customerService.update(customer).subscribe(() => {
+        setTimeout(() => {
+          this.router.navigateByUrl(`/dashboard/customers/customer-address/${customer.id}`);
+          this.messageService.add({detail:'Sucsessfully updated'
+        ,severity:'success',summary:'Update',key:'etiya-custom'})  
+        }, 1000);
+      });
   }
 }

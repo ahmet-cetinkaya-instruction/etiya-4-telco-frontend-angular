@@ -23,11 +23,11 @@ const routes: Routes = [
   { path: "customer-dashboard", component: CustomerDashboardComponent },
   { path: "contact-medium", component: AddContactMediumComponent },
   { path: "create-customer", component: CreateCustomerComponent },
-  { path: "customer-info/:customerId", component: CustomerInfoComponent },
+  { path: "customer-info/:id", component: CustomerInfoComponent },
   { path: "add-address-info", component: AddAddressInfoComponent },
   { path: "list-address-info", component: ListAddressInfoComponent },
-  { path: "update-customer/:customerId", component: UpdateCustomerComponent },
-  { path: "customer-address", component: CustomerAddressComponent },
+  { path: "update-customer/:id", component: UpdateCustomerComponent },
+  { path: "customer-address/:id", component: CustomerAddressComponent },
   { path: "customer-bill", component: CustomerBillingAccountComponent },
   { path: "customer-contact-form", component: UpdateCustContactMediumComponent },
   { path: "customer-billing-account-detail", component: CustomerBillingAccountDetailComponent },
@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: "customer-contact-medium", component: CustomerContactMediumComponent },
   { path: "offer-selection", component: OfferSelectionComponent },
   { path: "configuration-product", component: ConfigurationProductComponent },
-  { path: "add-customer-address", component: AddCustomerAddressComponent },
+  { path: "add-customer-address/:id", component: AddCustomerAddressComponent },
   { path: "add-customer-address/update/:id", component: AddCustomerAddressComponent },
 
 

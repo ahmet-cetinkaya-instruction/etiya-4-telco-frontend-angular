@@ -106,7 +106,7 @@ export class CustomersService {
 
   getCustomerById(selectedId:number):Observable<Customer>{
     const subject = new Subject<Customer>();  //backend simülasyonu
-    this.httpClient.get<Customer[]>(this.apiControllerUrl+("?customerId=")+selectedId).subscribe({
+    this.httpClient.get<Customer[]>(this.apiControllerUrl+("?id=")+selectedId).subscribe({
       next:(response) => {
         const customer: Customer = response[0]
         subject.next(customer);
@@ -129,6 +129,24 @@ export class CustomersService {
     }
     return this.httpClient.post<Customer>(this.apiControllerUrl, newCustomer);
   }
+
+  delete(id:number):Observable<Customer>{
+    return this.httpClient.delete<Customer>(`${this.apiControllerUrl}/${id}`)
+  }
+
+  update(customer:Customer):Observable<Customer>{
+    return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`,customer)
+  }
+
+  addAddress(address:any,customer:Customer):Observable<Customer>{
+    console.log(address)
+    const newCustomer:Customer = {
+      ...customer,
+      // addresses.push(address)
+    }
+    return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`,customer)
+  }
+
 
 
 }
