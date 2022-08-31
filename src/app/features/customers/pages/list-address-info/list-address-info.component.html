@@ -24,12 +24,20 @@
                   </tr>
                   </thead>
                   <tbody class="table-body">
-                  <tr>
+                    <tr *ngIf="!customer.addresses || customer.addresses.length==0; else customerAddressList">
                       <th>Null</th>
                       <td>Null</td>
                       <td>Null</td>
                       <td>Null</td>
-                  </tr>
+                    </tr>
+                    <ng-template #customerAddressList>
+                      <tr *ngFor="let address of customer.addresses">
+                        <th>{{address.city}}</th>
+                        <td>{{address.street}}</td>
+                        <td>{{address.flatNumber}}</td>
+                        <td>{{address.description}}</td>
+                      </tr>
+                    </ng-template>
                   </tbody>
                 </app-table-info>
           </div>        

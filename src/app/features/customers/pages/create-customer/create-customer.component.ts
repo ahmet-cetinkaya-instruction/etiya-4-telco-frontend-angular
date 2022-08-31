@@ -47,7 +47,7 @@ export class CreateCustomerComponent implements OnInit {
     });
   }
   goNextPage() {
-    this.customerService.setDemographicInfo(this.profileForm.value);
+    this.customerService.setDemographicInfoToStore(this.profileForm.value);
     this.router.navigateByUrl('/dashboard/customers/list-address-info');
   }
 }

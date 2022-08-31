@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Customer } from '../../models/customer';
+import { CustomersService } from '../../services/customer/customers.service';
 
 @Component({
   selector: 'app-list-address-info',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-address-info.component.css']
 })
 export class ListAddressInfoComponent implements OnInit {
-  offers:number[] = [1,2,3,4,5,6,7,8,9,10];
-  constructor() { }
+  customer!:Customer;
+  constructor(private customersService:CustomersService) { }
 
   ngOnInit(): void {
+    this.customersService.customerToAddModel$.subscribe(state=>{
+      this.customer = state;
+    })
   }
+
 
 }

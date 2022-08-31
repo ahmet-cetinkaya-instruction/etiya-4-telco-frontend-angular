@@ -1,4 +1,4 @@
-import { setDemographicInfo } from './../../store/customerToAdd/customerToAdd.actions';
+import { addAddressInfo, setContactMediumInfo, setDemographicInfo } from './../../store/customerToAdd/customerToAdd.actions';
 import { Customer } from './../../models/customer';
 import { map, Observable, Subject } from 'rxjs';
 import { environment } from './../../../../../environments/environment';
@@ -8,6 +8,8 @@ import { SearchCustomer } from '../../models/searchCustomer';
 import { Store } from '@ngrx/store';
 import { CustomerState } from '../../store/customer.reducer';
 import { CustomerDemographicInfo } from '../../models/customerDemographicInfo';
+import { Address } from '../../models/address';
+import { ContactMedium } from '../../models/contactMedium';
 @Injectable({
   providedIn: 'root',
 })
@@ -90,8 +92,16 @@ export class CustomersService {
     return subject.asObservable();
   }
 
-  setDemographicInfo(props: CustomerDemographicInfo) {
+  setDemographicInfoToStore(props: CustomerDemographicInfo) {
     this.store.dispatch(setDemographicInfo(props));
+  }
+
+  addAddressInfoToStore(props: Address) {
+    this.store.dispatch(addAddressInfo(props));
+  }
+
+  setContactMediumInfoToStore(props: ContactMedium) {
+    this.store.dispatch(setContactMediumInfo(props));
   }
 
   getCustomerById(selectedId:number):Observable<Customer>{
@@ -111,7 +121,14 @@ export class CustomersService {
     return subject.asObservable()
   }
 
- 
+  add(customer:Customer):Observable<Customer> {
+    const newCustomer:Customer = {
+      ...customer,
+      role: "individual",
+      customerId: 9999
+    }
+    return this.httpClient.post<Customer>(this.apiControllerUrl, newCustomer);
+  }
 
 
 }
