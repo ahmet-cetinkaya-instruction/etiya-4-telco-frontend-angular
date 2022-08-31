@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { CustomersModule } from './features/customers/customers.module';
 import { PanelModule } from './features/panel/panel.module';
+import { CityModule } from './features/city/city.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PanelModule } from './features/panel/panel.module';
     SharedModule,
     HttpClientModule,
     CustomersModule,
-    PanelModule
+    PanelModule,
+    CityModule
 
   ],
   providers: [],

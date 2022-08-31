@@ -36,8 +36,8 @@
                         id="gender"
                         formControlName="city"
                       >
-                        <option selected value="Istanbul">İstanbul</option>
-                        <option value="Ankara">Ankara</option>
+                        <option selected disabled hidden value="">Choose a city</option>
+                        <option *ngFor="let city of cityList" [ngValue]="city">{{city.name}}</option>
                       </select>
                     </div>
                   </div>
@@ -49,7 +49,7 @@
                     class="col-12 col-lg-4 e-address-col-center"
                   >
                     <label for="flatNumber"
-                      >Hause/Flat Number<span class="e-star">*</span>
+                      >House/Flat Number<span class="e-star">*</span>
                     </label>
                   </div>
                   <div

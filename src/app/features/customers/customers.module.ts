@@ -21,6 +21,7 @@ import { SubmitOrderComponent } from './pages/submit-order/submit-order.componen
 import { CustomerContactMediumComponent } from './pages/customer-contact-medium/customer-contact-medium/customer-contact-medium.component';
 import { OfferSelectionComponent } from './pages/offer-selection/offer-selection.component';
 import { AddCustomerAddressComponent } from './pages/add-customer-address/add-customer-address.component';
+import { CityModule } from '../city/city.module';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { AddCustomerAddressComponent } from './pages/add-customer-address/add-cu
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
+    CityModule
   ]
 })
 export class CustomersModule { }

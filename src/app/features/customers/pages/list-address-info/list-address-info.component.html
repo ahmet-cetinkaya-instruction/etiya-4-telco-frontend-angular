@@ -32,7 +32,7 @@
                     </tr>
                     <ng-template #customerAddressList>
                       <tr *ngFor="let address of customer.addresses">
-                        <th>{{address.city}}</th>
+                        <th>{{address.city.name}}</th>
                         <td>{{address.street}}</td>
                         <td>{{address.flatNumber}}</td>
                         <td>{{address.description}}</td>
