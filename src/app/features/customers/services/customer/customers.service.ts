@@ -159,15 +159,12 @@ export class CustomersService {
   }
 
   updateAddress(addressToUpdate:Address, customer:Customer):Observable<Customer>{    
-    console.debug("🐞 ➜ file: customers.service.ts ➜ line 162 ➜ CustomersService ➜ updateAddress ➜ addressToUpdate", addressToUpdate);
     const newCustomer:Customer = {
       ...customer,
     }
-    const addressIndex = customer.addresses?.findIndex(address => address.id === addressToUpdate.id) as number;
-    console.debug("🐞 ➜ file: customers.service.ts ➜ line 167 ➜ CustomersService ➜ updateAddress ➜ addressIndex", addressIndex);
-    newCustomer.addresses![addressIndex] = addressToUpdate;
+    const addressIndex = customer.addresses?.findIndex(address => address.id === addressToUpdate.id);
+    if(addressIndex) newCustomer.addresses![addressIndex] = addressToUpdate;
 
-    console.debug("🐞 ➜ file: customers.service.ts ➜ line 167 ➜ CustomersService ➜ updateAddress ➜ newCustomer", newCustomer);
     return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`, newCustomer)
   }
 }

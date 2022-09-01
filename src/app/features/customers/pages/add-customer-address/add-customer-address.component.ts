@@ -35,8 +35,8 @@ export class AddCustomerAddressComponent implements OnInit {
 
   getParams(){
     this.activatedRoute.params.subscribe((params) => {
-      if (params['id']) this.selectedCustomerId = params['id'];
-      if (params['addressId']) this.selectedAddressId = params['addressId'];
+      if (params['id']) this.selectedCustomerId = Number(params['id']);
+      if (params['addressId']) this.selectedAddressId = Number(params['addressId']);
 
       this.getCustomerById();
     });
