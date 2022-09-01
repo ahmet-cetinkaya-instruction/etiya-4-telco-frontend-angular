@@ -171,5 +171,11 @@ export class CustomersService {
 
     return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`, newCustomer)
   }
-
+  updateContactMedium(contactToUpdate:ContactMedium, customer:Customer):Observable<Customer>{
+    const newCustomer:Customer = {
+      ...customer,
+      contactMedium: contactToUpdate
+    }
+    return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`, newCustomer)
+  }
 }

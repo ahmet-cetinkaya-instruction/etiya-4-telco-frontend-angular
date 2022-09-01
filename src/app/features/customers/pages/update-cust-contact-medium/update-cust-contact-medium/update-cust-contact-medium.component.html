@@ -20,7 +20,7 @@
     <div class="p-5"></div>
     <div class="e-customer-content">
       <div class="d-flex justify-content-center">
-        <form [formGroup]="updateCustomerContactForm" class="p-4">
+        <form *ngIf="updateCustomerContactForm" [formGroup]="updateCustomerContactForm" class="p-4">
           <div class="row">
             <div class="row d-flex justify-space-between align-items-center">
               <div class="col-6">
@@ -62,9 +62,9 @@
                   <label class="col-5" for="faxNumber">Fax :</label>
                   <input
                     class="col-7"
-                    type="number"
+                    type="text"
                     etiyaInput="dark"
-                    formControlName="faxNumber"
+                    formControlName="fax"
                   />
                 </div>
               </div>
@@ -73,10 +73,10 @@
           <div class="d-flex justify-content-center mt-5">
             <div style="width: 1125px" class="row p-0 pt-4">
               <div class="col-6 d-flex justify-content-lg-start">
-                <button etiyaButton="clear">CANCEL</button>
+                <button etiyaButton="clear" [routerLink]="'/dashboard/customers/customer-contact-medium/'+selectedCustomerId">CANCEL</button>
               </div>
               <div class="col-6 d-flex justify-content-lg-end">
-                <button etiyaButton="clear">SAVE</button>
+                <button etiyaButton="clear" (click)="update()">SAVE</button>
               </div>
             </div>
           </div>
