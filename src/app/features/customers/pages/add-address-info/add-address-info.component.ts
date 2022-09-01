@@ -33,10 +33,12 @@ export class AddAddressInfoComponent implements OnInit {
       description: ['', Validators.required]
     });
   }
+
   addAddress() {
     this.customersService.addAddressInfoToStore(this.addressForm.value);
     this.router.navigateByUrl('/dashboard/customers/list-address-info');
   }
+  
   getAddressList() {
     this.cityService.getList().subscribe(data => {
       this.cityList = data;
