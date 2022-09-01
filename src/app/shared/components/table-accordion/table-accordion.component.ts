@@ -1,3 +1,4 @@
+import { Product } from './../../../features/customers/models/product';
 import { Component, Input, OnInit } from '@angular/core';
 import { BillingAccount } from 'src/app/features/customers/models/billingAccount';
 
@@ -9,11 +10,14 @@ import { BillingAccount } from 'src/app/features/customers/models/billingAccount
 export class TableAccordionComponent implements OnInit {
 
   @Input() billingAccountList!: BillingAccount[];
+  @Input() productList!: Product[];
 
   constructor() { }
 
   ngOnInit(): void {
     console.log(this.billingAccountList)
+    console.log(this.productList)
+
   }
 
 }

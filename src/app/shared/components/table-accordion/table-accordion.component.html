@@ -7,15 +7,15 @@
   <div class="col-2 e-accordion-text">Action</div>
 </div>
 <div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
+  <div class="accordion-item" *ngFor="let bill of billingAccountList">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
         data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
         <div class="col-12 e-accordion-cols">
           <div class="col-1 e-accordion-text"><img src="../assets/img/down_arrow.png" alt=""></div>
-          <div class="col-2 e-accordion-text">Active</div>
-          <div class="col-2 e-accordion-text">1001223241</div>
-          <div class="col-2 e-accordion-text">1001223241</div>
+          <div class="col-2 e-accordion-text">{{bill.status}}</div>
+          <div class="col-2 e-accordion-text">{{bill.accountNumber}}</div>
+          <div class="col-2 e-accordion-text">{{bill.accountName}}</div>
           <div class="col-3 e-accordion-text">Billing Account</div>
           <div class="col-2 e-accordion-text"><img src="../assets/img/delete_accordion.png"><img
               src="../assets/img/pencil_accordion.png"></div>
@@ -37,13 +37,13 @@
                   <th scope="col">Action</th>
                 </tr>
               </thead>
-              <tbody class="e-accordion-table-body">
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+              <tbody class="e-accordion-table-body" >
+                <tr *ngFor="let product of productList">
+                  <td>{{product.id}}</td>
+                  <td>{{product.name}}</td>
+                  <td>{{product.id}}</td>
+                  <td>{{product.id}}</td>
+                  <td>{{product.id}}</td>
                 </tr>
                 <tr>
                   <td scope="row">001</td>
@@ -72,7 +72,7 @@
       </div>
     </div>
   </div>
-  <div class="accordion-item">
+  <!-- <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
         data-bs-target="#flush-collapseTwo" aria-expanded="true" aria-controls="flush-collapseTwo">
@@ -201,5 +201,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

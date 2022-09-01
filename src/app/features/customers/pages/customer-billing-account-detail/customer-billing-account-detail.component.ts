@@ -1,3 +1,4 @@
+import { Product } from './../../models/product';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BillingAccount } from '../../models/billingAccount';
@@ -11,7 +12,7 @@ export class CustomerBillingAccountDetailComponent implements OnInit {
 
   selectedCustomerId!: number;
   billingAccount: BillingAccount[]=[];
-
+  products: Product[]=[];
   constructor(private customerService: CustomersService, private activatedRoute:ActivatedRoute ) { }
 
   ngOnInit(): void {
@@ -29,7 +30,15 @@ export class CustomerBillingAccountDetailComponent implements OnInit {
         .subscribe((data) => {
             data.billingAccounts?.forEach(bill => {
               this.billingAccount.push(bill)
+              bill.orders.forEach(order => {
+                order.offers.forEach(offer => {
+                  offer.products.forEach(product => {
+                    this.products.push(product)
+                  });
+                });
+              });
             });
+
         });
     }
   }
