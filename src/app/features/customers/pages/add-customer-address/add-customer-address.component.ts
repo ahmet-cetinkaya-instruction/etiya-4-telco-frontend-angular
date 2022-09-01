@@ -80,16 +80,17 @@ export class AddCustomerAddressComponent implements OnInit {
   }
   
   add(){
-    const addressToAdd:Address = {...this.addressForm.value, 
-      city: this.cityList.find(city => city.id == this.addressForm.value.cityId)};
-    this.customerService.addAddress(this.addressForm.value,this.customer).subscribe();
+    const addressToAdd:Address = {
+      ...this.addressForm.value, 
+      city: this.cityList.find(city => city.id == this.addressForm.value.city)
+    };
+    this.customerService.addAddress(addressToAdd,this.customer).subscribe();
   }
 
   update(){
     const addressToUpdate:Address = {...this.addressForm.value, id: this.selectedAddressId,
       city: this.cityList.find(city => city.id == this.addressForm.value.city)
     };
-    console.debug("🐞 ➜ file: add-customer-address.component.ts ➜ line 92 ➜ AddCustomerAddressComponent ➜ update ➜ addressToUpdate", addressToUpdate);
     this.customerService.updateAddress(addressToUpdate,this.customer).subscribe();
   }
 }
