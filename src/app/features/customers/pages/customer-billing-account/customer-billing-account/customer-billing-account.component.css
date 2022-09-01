@@ -58,3 +58,7 @@ line-height: 31px;
   border: none;
   color: #fff;
 }
+
+::ng-deep .main-box{
+  height: auto !important;
+}
