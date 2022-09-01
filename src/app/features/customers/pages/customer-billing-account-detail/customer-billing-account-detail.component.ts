@@ -10,7 +10,7 @@ import { CustomersService } from '../../services/customer/customers.service';
 export class CustomerBillingAccountDetailComponent implements OnInit {
 
   selectedCustomerId!: number;
-  billingAccount?: BillingAccount[];
+  billingAccount: BillingAccount[]=[];
 
   constructor(private customerService: CustomersService, private activatedRoute:ActivatedRoute ) { }
 
@@ -27,7 +27,9 @@ export class CustomerBillingAccountDetailComponent implements OnInit {
       this.customerService
         .getCustomerById(this.selectedCustomerId)
         .subscribe((data) => {
-            this.billingAccount=data.billingAccounts
+            data.billingAccounts?.forEach(bill => {
+              this.billingAccount.push(bill)
+            });
         });
     }
   }
