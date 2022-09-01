@@ -10,6 +10,8 @@ import { CustomerState } from '../../store/customer.reducer';
 import { CustomerDemographicInfo } from '../../models/customerDemographicInfo';
 import { Address } from '../../models/address';
 import { ContactMedium } from '../../models/contactMedium';
+import { CustomerBillingAccountComponent } from '../../pages/customer-billing-account/customer-billing-account/customer-billing-account.component';
+import { BillingAccount } from '../../models/billingAccount';
 @Injectable({
   providedIn: 'root',
 })
@@ -28,6 +30,8 @@ export class CustomersService {
   getList(): Observable<Customer[]> {
     return this.httpClient.get<Customer[]>(this.apiControllerUrl);
   }
+
+  
 
   getListByFilter(searchCustomer: SearchCustomer): Observable<Customer[]> {
     const subject = new Subject<Customer[]>();
@@ -167,4 +171,5 @@ export class CustomersService {
 
     return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`, newCustomer)
   }
+
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { BillingAccount } from 'src/app/features/customers/models/billingAccount';
 
 @Component({
   selector: 'app-table-accordion',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableAccordionComponent implements OnInit {
 
+  @Input() billingAccountList!: BillingAccount[];
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.billingAccountList)
   }
 
 }

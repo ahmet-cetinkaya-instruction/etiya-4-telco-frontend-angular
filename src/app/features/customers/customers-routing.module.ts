@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: "customer-address/:id", component: CustomerAddressComponent },
   { path: "customer-bill", component: CustomerBillingAccountComponent },
   { path: "customer-contact-form", component: UpdateCustContactMediumComponent },
-  { path: "customer-billing-account-detail", component: CustomerBillingAccountDetailComponent },
+  { path: "customer-billing-account-detail/:id", component: CustomerBillingAccountDetailComponent },
   { path: "submit-order", component: SubmitOrderComponent },
   { path: "customer-contact-medium", component: CustomerContactMediumComponent },
   { path: "offer-selection", component: OfferSelectionComponent },
