@@ -171,11 +171,21 @@ export class CustomersService {
 
     return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`, newCustomer)
   }
+
   updateContactMedium(contactToUpdate:ContactMedium, customer:Customer):Observable<Customer>{
     const newCustomer:Customer = {
       ...customer,
       contactMedium: contactToUpdate
     }
     return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`, newCustomer)
+  }
+
+  addBillingAccount(billingAccount:BillingAccount, customer:Customer):Observable<Customer>{
+    const newCustomer:Customer = {
+      ...customer,      
+      billingAccounts: [...customer.billingAccounts || [], {...billingAccount, id: (customer.billingAccounts?.length || 0) + 1}]
+    }
+    console.log(newCustomer);
+    return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`,newCustomer)
   }
 }

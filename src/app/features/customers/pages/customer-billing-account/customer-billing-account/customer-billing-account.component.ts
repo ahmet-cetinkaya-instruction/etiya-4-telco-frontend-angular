@@ -6,6 +6,7 @@ import { City } from '../../../models/city';
 import { CustomersService } from '../../../services/customer/customers.service';
 import { Address } from '../../../models/address';
 import { Customer } from '../../../models/customer';
+import { BillingAccount } from '../../../models/billingAccount';
 
 @Component({
   templateUrl: './customer-billing-account.component.html',
@@ -20,6 +21,7 @@ export class CustomerBillingAccountComponent implements OnInit {
   billingAdress: Address[] = [];
   selectedCustomerId!:number;
   customer!:Customer;
+  billingAccount!:BillingAccount;
   
 
   constructor(private formBuilder:FormBuilder, 
@@ -84,10 +86,23 @@ export class CustomerBillingAccountComponent implements OnInit {
   }
 
   addAddress() {
-    this.billingAdress.push(this.addressForm.value)
+    const addressToAdd:Address = {
+      ...this.addressForm.value, 
+      city: this.cityList.find(city => city.id == this.addressForm.value.city.id)
+    };
+    this.billingAdress.push(addressToAdd)
     console.log(this.billingAdress);
     this.isShown = false;
   }
+
+  add(){
+    this.billingAccount = this.accountForm.value;
+    this.billingAccount.addresses = this.billingAdress
+    console.log(this.billingAccount)
+    this.customerService.addBillingAccount(this.billingAccount,this.customer).subscribe();
+  }
+
+
 
 
 

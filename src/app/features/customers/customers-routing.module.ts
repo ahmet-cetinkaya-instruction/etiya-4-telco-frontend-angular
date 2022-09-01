@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: "list-address-info", component: ListAddressInfoComponent },
   { path: "update-customer/:id", component: UpdateCustomerComponent },
   { path: "customer-address/:id", component: CustomerAddressComponent },
-  { path: "customer-bill", component: CustomerBillingAccountComponent },
+  { path: "customer-bill/:id", component: CustomerBillingAccountComponent },
   { path: "customer-contact-form/:id", component: UpdateCustContactMediumComponent },
   { path: "customer-billing-account-detail/:id", component: CustomerBillingAccountDetailComponent },
   { path: "submit-order", component: SubmitOrderComponent },
