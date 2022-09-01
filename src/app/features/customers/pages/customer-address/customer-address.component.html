@@ -43,7 +43,7 @@
             <tr *ngFor="let adr of customerAddress">
               <th style="display:flex;">
                 <div>
-                  <button etiyaButton="edit"></button>
+                  <button (click)="selectAddressId(adr.id)" etiyaButton="edit"></button>
                 </div>
                 <div style="margin-left:65px">
                   {{adr.city.name}}

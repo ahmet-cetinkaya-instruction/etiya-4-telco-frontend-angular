@@ -67,7 +67,7 @@ export class UpdateCustomerComponent implements OnInit {
       return;
     }
     const customer:Customer = Object.assign({id:this.customer.id}, this.updateCustomerForm.value); 
-      this.customerService.update(customer).subscribe(() => {
+      this.customerService.update(customer, this.customer).subscribe(() => {
         setTimeout(() => {
           this.router.navigateByUrl(`/dashboard/customers/customer-address/${customer.id}`);
           this.messageService.add({detail:'Sucsessfully updated'

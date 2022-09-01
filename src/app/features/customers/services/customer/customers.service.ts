@@ -134,8 +134,20 @@ export class CustomersService {
     return this.httpClient.delete<Customer>(`${this.apiControllerUrl}/${id}`)
   }
 
-  update(customer:Customer):Observable<Customer>{
-    return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`,customer)
+  update(customerDemographicInfo:any, customer:Customer):Observable<Customer>{
+    const newCustomer:Customer = {
+      ...customer,
+      firstName:customerDemographicInfo.firstName,
+      middleName:customerDemographicInfo.middleName,
+      lastName:customerDemographicInfo.lastName,
+      birthDate:customerDemographicInfo.birthDate,
+      gender:customerDemographicInfo.gender,
+      nationalityId:customerDemographicInfo.nationalityId,
+      motherName:customerDemographicInfo.motherName,
+      fatherName:customerDemographicInfo.fatherName
+
+    }
+    return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`,newCustomer)
   }
 
   addAddress(address:any,customer:Customer):Observable<Customer>{    
@@ -147,7 +159,4 @@ export class CustomersService {
     console.log(newCustomer)
     return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`,newCustomer)
   }
-
-
-
 }
