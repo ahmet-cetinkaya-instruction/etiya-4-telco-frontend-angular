@@ -39,10 +39,10 @@ export class CustomerAddressComponent implements OnInit {
   }
 
   addAddressBySelectedId(){
-    this.router.navigateByUrl(`/dashboard/customers/add-customer-address/${this.selectedCustomerId}`)
+    this.router.navigateByUrl(`/dashboard/customers/${this.selectedCustomerId}/address/add`)
   }
-  selectAddressId(id:number){
-    this.router.navigateByUrl(`/dashboard/customers/add-customer-address/${id}`)
+
+  selectAddressId(addressId:number){
+    this.router.navigateByUrl(`/dashboard/customers/${this.selectedCustomerId}/address/update/${addressId}`)
   }
-  
 }

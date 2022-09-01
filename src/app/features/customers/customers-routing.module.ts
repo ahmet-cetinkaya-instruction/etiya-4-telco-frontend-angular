@@ -19,11 +19,15 @@ import { ConfigurationProductComponent } from './pages/configuration-product/con
 import { AddCustomerAddressComponent } from './pages/add-customer-address/add-customer-address.component';
 
 const routes: Routes = [
-
+  // dashboard/customers/:id/address/update/:addressId
+  {path: ":id", children:[
+    { path: "address/add", component: AddCustomerAddressComponent },
+    { path: "address/update/:addressId", component: AddCustomerAddressComponent },
+  ]},
+  { path: "customer-info/:id", component: CustomerInfoComponent },
   { path: "customer-dashboard", component: CustomerDashboardComponent },
   { path: "contact-medium", component: AddContactMediumComponent },
   { path: "create-customer", component: CreateCustomerComponent },
-  { path: "customer-info/:id", component: CustomerInfoComponent },
   { path: "add-address-info", component: AddAddressInfoComponent },
   { path: "list-address-info", component: ListAddressInfoComponent },
   { path: "update-customer/:id", component: UpdateCustomerComponent },
@@ -35,10 +39,6 @@ const routes: Routes = [
   { path: "customer-contact-medium", component: CustomerContactMediumComponent },
   { path: "offer-selection", component: OfferSelectionComponent },
   { path: "configuration-product", component: ConfigurationProductComponent },
-  { path: "add-customer-address/:id", component: AddCustomerAddressComponent },
-  { path: "add-customer-address/update/:id", component: AddCustomerAddressComponent },
-
-
 ];
 
 @NgModule({

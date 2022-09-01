@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { CityService } from 'src/app/features/city/services/city/city.service';
+import { Address } from '../../models/address';
 import { City } from '../../models/city';
 import { Customer } from '../../models/customer';
 import { CustomersService } from '../../services/customer/customers.service';
@@ -15,7 +16,9 @@ export class AddCustomerAddressComponent implements OnInit {
 
  addressForm!:FormGroup 
  selectedCustomerId!: number;
+ selectedAddressId!: number;
  customer!: Customer;
+ addressToUpdate!: Address;
  cityList!:City[];
 
   constructor(private formBuilder:FormBuilder,
@@ -26,48 +29,63 @@ export class AddCustomerAddressComponent implements OnInit {
     private cityService:CityService) { }
 
   ngOnInit(): void {
-    this.createAddressForm();
-    this.getAddressList();
-    this.getCustomerById();
+    this.getParams();
+    this.getCityList();
   }
 
-  
-  createAddressForm(){
-    this.addressForm = this.formBuilder.group({
-      id:[Math.floor(Math.random()*1000)],
-      city: ['', Validators.required],
-      street: ['', Validators.required],
-      flatNumber: ['', Validators.required],
-      description: ['', Validators.required]
-    });
-  }
-
-  getCustomerById() {
+  getParams(){
     this.activatedRoute.params.subscribe((params) => {
       if (params['id']) this.selectedCustomerId = params['id'];
+      if (params['addressId']) this.selectedAddressId = params['addressId'];
+
+      this.getCustomerById();
     });
+  }
+  
+  getCustomerById() {
     if (this.selectedCustomerId == undefined) {
       //toast
     } else {
       this.customerService
         .getCustomerById(this.selectedCustomerId)
         .subscribe((data) => {          
+            console.debug("🐞 ➜ file: add-customer-address.component.ts ➜ line 51 ➜ AddCustomerAddressComponent ➜ .subscribe ➜ data", data);
             this.customer=data
-            this.createAddressForm();          
+
+            if(this.customer.addresses?.find(address => address.id == this.selectedAddressId) !== undefined)
+              this.addressToUpdate = this.customer.addresses?.find(address => address.id == this.selectedAddressId) as Address; // Address | undefined,  as Address -> Address
+
+            this.createAddressForm();
         });
     }
   }
 
-  getAddressList() {
+  createAddressForm(){
+    this.addressForm = this.formBuilder.group({
+      city: [this.addressToUpdate?.city || "", Validators.required],
+      street: [this.addressToUpdate?.street || '', Validators.required],
+      flatNumber: [this.addressToUpdate?.flatNumber || '', Validators.required],
+      description: [this.addressToUpdate?.description || '', Validators.required]
+    });
+  }
+
+  getCityList() {
     this.cityService.getList().subscribe(data => {
       this.cityList = data;
     })
   }
 
   save(){
-    this.customerService.addAddress(this.addressForm.value,this.customer).subscribe();
+    if(this.addressToUpdate === undefined) this.add();
+    else this.update();
   }
   
+  add(){
+    this.customerService.addAddress(this.addressForm.value,this.customer).subscribe();
+  }
 
-
+  update(){
+    const addressToUpdate:Address = {...this.addressForm.value, id: this.selectedAddressId};
+    this.customerService.updateAddress(addressToUpdate,this.customer).subscribe();
+  }
 }

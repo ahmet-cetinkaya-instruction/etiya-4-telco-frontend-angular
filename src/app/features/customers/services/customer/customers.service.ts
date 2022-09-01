@@ -124,6 +124,7 @@ export class CustomersService {
   add(customer:Customer):Observable<Customer> {
     const newCustomer:Customer = {
       ...customer,
+      addresses: customer.addresses?.map((item, index) => ({...item, id:index+1})),
       role: "individual",
       customerId: 9999
     }
@@ -145,18 +146,28 @@ export class CustomersService {
       nationalityId:customerDemographicInfo.nationalityId,
       motherName:customerDemographicInfo.motherName,
       fatherName:customerDemographicInfo.fatherName
-
     }
     return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`,newCustomer)
   }
 
-  addAddress(address:any,customer:Customer):Observable<Customer>{    
+  addAddress(address:Address, customer:Customer):Observable<Customer>{    
     const newCustomer:Customer = {
       ...customer,
-      addresses: customer.addresses || []
+      addresses: [...customer.addresses || [], {...address, id: (customer.addresses?.length || 0) + 1}]
     }
-    newCustomer.addresses?.push(address)
-    console.log(newCustomer)
     return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`,newCustomer)
+  }
+
+  updateAddress(addressToUpdate:Address, customer:Customer):Observable<Customer>{    
+    console.debug("🐞 ➜ file: customers.service.ts ➜ line 162 ➜ CustomersService ➜ updateAddress ➜ addressToUpdate", addressToUpdate);
+    const newCustomer:Customer = {
+      ...customer,
+    }
+    const addressIndex = customer.addresses?.findIndex(address => address.id === addressToUpdate.id) as number;
+    console.debug("🐞 ➜ file: customers.service.ts ➜ line 167 ➜ CustomersService ➜ updateAddress ➜ addressIndex", addressIndex);
+    newCustomer.addresses![addressIndex] = addressToUpdate;
+
+    console.debug("🐞 ➜ file: customers.service.ts ➜ line 167 ➜ CustomersService ➜ updateAddress ➜ newCustomer", newCustomer);
+    return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`, newCustomer)
   }
 }
