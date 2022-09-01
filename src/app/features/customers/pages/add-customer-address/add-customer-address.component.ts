@@ -49,7 +49,6 @@ export class AddCustomerAddressComponent implements OnInit {
       this.customerService
         .getCustomerById(this.selectedCustomerId)
         .subscribe((data) => {          
-            console.debug("🐞 ➜ file: add-customer-address.component.ts ➜ line 51 ➜ AddCustomerAddressComponent ➜ .subscribe ➜ data", data);
             this.customer=data
 
             if(this.customer.addresses?.find(address => address.id == this.selectedAddressId) !== undefined)
@@ -62,7 +61,7 @@ export class AddCustomerAddressComponent implements OnInit {
 
   createAddressForm(){
     this.addressForm = this.formBuilder.group({
-      city: [this.addressToUpdate?.city || "", Validators.required],
+      city: [this.addressToUpdate?.city.id || 0, Validators.required],
       street: [this.addressToUpdate?.street || '', Validators.required],
       flatNumber: [this.addressToUpdate?.flatNumber || '', Validators.required],
       description: [this.addressToUpdate?.description || '', Validators.required]
@@ -81,11 +80,16 @@ export class AddCustomerAddressComponent implements OnInit {
   }
   
   add(){
+    const addressToAdd:Address = {...this.addressForm.value, 
+      city: this.cityList.find(city => city.id == this.addressForm.value.cityId)};
     this.customerService.addAddress(this.addressForm.value,this.customer).subscribe();
   }
 
   update(){
-    const addressToUpdate:Address = {...this.addressForm.value, id: this.selectedAddressId};
+    const addressToUpdate:Address = {...this.addressForm.value, id: this.selectedAddressId,
+      city: this.cityList.find(city => city.id == this.addressForm.value.city)
+    };
+    console.debug("🐞 ➜ file: add-customer-address.component.ts ➜ line 92 ➜ AddCustomerAddressComponent ➜ update ➜ addressToUpdate", addressToUpdate);
     this.customerService.updateAddress(addressToUpdate,this.customer).subscribe();
   }
 }

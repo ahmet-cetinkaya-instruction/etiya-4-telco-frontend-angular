@@ -27,8 +27,8 @@
                   <div class="col-12 col-lg-8 e-address-col-center">
                     <div class="e-dropdown">
                       <select etiyaInput="dark" name="gender" id="gender" formControlName="city">
-                        <option selected disabled hidden value="">Choose a city</option>
-                        <option *ngFor="let city of cityList" [ngValue]="city">{{city.name}}</option>
+                        <option selected disabled hidden [value]="0">Choose a city</option>
+                        <option *ngFor="let city of cityList" [value]="city.id">{{city.name}}</option>
                       </select>
                     </div>
                   </div>
@@ -41,7 +41,7 @@
                     </label>
                   </div>
                   <div class="col-12 col-lg-8 e-address-col-center">
-                    <input type="text" etiyaInput="dark" formControlName="flatNumber" />
+                    <input type="number" etiyaInput="dark" formControlName="flatNumber" />
                   </div>
                 </div>
               </div>

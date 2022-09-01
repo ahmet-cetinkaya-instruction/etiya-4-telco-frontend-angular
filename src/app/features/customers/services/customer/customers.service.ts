@@ -162,8 +162,8 @@ export class CustomersService {
     const newCustomer:Customer = {
       ...customer,
     }
-    const addressIndex = customer.addresses?.findIndex(address => address.id === addressToUpdate.id);
-    if(addressIndex) newCustomer.addresses![addressIndex] = addressToUpdate;
+    const addressIndex = customer.addresses?.findIndex(address => address.id === addressToUpdate.id) as number;
+    newCustomer.addresses![addressIndex] = addressToUpdate;
 
     return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`, newCustomer)
   }
