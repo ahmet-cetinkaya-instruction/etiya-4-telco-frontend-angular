@@ -8,9 +8,8 @@ describe('AddAddressInfoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddAddressInfoComponent ]
-    })
-    .compileComponents();
+      declarations: [AddAddressInfoComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AddAddressInfoComponent);
     component = fixture.componentInstance;

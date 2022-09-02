@@ -10,9 +10,7 @@ import { PanelModule } from './features/panel/panel.module';
 import { CityModule } from './features/city/city.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -21,10 +19,9 @@ import { CityModule } from './features/city/city.module';
     HttpClientModule,
     CustomersModule,
     PanelModule,
-    CityModule
-
+    CityModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

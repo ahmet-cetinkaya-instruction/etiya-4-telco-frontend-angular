@@ -2,15 +2,16 @@
   <app-navbar></app-navbar>
 
   <div class="container-fluid overflow-hidden">
-
-
     <div class="row">
       <div class="col-3">
         <div class="app-user-info">
           <app-user-info></app-user-info>
         </div>
 
-        <app-side-filter [filterTitle]="'SEARCH CUSTOMER'" (filteredData)="search($event)">
+        <app-side-filter
+          [filterTitle]="'SEARCH CUSTOMER'"
+          (filteredData)="search($event)"
+        >
         </app-side-filter>
       </div>
 
@@ -19,7 +20,7 @@
 
         <div class="e-search-container">
           <app-container>
-            <div *ngIf="lenght ==0; else tableInfo ">
+            <div *ngIf="lenght == 0; else tableInfo">
               <app-not-found [btnText]="'CREATE CUSTOMER'"></app-not-found>
             </div>
             <ng-template #tableInfo>
@@ -36,29 +37,37 @@
                     </tr>
                   </thead>
                   <tbody class="table-body">
-                    <div *ngIf="filteredCustomerList && lenght !=0; then filteredListState else otherState">
-
-                    </div>
+                    <div
+                      *ngIf="
+                        filteredCustomerList && lenght != 0;
+                        then filteredListState;
+                        else otherState
+                      "
+                    ></div>
                     <ng-template #filteredListState>
                       <tr *ngFor="let customer of filteredCustomerList">
-                        <th>{{customer.id}}</th>
-                        <td>{{customer.firstName}}</td>
-                        <td>{{customer.middleName}}</td>
-                        <td>{{customer.lastName}}</td>
-                        <td>{{customer.role}}</td>
+                        <th>{{ customer.id }}</th>
+                        <td>{{ customer.firstName }}</td>
+                        <td>{{ customer.middleName }}</td>
+                        <td>{{ customer.lastName }}</td>
+                        <td>{{ customer.role }}</td>
                         <!---Backend Simülasyonu, customerid gelecektir-->
-                        <td>{{customer.id}}</td>
+                        <td>{{ customer.id }}</td>
                       </tr>
                     </ng-template>
                     <ng-template #otherState>
                       <tr *ngFor="let customer of customerList">
-                        <th><a (click)="getCustomerId(customer)">{{customer.id}}</a></th>
-                        <td>{{customer.firstName}}</td>
-                        <td>{{customer.middleName}}</td>
-                        <td>{{customer.lastName}}</td>
-                        <td>{{customer.role}}</td>
+                        <th>
+                          <a (click)="getCustomerId(customer)">{{
+                            customer.id
+                          }}</a>
+                        </th>
+                        <td>{{ customer.firstName }}</td>
+                        <td>{{ customer.middleName }}</td>
+                        <td>{{ customer.lastName }}</td>
+                        <td>{{ customer.role }}</td>
                         <!---Backend Simülasyonu, customerid gelecektir-->
-                        <td>{{customer.id}}</td>
+                        <td>{{ customer.id }}</td>
                       </tr>
                     </ng-template>
                   </tbody>
@@ -69,10 +78,5 @@
         </div>
       </div>
     </div>
-
-
-
-
-
   </div>
 </div>

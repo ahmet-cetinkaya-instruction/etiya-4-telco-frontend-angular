@@ -1,3 +1,3 @@
-export interface ResultModel{
-    success:boolean;
+export interface ResultModel {
+  success: boolean;
 }

@@ -16,13 +16,22 @@
 </div>
 
 <app-main-layout [layoutTitle]="'Customer Account'">
-    <button class="ml-5" etiyaButton="new-address" [routerLink]="'/dashboard/customers/customer-bill/'+selectedCustomerId" routerLinkActive="active"> <img src="../../../../assets/img/add_new.png" alt="">Create New Account</button>
+  <button
+    class="ml-5"
+    etiyaButton="new-address"
+    [routerLink]="'/dashboard/customers/customer-bill/' + selectedCustomerId"
+    routerLinkActive="active"
+  >
+    <img src="../../../../assets/img/add_new.png" alt="" />Create New Account
+  </button>
 
-    <div class="p-2"></div>
-    <div class="e-customer-content">
-      <div class="m-3">
-       <app-table-accordion [billingAccountList]="billingAccount" [productList]="products"></app-table-accordion>
-
-      </div>
+  <div class="p-2"></div>
+  <div class="e-customer-content">
+    <div class="m-3">
+      <app-table-accordion
+        [billingAccountList]="billingAccount"
+        [productList]="products"
+      ></app-table-accordion>
     </div>
-  </app-main-layout>
+  </div>
+</app-main-layout>

@@ -1,6 +1,6 @@
-import { Offer } from "./offer";
+import { Offer } from './offer';
 
 export interface Order {
-    id: number;
-    offers: Offer[];
+  id: number;
+  offers: Offer[];
 }

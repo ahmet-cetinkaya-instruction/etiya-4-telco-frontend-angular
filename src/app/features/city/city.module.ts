@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { CityRoutingModule } from './city-routing.module';
 
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    CityRoutingModule
-  ]
+  imports: [CommonModule, CityRoutingModule],
 })
-export class CityModule { }
+export class CityModule {}

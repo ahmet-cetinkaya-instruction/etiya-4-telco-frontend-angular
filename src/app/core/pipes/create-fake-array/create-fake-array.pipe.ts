@@ -1,16 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'createFakeArray'
+  name: 'createFakeArray',
 })
 export class CreateFakeArrayPipe implements PipeTransform {
-
   transform(value: number): number[] {
-    let fakeArray:number[] = [];
+    let fakeArray: number[] = [];
     for (let n = 0; n < value; n++) {
-      fakeArray.push(n)      
+      fakeArray.push(n);
     }
     return fakeArray;
   }
-
 }

@@ -5,16 +5,17 @@ import { CustomersService } from '../../services/customer/customers.service';
 
 @Component({
   templateUrl: './customer-address.component.html',
-  styleUrls: ['./customer-address.component.css']
+  styleUrls: ['./customer-address.component.css'],
 })
 export class CustomerAddressComponent implements OnInit {
-  
   selectedCustomerId!: number;
-  customerAddress: Address[] =[];
+  customerAddress: Address[] = [];
 
-  constructor(private activatedRoute:ActivatedRoute, 
-    private customerService:CustomersService,
-    private router:Router) { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private customerService: CustomersService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getCustomerById();
@@ -29,20 +30,23 @@ export class CustomerAddressComponent implements OnInit {
     } else {
       this.customerService
         .getCustomerById(this.selectedCustomerId)
-        .subscribe((data) => { 
-            data.addresses?.forEach(adress =>{
-              this.customerAddress.push(adress)
-            })         
-                   
+        .subscribe((data) => {
+          data.addresses?.forEach((adress) => {
+            this.customerAddress.push(adress);
+          });
         });
     }
   }
 
-  addAddressBySelectedId(){
-    this.router.navigateByUrl(`/dashboard/customers/${this.selectedCustomerId}/address/add`)
+  addAddressBySelectedId() {
+    this.router.navigateByUrl(
+      `/dashboard/customers/${this.selectedCustomerId}/address/add`
+    );
   }
 
-  selectAddressId(addressId:number){
-    this.router.navigateByUrl(`/dashboard/customers/${this.selectedCustomerId}/address/update/${addressId}`)
+  selectAddressId(addressId: number) {
+    this.router.navigateByUrl(
+      `/dashboard/customers/${this.selectedCustomerId}/address/update/${addressId}`
+    );
   }
 }

@@ -1,46 +1,44 @@
 @import '../../../../styles.css';
 
-.e-container-nf{    
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
+.e-container-nf {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .e-label-nf {
-    width: 450px;
-    height: 53px;
+  width: 450px;
+  height: 53px;
 
-    font-family: 'Anybody';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 25px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
 
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .e-btn-create {
-    background: rgba(245, 130, 32, 0.8);
-    border-radius: 7px;
-    font-family: 'Anybody';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 25px;
-    margin-top: 20px;
-    cursor: pointer;
+  background: rgba(245, 130, 32, 0.8);
+  border-radius: 7px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+  margin-top: 20px;
+  cursor: pointer;
 
-
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .e-btn-create-logo {
-    margin-top: -10px;
-    width: 50px;
-    color: #FFFFFF;
+  margin-top: -10px;
+  width: 50px;
+  color: #ffffff;
 }
 
-.e-img-nf{
-    width: 90px;
+.e-img-nf {
+  width: 90px;
 }
-

@@ -1,53 +1,52 @@
 ::ng-deep body {
-    background-color: #061F3E !important;
+  background-color: #061f3e !important;
 }
 
 .app-user-info {
-    width: 264px;
-    margin-left: 35px;
+  width: 264px;
+  margin-left: 35px;
 }
 
 .bar-menu {
-    margin-left: 30%;
-    margin-top: -55px;
+  margin-left: 30%;
+  margin-top: -55px;
 }
 
 .e-customer-content {
-
-    box-sizing: border-box;
-    margin-left: 60px;
-    width: 1300px;
-    height: 350px;
-    margin-top: 120px;
-    background: rgba(13, 43, 80, 0.7);
-    border: 3px solid #F58220;
-    border-right: 3px solid #F58220;
-    border-radius: 22px;
+  box-sizing: border-box;
+  margin-left: 60px;
+  width: 1300px;
+  height: 350px;
+  margin-top: 120px;
+  background: rgba(13, 43, 80, 0.7);
+  border: 3px solid #f58220;
+  border-right: 3px solid #f58220;
+  border-radius: 22px;
 }
 
 .e-frame-label {
-    margin-top: 25px;
-    width: 100%;
-    height: 31px;
+  margin-top: 25px;
+  width: 100%;
+  height: 31px;
 
-    font-family: 'Anybody';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 31px;
-    color: #FFFFFF;
-    margin-left: 90px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 31px;
+  color: #ffffff;
+  margin-left: 90px;
 }
-::ng-deep .e-btn-edit{
-    float: right;
+::ng-deep .e-btn-edit {
+  float: right;
 }
-::ng-deep .e-btn-remove{
-    float: right;
-    margin-right: 15px;
+::ng-deep .e-btn-remove {
+  float: right;
+  margin-right: 15px;
 }
-::ng-deep .e-btn-remove:hover{
-    border: 6px solid #F58220;
+::ng-deep .e-btn-remove:hover {
+  border: 6px solid #f58220;
 }
-::ng-deep .e-btn-edit:hover{
-    border: 6px solid #F58220;
+::ng-deep .e-btn-edit:hover {
+  border: 6px solid #f58220;
 }

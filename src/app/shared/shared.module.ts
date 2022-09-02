@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OverlayTitleComponent } from './components/overlay-title/overlay-title.component';
@@ -18,8 +17,8 @@ import { ShowcaseComponent } from './pages/showcase/showcase.component';
 import { TableAccordionComponent } from './components/table-accordion/table-accordion.component';
 import { BarMenuComponent } from './components/bar-menu/bar-menu.component';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
-import {ButtonModule} from 'primeng/button';
-import {ToastModule} from 'primeng/toast';
+import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageService } from 'primeng/api';
 import { CustomToastComponent } from './components/custom-toast/custom-toast.component';
@@ -32,8 +31,6 @@ import { InputDirective } from './directives/input.directive';
 import { CheckBoxDirective } from './directives/check-box.directive';
 import { RouterModule } from '@angular/router';
 import { TableScrollComponent } from './components/table-scroll/table-scroll.component';
-
-
 
 @NgModule({
   declarations: [
@@ -61,7 +58,7 @@ import { TableScrollComponent } from './components/table-scroll/table-scroll.com
     ButtonDirective,
     InputDirective,
     CheckBoxDirective,
-    TableScrollComponent
+    TableScrollComponent,
   ],
   imports: [
     CommonModule,
@@ -69,10 +66,9 @@ import { TableScrollComponent } from './components/table-scroll/table-scroll.com
     ButtonModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    RouterModule
-    
+    RouterModule,
   ],
-  exports:[
+  exports: [
     OverlayTitleComponent,
     SideFilterComponent,
     SettingsMenuComponent,
@@ -95,9 +91,8 @@ import { TableScrollComponent } from './components/table-scroll/table-scroll.com
     TitleLineComponent,
     ButtonDirective,
     InputDirective,
-    TableScrollComponent
-
+    TableScrollComponent,
   ],
-  providers:[MessageService]
+  providers: [MessageService],
 })
-export class SharedModule { }
+export class SharedModule {}

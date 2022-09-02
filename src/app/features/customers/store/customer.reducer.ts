@@ -1,10 +1,10 @@
-import { Customer } from "../models/customer";
-import { customerToAddReducer } from "./customerToAdd/customerToAdd.reducer";
+import { Customer } from '../models/customer';
+import { customerToAddReducer } from './customerToAdd/customerToAdd.reducer';
 
 export interface CustomerState {
-    customerToAdd: Customer
+  customerToAdd: Customer;
 }
 
 export const customersReducers = {
-    customerToAdd: customerToAddReducer
-}
+  customerToAdd: customerToAddReducer,
+};

@@ -8,9 +8,8 @@ describe('TitleLineComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TitleLineComponent ]
-    })
-    .compileComponents();
+      declarations: [TitleLineComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TitleLineComponent);
     component = fixture.componentInstance;

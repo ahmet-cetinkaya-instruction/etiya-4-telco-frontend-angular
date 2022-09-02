@@ -28,7 +28,7 @@ export class CreateCustomerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.createCustomerModel$.subscribe(state => {
+    this.createCustomerModel$.subscribe((state) => {
       this.customer = state;
       this.createFormUpdateCustomer();
     });

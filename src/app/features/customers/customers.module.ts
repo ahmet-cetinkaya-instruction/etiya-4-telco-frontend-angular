@@ -23,7 +23,6 @@ import { OfferSelectionComponent } from './pages/offer-selection/offer-selection
 import { AddCustomerAddressComponent } from './pages/add-customer-address/add-customer-address.component';
 import { CityModule } from '../city/city.module';
 
-
 @NgModule({
   declarations: [
     CustomerDashboardComponent,
@@ -41,9 +40,7 @@ import { CityModule } from '../city/city.module';
     SubmitOrderComponent,
     CustomerContactMediumComponent,
     OfferSelectionComponent,
-    AddCustomerAddressComponent
-
-
+    AddCustomerAddressComponent,
   ],
   imports: [
     CommonModule,
@@ -52,7 +49,7 @@ import { CityModule } from '../city/city.module';
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
-    CityModule
-  ]
+    CityModule,
+  ],
 })
-export class CustomersModule { }
+export class CustomersModule {}

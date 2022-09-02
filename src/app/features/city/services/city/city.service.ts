@@ -5,12 +5,12 @@ import { City } from 'src/app/features/customers/models/city';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CityService {
   apiControllerUrl: string = `${environment.apiUrl}/cities`;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   getList(): Observable<City[]> {
     return this.httpClient.get<City[]>(this.apiControllerUrl);

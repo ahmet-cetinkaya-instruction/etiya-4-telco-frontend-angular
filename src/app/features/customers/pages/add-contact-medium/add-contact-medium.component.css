@@ -5,7 +5,7 @@
 }
 .e-customer-content {
   color: #fff;
-  font-family: "Anybody";
+  font-family: 'Anybody';
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
@@ -39,7 +39,7 @@
   left: 535.53px;
   top: 333px;
   color: #f58220;
-  background-image: url("../../../../../assets/img/arrow.png") !important;
+  background-image: url('../../../../../assets/img/arrow.png') !important;
   background-repeat: no-repeat !important;
   background-position: right !important;
   background: #061f3e;
@@ -64,10 +64,10 @@
   font-weight: bold;
   font-size: 40px;
 }
-.e-contact-col-center{
+.e-contact-col-center {
   display: flex;
   align-items: center;
 }
-::ng-deep .main-box{
+::ng-deep .main-box {
   height: auto !important;
 }

@@ -8,9 +8,8 @@ describe('TableScrollComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TableScrollComponent ]
-    })
-    .compileComponents();
+      declarations: [TableScrollComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TableScrollComponent);
     component = fixture.componentInstance;

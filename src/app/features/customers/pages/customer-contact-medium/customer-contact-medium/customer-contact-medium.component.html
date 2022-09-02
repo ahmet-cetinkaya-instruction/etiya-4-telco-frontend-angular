@@ -20,42 +20,51 @@
     <div class="p-5"></div>
     <div class="e-customer-content">
       <div class="container">
-          <div class="row">
-              <div class="col-2">
-                  <label class="e-frame-label">Email :</label>
-              </div>
-              <div class="col-4">
-                  <label class="e-frame-label">{{customer.contactMedium?.email}}</label>
-              </div>
-              <div class="col-2">
-                  <label class="e-frame-label">Home Phone :</label>
-              </div>
-              <div class="col-4">
-                  <label class="e-frame-label">{{customer.contactMedium?.homePhone}}</label>
-              </div>
+        <div class="row">
+          <div class="col-2">
+            <label class="e-frame-label">Email :</label>
           </div>
+          <div class="col-4">
+            <label class="e-frame-label">{{
+              customer.contactMedium?.email
+            }}</label>
+          </div>
+          <div class="col-2">
+            <label class="e-frame-label">Home Phone :</label>
+          </div>
+          <div class="col-4">
+            <label class="e-frame-label">{{
+              customer.contactMedium?.homePhone
+            }}</label>
+          </div>
+        </div>
 
-          <div class="row mt-3">
-              <div class="col-2">
-                  <label class="e-frame-label">Mobile Phone :</label>
-              </div>
-              <div class="col-4">
-                  <label class="e-frame-label">{{customer.contactMedium?.mobilePhone}}</label>
-              </div>
-              <div class="col-2">
-                  <label class="e-frame-label">Fax :</label>
-              </div>
-              <div class="col-4">
-                  <label class="e-frame-label">{{customer.contactMedium?.fax}}</label>
-              </div>
-          
-              
-          
+        <div class="row mt-3">
+          <div class="col-2">
+            <label class="e-frame-label">Mobile Phone :</label>
           </div>
-          <button etiyaButton="remove"></button>
-          <button etiyaButton="edit" [routerLink]="'/dashboard/customers/customer-contact-form/'+selectedCustomerId"></button>
+          <div class="col-4">
+            <label class="e-frame-label">{{
+              customer.contactMedium?.mobilePhone
+            }}</label>
+          </div>
+          <div class="col-2">
+            <label class="e-frame-label">Fax :</label>
+          </div>
+          <div class="col-4">
+            <label class="e-frame-label">{{
+              customer.contactMedium?.fax
+            }}</label>
+          </div>
+        </div>
+        <button etiyaButton="remove"></button>
+        <button
+          etiyaButton="edit"
+          [routerLink]="
+            '/dashboard/customers/customer-contact-form/' + selectedCustomerId
+          "
+        ></button>
       </div>
-  </div>
+    </div>
   </app-main-layout>
 </div>
-

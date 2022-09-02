@@ -13,51 +13,63 @@ import { setTokenUserModel } from '../../store/actions/auth.actions';
 import { AuthStates } from '../../store/auth.reducers';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   tokenUserModel$: Observable<TokenUserModel | undefined> = this.store
-  .select(state => state.appAuth)
-  .pipe(map(state => state.tokenUserModel));
+    .select((state) => state.appAuth)
+    .pipe(map((state) => state.tokenUserModel));
 
-  apiControllerUrl:string = `${environment.apiUrl}/auth`
+  apiControllerUrl: string = `${environment.apiUrl}/auth`;
 
+  constructor(
+    private httpClient: HttpClient,
+    private localStorageService: LocalStorageService,
+    private jwtHelperService: JwtHelperService,
+    private router: Router,
+    private store: Store<AuthStates>
+  ) {}
 
-  constructor(private httpClient:HttpClient,
-    private localStorageService:LocalStorageService,
-    private jwtHelperService:JwtHelperService,
-    private router:Router,private store: Store<AuthStates>) { }
-
-  login(userForLoginModel:UserForLogin):Observable<UserLoginResponse>{
+  login(userForLoginModel: UserForLogin): Observable<UserLoginResponse> {
     const subject = new Subject<UserLoginResponse>();
-    this.httpClient.post<UserLoginResponse>(this.apiControllerUrl + '/login',
-    userForLoginModel).subscribe({next:response =>{
-      if (!response.success) return;
-      this.saveToken(response)
-      subject.next(response);
-    },error:(err) =>{
-      subject.error(err);
-    },complete:() =>{
-      subject.complete();
-    }});
+    this.httpClient
+      .post<UserLoginResponse>(
+        this.apiControllerUrl + '/login',
+        userForLoginModel
+      )
+      .subscribe({
+        next: (response) => {
+          if (!response.success) return;
+          this.saveToken(response);
+          subject.next(response);
+        },
+        error: (err) => {
+          subject.error(err);
+        },
+        complete: () => {
+          subject.complete();
+        },
+      });
 
     return subject.asObservable();
   }
 
-  saveToken(userLoginResponse:UserLoginResponse){
-    this.localStorageService.set('token',userLoginResponse.access_token);
-    this.setTokenUserModel(this.jwtHelperService.decodeToken(this.jwtHelperService.tokenGetter()));
+  saveToken(userLoginResponse: UserLoginResponse) {
+    this.localStorageService.set('token', userLoginResponse.access_token);
+    this.setTokenUserModel(
+      this.jwtHelperService.decodeToken(this.jwtHelperService.tokenGetter())
+    );
   }
 
-  get isAuthenticated():boolean{
-    if(this.jwtHelperService.isTokenExpired()) return false;
+  get isAuthenticated(): boolean {
+    if (this.jwtHelperService.isTokenExpired()) return false;
 
     return true;
   }
 
-  logOut(){
-    this.localStorageService.remove('token')
-    this.router.navigateByUrl('/login')
+  logOut() {
+    this.localStorageService.remove('token');
+    this.router.navigateByUrl('/login');
   }
 
   setTokenUserModel(tokenUserModel: TokenUserModel) {

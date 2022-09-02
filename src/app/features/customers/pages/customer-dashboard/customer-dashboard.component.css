@@ -1,24 +1,20 @@
 .search-background {
-  background-color: #061F3E !important;
+  background-color: #061f3e !important;
 }
 
-.app-user-info{
+.app-user-info {
   width: 264px;
 }
 
-
-.e-search-container{
+.e-search-container {
   margin: 65px 0px 0px 25px;
-  height: 100vh!important;
-
+  height: 100vh !important;
 }
 
-::ng-deep .e-input-dark{
+::ng-deep .e-input-dark {
   margin-left: 15px;
 }
 
 ::ng-deep .table.e-table .table-body tr th a {
   cursor: pointer;
 }
-
-

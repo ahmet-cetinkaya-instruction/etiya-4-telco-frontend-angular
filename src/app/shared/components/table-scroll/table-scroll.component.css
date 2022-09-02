@@ -34,18 +34,18 @@
   width: 100%;
   display: inline-table;
 }
-::ng-deep .table-hidden thead th[data-th="third"] {
+::ng-deep .table-hidden thead th[data-th='third'] {
   width: 400px;
 }
-::ng-deep .table-hidden tbody td[data-th="third"] {
+::ng-deep .table-hidden tbody td[data-th='third'] {
   width: calc(400px - 15px);
 }
-::ng-deep .table-hidden td[data-th="first"],
-.table-hidden th[data-th="first"] {
+::ng-deep .table-hidden td[data-th='first'],
+.table-hidden th[data-th='first'] {
   width: 400px;
 }
-::ng-deep .table-hidden td[data-th="second"],
-.table-hidden th[data-th="second"] {
+::ng-deep .table-hidden td[data-th='second'],
+.table-hidden th[data-th='second'] {
   width: 400px;
 }
 ::ng-deep .table-body::-webkit-scrollbar {
@@ -66,7 +66,7 @@
   background-position: center;
 }
 ::ng-deep ::-webkit-scrollbar-button:vertical:start:increment {
-  background-image: url("../../../../assets/img/caret-up.png") !important;
+  background-image: url('../../../../assets/img/caret-up.png') !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
 }
@@ -77,7 +77,7 @@
   display: none;
 }
 ::ng-deep ::-webkit-scrollbar-button:vertical:end:decrement {
-  background-image: url("../../../../assets/img/caret-down.png") !important;
+  background-image: url('../../../../assets/img/caret-down.png') !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
 }

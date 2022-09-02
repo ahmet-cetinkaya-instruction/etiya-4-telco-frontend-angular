@@ -5,20 +5,22 @@ import { CustomersService } from 'src/app/features/customers/services/customer/c
 @Component({
   selector: 'app-side-filter',
   templateUrl: './side-filter.component.html',
-  styleUrls: ['./side-filter.component.css']
+  styleUrls: ['./side-filter.component.css'],
 })
 export class SideFilterComponent implements OnInit {
-  @Input() filterTitle!:string
-  searchForm! : FormGroup;
-  @Output() filteredData: any = new EventEmitter()
-  constructor(private formBuilder: FormBuilder, private customersService:CustomersService) { }
+  @Input() filterTitle!: string;
+  searchForm!: FormGroup;
+  @Output() filteredData: any = new EventEmitter();
+  constructor(
+    private formBuilder: FormBuilder,
+    private customersService: CustomersService
+  ) {}
 
   ngOnInit(): void {
     this.createSearchForm();
-
   }
 
-  createSearchForm(): void{
+  createSearchForm(): void {
     this.searchForm = this.formBuilder.group({
       id: [''],
       customerId: [''],
@@ -26,16 +28,18 @@ export class SideFilterComponent implements OnInit {
       gsmNumber: [''],
       firstName: [''],
       lastname: [''],
-      orderNumber: ['']
-    })
+      orderNumber: [''],
+    });
   }
 
-  search(){
-    this.customersService.getListByFilter(this.searchForm.value).subscribe(data=>{
-      this.filteredData.emit(data)
-     })
+  search() {
+    this.customersService
+      .getListByFilter(this.searchForm.value)
+      .subscribe((data) => {
+        this.filteredData.emit(data);
+      });
   }
-  clear(){
+  clear() {
     this.createSearchForm();
   }
 }

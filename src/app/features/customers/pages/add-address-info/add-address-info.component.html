@@ -26,9 +26,18 @@
                   </div>
                   <div class="col-12 col-lg-8 e-address-col-center">
                     <div class="e-dropdown">
-                      <select etiyaInput="dark" name="gender" id="gender" formControlName="city">
-                        <option selected disabled hidden value="">Choose a city</option>
-                        <option *ngFor="let city of cityList" [ngValue]="city">{{city.name}}</option>
+                      <select
+                        etiyaInput="dark"
+                        name="gender"
+                        id="gender"
+                        formControlName="city"
+                      >
+                        <option selected disabled hidden value="">
+                          Choose a city
+                        </option>
+                        <option *ngFor="let city of cityList" [ngValue]="city">
+                          {{ city.name }}
+                        </option>
                       </select>
                     </div>
                   </div>
@@ -37,42 +46,55 @@
               <div class="col-12 col-xl-7">
                 <div class="row e-address-input">
                   <div class="col-12 col-lg-4 e-address-col-center">
-                    <label for="flatNumber">House/Flat Number<span class="e-star">*</span>
+                    <label for="flatNumber"
+                      >House/Flat Number<span class="e-star">*</span>
                     </label>
                   </div>
                   <div class="col-12 col-lg-8 e-address-col-center">
-                    <input type="text" etiyaInput="dark" formControlName="flatNumber" />
+                    <input
+                      type="text"
+                      etiyaInput="dark"
+                      formControlName="flatNumber"
+                    />
                   </div>
                 </div>
               </div>
               <div class="col-12 col-xl-5">
                 <div class="row e-address-input">
                   <div class="col-12 col-lg-4 e-address-col-center">
-                    <label for="street">Street<span class="e-star">*</span>
+                    <label for="street"
+                      >Street<span class="e-star">*</span>
                     </label>
                   </div>
                   <div class="col-12 col-lg-8 e-address-col-center">
-                    <input type="text" etiyaInput="dark" formControlName="street" />
+                    <input
+                      type="text"
+                      etiyaInput="dark"
+                      formControlName="street"
+                    />
                   </div>
                 </div>
               </div>
               <div class="col-12">
                 <div class="row mb-1">
                   <div class="col-12 e-address-col-center">
-                    <label for="address-description">Address Description<span class="e-star">*</span>
+                    <label for="address-description"
+                      >Address Description<span class="e-star">*</span>
                     </label>
                   </div>
                   <div class="col-12 e-address-col-center">
-                    <textarea class="e-address-desc" placeholder="" formControlName="description"></textarea>
+                    <textarea
+                      class="e-address-desc"
+                      placeholder=""
+                      formControlName="description"
+                    ></textarea>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row mt-2 d-flex justify-content-center">
               <div class="col-2">
-                <button etiyaButton="clear" (click)="addAddress()">
-                  SAVE
-                </button>
+                <button etiyaButton="clear" (click)="addAddress()">SAVE</button>
               </div>
             </div>
           </form>

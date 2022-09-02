@@ -1,12 +1,19 @@
-<p-toast class="etiya-warn-toast" position="bottom-right" key="etiya-warn" [baseZIndex]="5000">
-    <ng-template let-message pTemplate="message">
-        <div class="e-warn-container">
-            <div>
-                <i style="font-size: 3rem"><img class="e-warn-img" src='../../../../assets/img/warning.png' /></i>                
-            </div>
-            <div>
-                <p class="e-warn-text">{{message.detail}}</p>
-            </div>
-        </div>
-    </ng-template>
+<p-toast
+  class="etiya-warn-toast"
+  position="bottom-right"
+  key="etiya-warn"
+  [baseZIndex]="5000"
+>
+  <ng-template let-message pTemplate="message">
+    <div class="e-warn-container">
+      <div>
+        <i style="font-size: 3rem"
+          ><img class="e-warn-img" src="../../../../assets/img/warning.png"
+        /></i>
+      </div>
+      <div>
+        <p class="e-warn-text">{{ message.detail }}</p>
+      </div>
+    </div>
+  </ng-template>
 </p-toast>

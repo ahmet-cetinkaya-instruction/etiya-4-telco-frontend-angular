@@ -1,5 +1,5 @@
 ::ng-deep body {
-  background-color: #061F3E !important;
+  background-color: #061f3e !important;
 }
 
 .e-customer-content {
@@ -16,24 +16,21 @@
 
 .e-configuration-product-container {
   background: rgba(13, 43, 80, 0.75);
-  border: 1px solid #F58220;
+  border: 1px solid #f58220;
   border-radius: 9px;
 }
 
 .e-configuritaion-product-info {
-  border-bottom: 1px solid #F58220;
-
+  border-bottom: 1px solid #f58220;
 }
 
-
 .e-configuration-product-input {
-
   box-sizing: border-box;
   height: 31.47px;
   max-width: 200px;
   text-align: left !important;
-  background:  #061F3E;
-  border: 1px solid #F58220;
+  background: #061f3e;
+  border: 1px solid #f58220;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
 }
@@ -49,7 +46,7 @@
   padding: 0px !important;
   margin: 0px;
   text-align: left !important;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .e-configuritaion-product-info span {
@@ -62,15 +59,15 @@
   font-size: 22px;
   line-height: 23px;
 
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-::ng-deep .main-box{
+::ng-deep .main-box {
   height: auto !important;
 }
 
-.e-configuritaion-product-info2{
-  border: 1px solid #F58220;
+.e-configuritaion-product-info2 {
+  border: 1px solid #f58220;
   padding: 10px;
   border-radius: 9px;
   background: rgba(13, 43, 80, 0.75);

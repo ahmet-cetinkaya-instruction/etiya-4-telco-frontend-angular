@@ -1,26 +1,30 @@
-<br>
+<br />
 <div class="e-basket-container">
-    <div class="e-basket">
-        <div class="row d-flex justify-content-center mt-2">
-            <span class="e-line-left"></span>
-            <label class="e-basket-label">Basket</label>
-            <span class="e-line-right"></span>
-        </div>
-        <div class="scroll">
-            <div *ngFor="let item of baskets">
-                <p>Campain ID : <br> Prod Offer ID : <br> Prod Offer Name :</p>
-            </div>
-        </div>
-        <div class="basket-total-price-row">
-            <div>
-                <label class="e-basket-total-label">TOTAL AMOUNT</label>
-            </div>
-            <div>
-                <label class="e-basket-price-label">139 TL</label>
-            </div>
-        </div>
-        <div class="row d-flex align-items-center justify-content-center">
-            <button etiyaButton="clear" class="col-3 mt-2">Clear</button>
-        </div>
+  <div class="e-basket">
+    <div class="row d-flex justify-content-center mt-2">
+      <span class="e-line-left"></span>
+      <label class="e-basket-label">Basket</label>
+      <span class="e-line-right"></span>
     </div>
+    <div class="scroll">
+      <div *ngFor="let item of baskets">
+        <p>
+          Campain ID : <br />
+          Prod Offer ID : <br />
+          Prod Offer Name :
+        </p>
+      </div>
+    </div>
+    <div class="basket-total-price-row">
+      <div>
+        <label class="e-basket-total-label">TOTAL AMOUNT</label>
+      </div>
+      <div>
+        <label class="e-basket-price-label">139 TL</label>
+      </div>
+    </div>
+    <div class="row d-flex align-items-center justify-content-center">
+      <button etiyaButton="clear" class="col-3 mt-2">Clear</button>
+    </div>
+  </div>
 </div>

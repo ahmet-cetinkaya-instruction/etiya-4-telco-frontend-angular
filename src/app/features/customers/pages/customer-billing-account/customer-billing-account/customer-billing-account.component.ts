@@ -10,101 +10,98 @@ import { BillingAccount } from '../../../models/billingAccount';
 
 @Component({
   templateUrl: './customer-billing-account.component.html',
-  styleUrls: ['./customer-billing-account.component.css']
+  styleUrls: ['./customer-billing-account.component.css'],
 })
 export class CustomerBillingAccountComponent implements OnInit {
-
-  accountForm!:FormGroup;
-  addressForm!:FormGroup;
-  isShown:boolean = false;
+  accountForm!: FormGroup;
+  addressForm!: FormGroup;
+  isShown: boolean = false;
   cityList!: City[];
   billingAdress: Address[] = [];
-  selectedCustomerId!:number;
-  customer!:Customer;
-  billingAccount!:BillingAccount;
-  
+  selectedCustomerId!: number;
+  customer!: Customer;
+  billingAccount!: BillingAccount;
 
-  constructor(private formBuilder:FormBuilder, 
-    private cityService:CityService,
-    private customerService:CustomersService,
-    private router:Router,
-    private activatedRoute:ActivatedRoute) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private cityService: CityService,
+    private customerService: CustomersService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.getParams();
     this.getCityList();
   }
 
-  getParams(){
+  getParams() {
     this.activatedRoute.params.subscribe((params) => {
       if (params['id']) this.selectedCustomerId = Number(params['id']);
       this.getCustomerById();
     });
   }
-  
+
   getCustomerById() {
     if (this.selectedCustomerId == undefined) {
       //toast
     } else {
       this.customerService
         .getCustomerById(this.selectedCustomerId)
-        .subscribe((data) => {          
-            this.customer=data
-            this.createAddressForm();
-            this.createAccountForm();
+        .subscribe((data) => {
+          this.customer = data;
+          this.createAddressForm();
+          this.createAccountForm();
         });
     }
   }
 
-
-  
   createAccountForm() {
     this.accountForm = this.formBuilder.group({
       accountName: ['', Validators.required],
-      accountDescription: ['', Validators.required]
+      accountDescription: ['', Validators.required],
     });
   }
 
   createAddressForm() {
     this.addressForm = this.formBuilder.group({
-      id:[Math.floor(Math.random()*1000)],
+      id: [Math.floor(Math.random() * 1000)],
       city: ['', Validators.required],
       street: ['', Validators.required],
       flatNumber: ['', Validators.required],
-      description: ['', Validators.required]
+      description: ['', Validators.required],
     });
   }
 
-  addNewAddressBtn(){
+  addNewAddressBtn() {
     this.isShown = true;
-    this. createAddressForm();
+    this.createAddressForm();
   }
 
   getCityList() {
-    this.cityService.getList().subscribe(data => {
+    this.cityService.getList().subscribe((data) => {
       this.cityList = data;
-    })
+    });
   }
 
   addAddress() {
-    const addressToAdd:Address = {
-      ...this.addressForm.value, 
-      city: this.cityList.find(city => city.id == this.addressForm.value.city.id)
+    const addressToAdd: Address = {
+      ...this.addressForm.value,
+      city: this.cityList.find(
+        (city) => city.id == this.addressForm.value.city.id
+      ),
     };
-    this.billingAdress.push(addressToAdd)
+    this.billingAdress.push(addressToAdd);
     console.log(this.billingAdress);
     this.isShown = false;
   }
 
-  add(){
+  add() {
     this.billingAccount = this.accountForm.value;
-    this.billingAccount.addresses = this.billingAdress
-    console.log(this.billingAccount)
-    this.customerService.addBillingAccount(this.billingAccount,this.customer).subscribe();
+    this.billingAccount.addresses = this.billingAdress;
+    console.log(this.billingAccount);
+    this.customerService
+      .addBillingAccount(this.billingAccount, this.customer)
+      .subscribe();
   }
-
-
-
-
-
 }

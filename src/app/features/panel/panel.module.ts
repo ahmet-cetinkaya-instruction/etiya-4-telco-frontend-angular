@@ -14,13 +14,11 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 
 @NgModule({
-  declarations: [
-    LoginComponent
-  ],
+  declarations: [LoginComponent],
   imports: [
     CommonModule,
     PanelRoutingModule,
-    SharedModule,    
+    SharedModule,
     CardModule,
     ButtonModule,
     InputTextModule,
@@ -28,6 +26,6 @@ import { MessageService } from 'primeng/api';
     ReactiveFormsModule,
     ToastModule,
   ],
-  providers:[MessageService]
+  providers: [MessageService],
 })
-export class PanelModule { }
+export class PanelModule {}

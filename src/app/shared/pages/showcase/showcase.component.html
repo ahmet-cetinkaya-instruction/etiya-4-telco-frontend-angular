@@ -1,84 +1,101 @@
-<br>
+<br />
 <app-navbar></app-navbar>
 <div class="container">
   <div class="row">
     <div class="col-5">
-      <br>
-      <h3 style="color: white;">BUTTONS</h3>
-      <br>
+      <br />
+      <h3 style="color: white">BUTTONS</h3>
+      <br />
       <button etiyaButton="login">BUTTON</button>
-      <br>
-      <button etiyaButton="create"><img etiyaButton="create-logo" 
-          src="../../../../assets/img/create_btn_logo.png">BUTTON</button>
-      <br><br>
+      <br />
+      <button etiyaButton="create">
+        <img
+          etiyaButton="create-logo"
+          src="../../../../assets/img/create_btn_logo.png"
+        />BUTTON
+      </button>
+      <br /><br />
       <button etiyaButton="clear">BUTTON</button>
-      <br><br>
+      <br /><br />
       <button etiyaButton="clear-disabled">BUTTON</button>
-      <br><br>
-      <button type="button" etiyaButton="search">BUTTON<img etiyaButton="img-search"
-          src="../../../../assets/img/search-btn-logo.png"></button>
-      <br><br>
-      <button etiyaButton="new-address"> <img src="../../../../assets/img/add_new.png">BUTTON</button>
-      <br><br>
-      <h3 style="color: white;">CHECKBOX</h3>
+      <br /><br />
+      <button type="button" etiyaButton="search">
+        BUTTON<img
+          etiyaButton="img-search"
+          src="../../../../assets/img/search-btn-logo.png"
+        />
+      </button>
+      <br /><br />
+      <button etiyaButton="new-address">
+        <img src="../../../../assets/img/add_new.png" />BUTTON
+      </button>
+      <br /><br />
+      <h3 style="color: white">CHECKBOX</h3>
       <input type="checkbox" etiyaCheckBox="dark" id="exampleCheck1" />
-      <br><br>
-      <h3 style="color: white;">TOAST</h3>
-      <br>
-      <h5 style="color: white;">Warning</h5>
-      <button (click)="warningMessage()" class="btn btn-warning">Warning Message</button>
-      <br><br>
-      <button (click)="customToast()" class="btn btn-primary">Custom Toast</button>
-      <br><br>
-      <h5 style="color: white;">Confirm</h5>
+      <br /><br />
+      <h3 style="color: white">TOAST</h3>
+      <br />
+      <h5 style="color: white">Warning</h5>
+      <button (click)="warningMessage()" class="btn btn-warning">
+        Warning Message
+      </button>
+      <br /><br />
+      <button (click)="customToast()" class="btn btn-primary">
+        Custom Toast
+      </button>
+      <br /><br />
+      <h5 style="color: white">Confirm</h5>
       <button (click)="confirm()" class="btn btn-info">Confirm</button>
-      <br><br>
+      <br /><br />
       <app-basket></app-basket>
     </div>
     <div class="col-7">
-      <br>
-      <h3 style="color: white;">HEADERS</h3>
-      <br>
-      <etiya-overlay-title [title]="'WELCOME'" class="mc1"></etiya-overlay-title>
+      <br />
+      <h3 style="color: white">HEADERS</h3>
+      <br />
+      <etiya-overlay-title
+        [title]="'WELCOME'"
+        class="mc1"
+      ></etiya-overlay-title>
       <etiya-overlay-title [title]="'TO'" class="mc1"></etiya-overlay-title>
       <etiya-overlay-title [title]="'ETİYA'" class="mc"></etiya-overlay-title>
-      <br>
+      <br />
       <div class="e-title-container-info">
-        <span class="mini-horizontalLine-info"></span><span class="mini-verticalLine-info"></span>
+        <span class="mini-horizontalLine-info"></span
+        ><span class="mini-verticalLine-info"></span>
         <span class="e-info-title">Demographic Info</span>
-        <span class="verticalLine-info"></span> <span class="horizontalLine-info"></span>
+        <span class="verticalLine-info"></span>
+        <span class="horizontalLine-info"></span>
       </div>
-      <br>
-      <h3 style="color: white;">INPUT</h3>
-      <br>
-      <input type="text" etiyaInput='white' placeholder="PlaceHolder" />
-      <br>
+      <br />
+      <h3 style="color: white">INPUT</h3>
+      <br />
+      <input type="text" etiyaInput="white" placeholder="PlaceHolder" />
+      <br />
       <input type="text" etiyaInput="dark" class="w-100" />
-      <br>
-      <h3 style="color: white;">MENU</h3>
-      <br>
-      <h5 style="color: white;">Hover Menu</h5>
-      <br>
+      <br />
+      <h3 style="color: white">MENU</h3>
+      <br />
+      <h5 style="color: white">Hover Menu</h5>
+      <br />
       <app-settings-menu></app-settings-menu>
-      <br><br><br><br>
-      <h5 class="mt-5" style="color: white;">Bar Menu</h5>
-      <br>
+      <br /><br /><br /><br />
+      <h5 class="mt-5" style="color: white">Bar Menu</h5>
+      <br />
       <app-bar-menu></app-bar-menu>
-      <br>
-      <h5 class="mt-5" style="color: white;">Tab Menu</h5>
-      <br>
+      <br />
+      <h5 class="mt-5" style="color: white">Tab Menu</h5>
+      <br />
       <app-tab-menu></app-tab-menu>
-
     </div>
   </div>
-  <br>
+  <br />
   <div class="row">
-    <br>
-    <h3 style="color: white;">Accordion</h3>
-    <br>
+    <br />
+    <h3 style="color: white">Accordion</h3>
+    <br />
     <div class="col-12">
       <app-table-accordion></app-table-accordion>
     </div>
-
   </div>
 </div>

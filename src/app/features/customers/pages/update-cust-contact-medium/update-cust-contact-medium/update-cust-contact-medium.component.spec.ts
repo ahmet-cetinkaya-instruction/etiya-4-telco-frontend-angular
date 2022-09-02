@@ -8,9 +8,8 @@ describe('UpdateCustContactMediumComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UpdateCustContactMediumComponent ]
-    })
-    .compileComponents();
+      declarations: [UpdateCustContactMediumComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(UpdateCustContactMediumComponent);
     component = fixture.componentInstance;

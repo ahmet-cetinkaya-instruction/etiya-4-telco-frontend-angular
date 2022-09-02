@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 
@@ -23,8 +19,8 @@ export class UpdateCustomerComponent implements OnInit {
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
     private customerService: CustomersService,
-    private router:Router,
-    private messageService:MessageService
+    private router: Router,
+    private messageService: MessageService
   ) {}
 
   ngOnInit(): void {
@@ -53,26 +49,39 @@ export class UpdateCustomerComponent implements OnInit {
     } else {
       this.customerService
         .getCustomerById(this.selectedCustomerId)
-        .subscribe((data) => {          
-            this.customer=data
-            this.createFormUpdateCustomer();          
+        .subscribe((data) => {
+          this.customer = data;
+          this.createFormUpdateCustomer();
         });
     }
   }
 
   update() {
     if (this.updateCustomerForm.invalid) {
-      this.messageService.add({detail:'Please fill required areas'
-      ,severity:'danger',summary:'Error',key:'etiya-custom'}) 
+      this.messageService.add({
+        detail: 'Please fill required areas',
+        severity: 'danger',
+        summary: 'Error',
+        key: 'etiya-custom',
+      });
       return;
     }
-    const customer:Customer = Object.assign({id:this.customer.id}, this.updateCustomerForm.value); 
-      this.customerService.update(customer, this.customer).subscribe(() => {
-        setTimeout(() => {
-          this.router.navigateByUrl(`/dashboard/customers/customer-address/${customer.id}`);
-          this.messageService.add({detail:'Sucsessfully updated'
-        ,severity:'success',summary:'Update',key:'etiya-custom'})  
-        }, 1000);
-      });
+    const customer: Customer = Object.assign(
+      { id: this.customer.id },
+      this.updateCustomerForm.value
+    );
+    this.customerService.update(customer, this.customer).subscribe(() => {
+      setTimeout(() => {
+        this.router.navigateByUrl(
+          `/dashboard/customers/customer-address/${customer.id}`
+        );
+        this.messageService.add({
+          detail: 'Sucsessfully updated',
+          severity: 'success',
+          summary: 'Update',
+          key: 'etiya-custom',
+        });
+      }, 1000);
+    });
   }
 }

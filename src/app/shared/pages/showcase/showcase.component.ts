@@ -6,33 +6,35 @@ import { AuthService } from 'src/app/core/auth/services/auth/auth.service';
 
 @Component({
   templateUrl: './showcase.component.html',
-  styleUrls: ['./showcase.component.css']
+  styleUrls: ['./showcase.component.css'],
 })
-export class ShowcaseComponent implements OnInit {  
-
-  constructor(private messageService: MessageService) {  }
+export class ShowcaseComponent implements OnInit {
+  constructor(private messageService: MessageService) {}
 
   ngOnInit(): void {}
 
-  confirm(){
-    this.messageService.add({detail:'Are you sure you want to delete the customer',severity:'warn',
-    key:'c',sticky:true})
+  confirm() {
+    this.messageService.add({
+      detail: 'Are you sure you want to delete the customer',
+      severity: 'warn',
+      key: 'c',
+      sticky: true,
+    });
   }
 
-  customToast(){
-    this.messageService.add({detail:'Please contact your system administrator'
-    ,severity:'info',summary:'Forgot password?',key:'etiya-custom'})
+  customToast() {
+    this.messageService.add({
+      detail: 'Please contact your system administrator',
+      severity: 'info',
+      summary: 'Forgot password?',
+      key: 'etiya-custom',
+    });
   }
 
-  warningMessage(){
-    this.messageService.add({detail:'The password was entered incorrectly 3 times.',key:'etiya-warn'})
+  warningMessage() {
+    this.messageService.add({
+      detail: 'The password was entered incorrectly 3 times.',
+      key: 'etiya-warn',
+    });
   }
-  
-
-
-  
-
- 
-
-
 }

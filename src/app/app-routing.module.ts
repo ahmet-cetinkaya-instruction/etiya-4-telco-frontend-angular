@@ -4,26 +4,25 @@ import { CustomerDashboardComponent } from './features/customers/pages/customer-
 import { ShowcaseComponent } from './shared/pages/showcase/showcase.component';
 
 const routes: Routes = [
-  {path:'showcase',component:ShowcaseComponent},
+  { path: 'showcase', component: ShowcaseComponent },
 
   {
     path: 'dashboard',
     children: [
-      {path: '', component: CustomerDashboardComponent, pathMatch: 'full'},
+      { path: '', component: CustomerDashboardComponent, pathMatch: 'full' },
       {
         path: 'customers',
         loadChildren: () =>
           import('./features/customers/customers-routing.module').then(
-            m => m.CustomersRoutingModule
+            (m) => m.CustomersRoutingModule
           ),
       },
     ],
   },
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

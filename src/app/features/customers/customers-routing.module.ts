@@ -19,28 +19,40 @@ import { ConfigurationProductComponent } from './pages/configuration-product/con
 import { AddCustomerAddressComponent } from './pages/add-customer-address/add-customer-address.component';
 
 const routes: Routes = [
-  // dashboard/customers/:id/address/update/:addressId 
-  { path: "customer-info/:id", component: CustomerInfoComponent },
-  { path: "customer-dashboard", component: CustomerDashboardComponent },
-  { path: "contact-medium", component: AddContactMediumComponent },
-  { path: "create-customer", component: CreateCustomerComponent },
-  { path: "add-address-info", component: AddAddressInfoComponent },
-  { path: "list-address-info", component: ListAddressInfoComponent },
-  { path: "update-customer/:id", component: UpdateCustomerComponent },
-  { path: "customer-address/:id", component: CustomerAddressComponent },
-  { path: "customer-bill/:id", component: CustomerBillingAccountComponent },
-  { path: "customer-contact-form/:id", component: UpdateCustContactMediumComponent },
-  { path: "customer-billing-account-detail/:id", component: CustomerBillingAccountDetailComponent },
-  { path: "submit-order", component: SubmitOrderComponent },
-  { path: "customer-contact-medium/:id", component: CustomerContactMediumComponent },
-  { path: "offer-selection", component: OfferSelectionComponent },
-  { path: "configuration-product", component: ConfigurationProductComponent },
-  { path: ":id/address/add", component: AddCustomerAddressComponent },
-  { path: ":id/address/update/:addressId", component: AddCustomerAddressComponent },
+  // dashboard/customers/:id/address/update/:addressId
+  { path: 'customer-info/:id', component: CustomerInfoComponent },
+  { path: 'customer-dashboard', component: CustomerDashboardComponent },
+  { path: 'contact-medium', component: AddContactMediumComponent },
+  { path: 'create-customer', component: CreateCustomerComponent },
+  { path: 'add-address-info', component: AddAddressInfoComponent },
+  { path: 'list-address-info', component: ListAddressInfoComponent },
+  { path: 'update-customer/:id', component: UpdateCustomerComponent },
+  { path: 'customer-address/:id', component: CustomerAddressComponent },
+  { path: 'customer-bill/:id', component: CustomerBillingAccountComponent },
+  {
+    path: 'customer-contact-form/:id',
+    component: UpdateCustContactMediumComponent,
+  },
+  {
+    path: 'customer-billing-account-detail/:id',
+    component: CustomerBillingAccountDetailComponent,
+  },
+  { path: 'submit-order', component: SubmitOrderComponent },
+  {
+    path: 'customer-contact-medium/:id',
+    component: CustomerContactMediumComponent,
+  },
+  { path: 'offer-selection', component: OfferSelectionComponent },
+  { path: 'configuration-product', component: ConfigurationProductComponent },
+  { path: ':id/address/add', component: AddCustomerAddressComponent },
+  {
+    path: ':id/address/update/:addressId',
+    component: AddCustomerAddressComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class CustomersRoutingModule { }
+export class CustomersRoutingModule {}

@@ -8,9 +8,8 @@ describe('ListAddressInfoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListAddressInfoComponent ]
-    })
-    .compileComponents();
+      declarations: [ListAddressInfoComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ListAddressInfoComponent);
     component = fixture.componentInstance;

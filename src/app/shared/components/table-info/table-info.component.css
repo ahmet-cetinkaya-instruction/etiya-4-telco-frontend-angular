@@ -1,41 +1,41 @@
 @import '../../../../styles.css';
 
 ::ng-deep .table.e-table .table-title {
-    background-color: #191847;
+  background-color: #191847;
 }
 
 ::ng-deep .table.e-table .table-body {
-    background-color: #2A5183;
+  background-color: #2a5183;
 }
 
 ::ng-deep .table.e-table {
-    color: #FFFFFF;
-    border: 2px solid #F58220 !important;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-align: center;
+  color: #ffffff;
+  border: 2px solid #f58220 !important;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
 }
 
 ::ng-deep .table.e-table .table-title th,
 ::ng-deep .table.e-table tr td {
-    height: 59px;
-    border-left: 2px solid black;
-    font-family: 'Anybody';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 19px;
+  height: 59px;
+  border-left: 2px solid black;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
 }
 
 ::ng-deep .table.e-table .table-title th:first-child,
 ::ng-deep .table.e-table .table-body tr th {
-    border-left: 2px solid #F58220;
-    font-family: 'Anybody';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 19px;
+  border-left: 2px solid #f58220;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
 }
 
 ::ng-deep .table.e-table tr th {
-    border-left: 2px solid #F58220;
+  border-left: 2px solid #f58220;
 }

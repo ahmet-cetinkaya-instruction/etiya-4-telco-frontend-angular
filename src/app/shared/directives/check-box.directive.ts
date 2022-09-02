@@ -1,16 +1,18 @@
 import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[etiyaCheckBox]'
+  selector: '[etiyaCheckBox]',
 })
 export class CheckBoxDirective {
-  @Input() etiyaCheckBox!:'dark';
+  @Input() etiyaCheckBox!: 'dark';
 
-  constructor(private renderer: Renderer2,private hostElement: ElementRef) {   
-  }
+  constructor(private renderer: Renderer2, private hostElement: ElementRef) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.renderer.addClass(this.hostElement.nativeElement, `form-check-input`);
-    this.renderer.addClass(this.hostElement.nativeElement, `e-check-box-${this.etiyaCheckBox}`);
+    this.renderer.addClass(
+      this.hostElement.nativeElement,
+      `e-check-box-${this.etiyaCheckBox}`
+    );
   }
 }
