@@ -7,11 +7,11 @@
       <span class="e-line-right"></span>
     </div>
     <div class="scroll">
-      <div *ngFor="let item of baskets">
+      <div *ngFor="let offer of basket">
         <p>
-          Campain ID : <br />
-          Prod Offer ID : <br />
-          Prod Offer Name :
+          Campain ID : {{ offer.type.id }}<br />
+          Prod Offer ID : {{ offer.id }}<br />
+          Prod Offer Name :{{ offer.name }}
         </p>
       </div>
     </div>
@@ -20,11 +20,13 @@
         <label class="e-basket-total-label">TOTAL AMOUNT</label>
       </div>
       <div>
-        <label class="e-basket-price-label">139 TL</label>
+        <label class="e-basket-price-label">{{ amount }} TL</label>
       </div>
     </div>
     <div class="row d-flex align-items-center justify-content-center">
-      <button etiyaButton="clear" class="col-3 mt-2">Clear</button>
+      <button etiyaButton="clear" class="col-3 mt-2" (click)="clear()">
+        Clear
+      </button>
     </div>
   </div>
 </div>

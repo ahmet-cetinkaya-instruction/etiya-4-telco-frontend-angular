@@ -8,13 +8,14 @@ import { OfferService } from 'src/app/features/offers/services/offer/offer.servi
   styleUrls: ['./offer-selection.component.css'],
 })
 export class OfferSelectionComponent implements OnInit {
-  offers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   catalogOffersList!: Offer[];
   campaignOffersList!: Offer[];
+  offerList!: Offer[];
   constructor(private offerService: OfferService) {}
 
   ngOnInit(): void {
     this.getOfferList();
+    this.listenBasket();
   }
 
   getOfferList() {
@@ -27,5 +28,32 @@ export class OfferSelectionComponent implements OnInit {
       );
     });
   }
-  addBasket(offer: Offer) {}
+  addBasket(offer: Offer) {
+    if (this.offerList === undefined) this.offerList = [];
+    this.offerList.push(offer);
+  }
+  saveBasket() {
+    this.offerList.forEach((offer) => {
+      this.offerService.addOfferToBasketStore(offer);
+    });
+  }
+  isSelected(offer: Offer): boolean {
+    if (this.offerList === undefined) return false;
+    return Boolean(
+      this.offerList.find((offerInList) => offerInList.id === offer.id)
+    );
+  }
+  getOfferCount(offer: Offer): number {
+    let count: number = 0;
+    this.offerList.forEach((offerInList) => {
+      if (offerInList.id === offer.id) count++;
+    });
+    return count;
+  }
+  listenBasket() {
+    this.offerService.basket$.subscribe((basket) => {
+      this.offerList = [...basket];
+      console.log(basket);
+    });
+  }
 }

@@ -70,9 +70,15 @@
                     <tr
                       *ngFor="let catalogOffer of catalogOffersList"
                       (click)="addBasket(catalogOffer)"
+                      [ngClass]="{ selected: isSelected(catalogOffer) }"
                     >
                       <td>{{ catalogOffer.id }}</td>
-                      <td>{{ catalogOffer.name }}</td>
+                      <td>
+                        <span *ngIf="isSelected(catalogOffer)"
+                          >{{ getOfferCount(catalogOffer) }}x</span
+                        >
+                        {{ catalogOffer.name }}
+                      </td>
                     </tr>
                   </tbody>
                 </app-table-scroll>
@@ -139,10 +145,16 @@
                     <tr
                       *ngFor="let campaignOffer of campaignOffersList"
                       (click)="addBasket(campaignOffer)"
+                      [ngClass]="{ selected: isSelected(campaignOffer) }"
                     >
                       <td>{{ campaignOffer.type.id }}</td>
                       <td>{{ campaignOffer.id }}</td>
-                      <td>{{ campaignOffer.name }}</td>
+                      <td>
+                        <span *ngIf="isSelected(campaignOffer)"
+                          >{{ getOfferCount(campaignOffer) }}x</span
+                        >
+                        {{ campaignOffer.name }}
+                      </td>
                     </tr>
                   </tbody>
                 </app-table-scroll>
@@ -156,7 +168,9 @@
       </div>
       <div class="row e-buttons">
         <div class="col-8 d-flex justify-content-end align-items-center">
-          <button etiyaButton="accordion-body">Add Basket</button>
+          <button etiyaButton="accordion-body" (click)="saveBasket()">
+            Add Basket
+          </button>
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
           <button etiyaButton="clear">NEXT</button>

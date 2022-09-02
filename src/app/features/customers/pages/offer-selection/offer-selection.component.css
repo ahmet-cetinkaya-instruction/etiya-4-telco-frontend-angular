@@ -95,3 +95,7 @@
 ::ng-deep .main-box {
   height: auto !important;
 }
+
+.selected {
+  background-color: #1a4981;
+}
