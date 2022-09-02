@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { CustomersModule } from './features/customers/customers.module';
 import { PanelModule } from './features/panel/panel.module';
 import { CityModule } from './features/city/city.module';
+import { OffersModule } from './features/offers/offers.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { CityModule } from './features/city/city.module';
     CustomersModule,
     PanelModule,
     CityModule,
+    OffersModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

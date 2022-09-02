@@ -75,7 +75,17 @@
             </table>
           </div>
           <div class="col-3 e-accordion-body-buttons">
-            <button etiyaButton="accordion-body">Start New Sale</button>
+            <button
+              etiyaButton="accordion-body"
+              [routerLink]="
+                '/dashboard/customers/' +
+                customerId +
+                '/offer-selection/' +
+                billingAccount.id
+              "
+            >
+              Start New Sale
+            </button>
             <button etiyaButton="accordion-body">Transfer</button>
             <button etiyaButton="accordion-body">Service Address Page</button>
           </div>

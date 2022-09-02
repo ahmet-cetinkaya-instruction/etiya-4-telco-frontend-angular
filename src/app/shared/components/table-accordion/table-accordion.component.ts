@@ -9,6 +9,7 @@ import { BillingAccount } from 'src/app/features/customers/models/billingAccount
 })
 export class TableAccordionComponent implements OnInit {
   @Input() billingAccount!: BillingAccount;
+  @Input() customerId!: number;
 
   constructor() {}
 

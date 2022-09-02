@@ -67,9 +67,12 @@
                     </tr>
                   </thead>
                   <tbody class="table-body">
-                    <tr *ngFor="let item of offers">
-                      <td></td>
-                      <td></td>
+                    <tr
+                      *ngFor="let catalogOffer of catalogOffersList"
+                      (click)="addBasket(catalogOffer)"
+                    >
+                      <td>{{ catalogOffer.id }}</td>
+                      <td>{{ catalogOffer.name }}</td>
                     </tr>
                   </tbody>
                 </app-table-scroll>
@@ -127,16 +130,19 @@
                 <app-table-scroll class="e-table">
                   <thead>
                     <tr class="table-title">
-                      <th>Compaign ID</th>
+                      <th>Campaign ID</th>
                       <th>Prod Offer ID</th>
                       <th>Prod Offer Name</th>
                     </tr>
                   </thead>
                   <tbody class="table-body">
-                    <tr *ngFor="let item of offers">
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                    <tr
+                      *ngFor="let campaignOffer of campaignOffersList"
+                      (click)="addBasket(campaignOffer)"
+                    >
+                      <td>{{ campaignOffer.type.id }}</td>
+                      <td>{{ campaignOffer.id }}</td>
+                      <td>{{ campaignOffer.name }}</td>
                     </tr>
                   </tbody>
                 </app-table-scroll>

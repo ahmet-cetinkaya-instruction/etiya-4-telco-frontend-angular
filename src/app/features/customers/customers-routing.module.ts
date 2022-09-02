@@ -42,7 +42,10 @@ const routes: Routes = [
     path: 'customer-contact-medium/:id',
     component: CustomerContactMediumComponent,
   },
-  { path: 'offer-selection', component: OfferSelectionComponent },
+  {
+    path: ':id/offer-selection/:billingAccountId',
+    component: OfferSelectionComponent,
+  },
   { path: 'configuration-product', component: ConfigurationProductComponent },
   { path: ':id/address/add', component: AddCustomerAddressComponent },
   {
