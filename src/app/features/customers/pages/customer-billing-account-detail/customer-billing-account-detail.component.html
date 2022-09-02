@@ -28,10 +28,10 @@
   <div class="p-2"></div>
   <div class="e-customer-content">
     <div class="m-3">
-      <app-table-accordion
-        [billingAccountList]="billingAccount"
-        [productList]="products"
-      ></app-table-accordion>
+      <app-table-accordion-header></app-table-accordion-header>
+      <ng-template ngFor let-bill [ngForOf]="billingAccountList">
+        <app-table-accordion [billingAccount]="bill"></app-table-accordion>
+      </ng-template>
     </div>
   </div>
 </app-main-layout>

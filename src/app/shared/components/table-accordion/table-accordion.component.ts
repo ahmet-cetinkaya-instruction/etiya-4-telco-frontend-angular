@@ -8,13 +8,9 @@ import { BillingAccount } from 'src/app/features/customers/models/billingAccount
   styleUrls: ['./table-accordion.component.css'],
 })
 export class TableAccordionComponent implements OnInit {
-  @Input() billingAccountList!: BillingAccount[];
-  @Input() productList!: Product[];
+  @Input() billingAccount!: BillingAccount;
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.billingAccountList);
-    console.log(this.productList);
-  }
+  ngOnInit(): void {}
 }

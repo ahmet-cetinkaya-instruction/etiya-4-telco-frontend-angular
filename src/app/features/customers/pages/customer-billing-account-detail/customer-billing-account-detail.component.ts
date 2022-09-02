@@ -10,8 +10,7 @@ import { CustomersService } from '../../services/customer/customers.service';
 })
 export class CustomerBillingAccountDetailComponent implements OnInit {
   selectedCustomerId!: number;
-  billingAccount: BillingAccount[] = [];
-  products: Product[] = [];
+  billingAccountList!: BillingAccount[];
   constructor(
     private customerService: CustomersService,
     private activatedRoute: ActivatedRoute
@@ -30,16 +29,7 @@ export class CustomerBillingAccountDetailComponent implements OnInit {
       this.customerService
         .getCustomerById(this.selectedCustomerId)
         .subscribe((data) => {
-          data.billingAccounts?.forEach((bill) => {
-            this.billingAccount.push(bill);
-            bill.orders.forEach((order) => {
-              order.offers.forEach((offer) => {
-                offer.products.forEach((product) => {
-                  this.products.push(product);
-                });
-              });
-            });
-          });
+          this.billingAccountList = data.billingAccounts || [];
         });
     }
   }

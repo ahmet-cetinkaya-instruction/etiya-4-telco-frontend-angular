@@ -31,6 +31,7 @@ import { InputDirective } from './directives/input.directive';
 import { CheckBoxDirective } from './directives/check-box.directive';
 import { RouterModule } from '@angular/router';
 import { TableScrollComponent } from './components/table-scroll/table-scroll.component';
+import { TableAccordionHeaderComponent } from './components/table-accordion-header/table-accordion-header.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { TableScrollComponent } from './components/table-scroll/table-scroll.com
     InputDirective,
     CheckBoxDirective,
     TableScrollComponent,
+    TableAccordionHeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -92,6 +94,7 @@ import { TableScrollComponent } from './components/table-scroll/table-scroll.com
     ButtonDirective,
     InputDirective,
     TableScrollComponent,
+    TableAccordionHeaderComponent,
   ],
   providers: [MessageService],
 })

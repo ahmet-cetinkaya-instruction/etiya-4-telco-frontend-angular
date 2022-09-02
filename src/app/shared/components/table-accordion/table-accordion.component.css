@@ -1,14 +1,5 @@
 @import '../../../../styles.css';
 
-.e-accordion-header {
-  background: #191847;
-  border: 1px solid #f58220;
-  box-shadow: inset 0px 4px 16px rgba(0, 0, 0, 0.25);
-  height: 63px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-}
 
 .table.e-accordion-table {
   color: #ffffff;
