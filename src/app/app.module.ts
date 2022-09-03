@@ -9,6 +9,8 @@ import { CustomersModule } from './features/customers/customers.module';
 import { PanelModule } from './features/panel/panel.module';
 import { CityModule } from './features/city/city.module';
 import { OffersModule } from './features/offers/offers.module';
+import { CampaignsModule } from './features/campaigns/campaigns.module';
+import { CatalogsModule } from './features/catalogs/catalogs.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +24,8 @@ import { OffersModule } from './features/offers/offers.module';
     PanelModule,
     CityModule,
     OffersModule,
+    CampaignsModule,
+    CatalogsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

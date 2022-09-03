@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Campaign } from 'src/app/features/campaigns/models/campaign';
+import { CampaignsService } from 'src/app/features/campaigns/services/campaigns/campaigns.service';
+import { Catalog } from 'src/app/features/catalogs/models/catalog';
+import { CatalogsService } from 'src/app/features/catalogs/services/catalogs/catalogs.service';
 import { Offer } from 'src/app/features/offers/models/offer';
 import { OfferService } from 'src/app/features/offers/services/offer/offer.service';
 
@@ -11,11 +16,22 @@ export class OfferSelectionComponent implements OnInit {
   catalogOffersList!: Offer[];
   campaignOffersList!: Offer[];
   offerList!: Offer[];
-  constructor(private offerService: OfferService) {}
+  campaignList!:Campaign[];
+  catalogList!:Catalog[];
+  searchCampaignForm!:FormGroup;
+  searchCatalogForm!:FormGroup;
 
-  ngOnInit(): void {
+  constructor(private offerService: OfferService,
+    private catalogService:CatalogsService,
+    private campaignService:CampaignsService,
+    private formBuilder:FormBuilder) {}
+
+    ngOnInit(): void {
     this.getOfferList();
     this.listenBasket();
+    this.getCampaignList();
+    this.getCatalogList();
+    this.createSearchCatalogForm();
   }
 
   getOfferList() {
@@ -56,4 +72,34 @@ export class OfferSelectionComponent implements OnInit {
       console.log(basket);
     });
   }
+
+  getCampaignList(){
+    this.campaignService.getList().subscribe(data =>{
+      this.campaignList = data;
+    })
+  }
+
+  getCatalogList(){
+    this.catalogService.getList().subscribe(data =>{
+      this.catalogList = data;
+    })
+  }
+
+  createSearchCatalogForm(){
+    this.searchCatalogForm = this.formBuilder.group({
+      selectedId : [''],
+      prodOfferName : [''],
+      prodOfferId : ['']
+    })
+  }
+
+  searchCatalog(){
+    this.catalogService
+      .getListByFilter(this.searchCatalogForm.value)
+      .subscribe((data) => {
+        this.catalogOffersList = data;
+        console.log(data)
+      });
+  }
+
 }

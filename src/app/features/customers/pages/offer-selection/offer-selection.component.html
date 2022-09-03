@@ -15,8 +15,9 @@
             <div one>
               <div class="offer-title mb-3">Catalog Selection</div>
               <div class="e-dropdown">
-                <select etiyaInput="dark">
-                  <option selected value="">Select</option>
+                <select etiyaInput="dark" formControlName="selectedId">
+                  <option selected disabled hidden value="">Select</option>
+                  <option *ngFor="let catalog of catalogList">{{catalog.name}}</option>
                 </select>
               </div>
               <div class="row">
@@ -32,6 +33,7 @@
                         type="text"
                         class="offer-input"
                         etiyaInput="dark"
+                        formControlName="prodOfferId"
                       />
                     </div>
                   </div>
@@ -48,13 +50,14 @@
                         type="text"
                         class="offer-input"
                         etiyaInput="dark"
+                        formControlName="prodOfferName"
                       />
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-12 d-flex justify-content-end">
-                <button class="e-offer-button" etiyaButton="clear">
+                <button class="e-offer-button" etiyaButton="clear" (click)="searchCatalog()">
                   Search
                 </button>
               </div>
@@ -87,46 +90,48 @@
 
             <div two>
               <div class="offer-title mb-3">Campaign Selection</div>
-              <div class="e-dropdown">
-                <select etiyaInput="dark">
-                  <option selected value="">Select</option>
-                  <option value=""></option>
-                </select>
-              </div>
-              <div class="row">
-                <div class="col-12 col-xl-6">
-                  <div class="row m-2 e-offer-selection-center">
-                    <div class="col-12 col-lg-5 p-0">
-                      <label class="e-offer-label" for="prodOfferId"
-                        >Campaign ID
-                      </label>
+              <form [formGroup]="searchCampaignForm">
+                <div class="e-dropdown">
+                  <select etiyaInput="dark">
+                    <option selected disabled hidden value="">Select</option>
+                    <option *ngFor="let campaign of campaignList">{{campaign.name}}</option>
+                  </select>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-xl-6">
+                    <div class="row m-2 e-offer-selection-center">
+                      <div class="col-12 col-lg-5 p-0">
+                        <label class="e-offer-label" for="prodOfferId"
+                          >Campaign ID
+                        </label>
+                      </div>
+                      <div class="col-12 col-lg-7 p-0">
+                        <input
+                          type="text"
+                          class="offer-input"
+                          etiyaInput="dark"
+                        />
+                      </div>
                     </div>
-                    <div class="col-12 col-lg-7 p-0">
-                      <input
-                        type="text"
-                        class="offer-input"
-                        etiyaInput="dark"
-                      />
+                  </div>
+                  <div class="col-12 col-xl-6">
+                    <div class="row e-offer-selection-center">
+                      <div class="col-12 col-lg-5 p-0">
+                        <label class="e-offer-label" for="prodOfferName"
+                          >Campaign Name
+                        </label>
+                      </div>
+                      <div class="col-12 col-lg-7 p-0">
+                        <input
+                          type="text"
+                          class="offer-input"
+                          etiyaInput="dark"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-xl-6">
-                  <div class="row e-offer-selection-center">
-                    <div class="col-12 col-lg-5 p-0">
-                      <label class="e-offer-label" for="prodOfferName"
-                        >Campaign Name
-                      </label>
-                    </div>
-                    <div class="col-12 col-lg-7 p-0">
-                      <input
-                        type="text"
-                        class="offer-input"
-                        etiyaInput="dark"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </form>             
               <div class="col-12 d-flex justify-content-end">
                 <button class="e-offer-button" etiyaButton="clear">
                   Search
