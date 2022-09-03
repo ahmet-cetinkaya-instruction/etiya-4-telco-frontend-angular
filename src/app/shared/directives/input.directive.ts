@@ -4,7 +4,7 @@ import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
   selector: '[etiyaInput]',
 })
 export class InputDirective {
-  @Input() etiyaInput!: 'white' | 'dark';
+  @Input() etiyaInput!: 'white' | 'dark' | 'configuration-product';
 
   constructor(private renderer: Renderer2, private hostElement: ElementRef) {}
 

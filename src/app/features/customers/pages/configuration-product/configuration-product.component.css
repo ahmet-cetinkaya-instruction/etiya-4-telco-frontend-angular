@@ -24,16 +24,7 @@
   border-bottom: 1px solid #f58220;
 }
 
-.e-configuration-product-input {
-  box-sizing: border-box;
-  height: 31.47px;
-  max-width: 200px;
-  text-align: left !important;
-  background: #061f3e;
-  border: 1px solid #f58220;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-}
+
 
 .e-confirugration-product-label {
   height: 20.68px;

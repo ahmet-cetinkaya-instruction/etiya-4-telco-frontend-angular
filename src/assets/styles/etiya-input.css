@@ -23,7 +23,17 @@
 
     color: rgba(0, 0, 0, 0.6);
 }
-
+.e-input-configuration-product {
+    box-sizing: border-box;
+    height: 31.47px;
+    max-width: 200px;
+    text-align: left !important;
+    background: #061f3e;
+    border: 1px solid #f58220;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    color: #fff;
+  }
 .e-input-dark {
     box-sizing: border-box;
 

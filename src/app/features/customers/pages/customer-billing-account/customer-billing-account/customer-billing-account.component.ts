@@ -17,10 +17,11 @@ export class CustomerBillingAccountComponent implements OnInit {
   addressForm!: FormGroup;
   isShown: boolean = false;
   cityList!: City[];
-  billingAdress: Address[] = [];
   selectedCustomerId!: number;
   customer!: Customer;
   billingAccount!: BillingAccount;
+  
+  billingAdress: Address[] = [];
 
   constructor(
     private formBuilder: FormBuilder,

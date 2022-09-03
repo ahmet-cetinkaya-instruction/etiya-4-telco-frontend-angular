@@ -11,6 +11,7 @@ import { CityModule } from './features/city/city.module';
 import { OffersModule } from './features/offers/offers.module';
 import { CampaignsModule } from './features/campaigns/campaigns.module';
 import { CatalogsModule } from './features/catalogs/catalogs.module';
+import { ProductsModule } from './features/products/products.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +27,7 @@ import { CatalogsModule } from './features/catalogs/catalogs.module';
     OffersModule,
     CampaignsModule,
     CatalogsModule,
+    ProductsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

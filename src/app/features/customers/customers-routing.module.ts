@@ -37,7 +37,7 @@ const routes: Routes = [
     path: 'customer-billing-account-detail/:id',
     component: CustomerBillingAccountDetailComponent,
   },
-  { path: 'submit-order', component: SubmitOrderComponent },
+  { path: ':id/submit-order/:billingAccountId', component: SubmitOrderComponent },
   {
     path: 'customer-contact-medium/:id',
     component: CustomerContactMediumComponent,
