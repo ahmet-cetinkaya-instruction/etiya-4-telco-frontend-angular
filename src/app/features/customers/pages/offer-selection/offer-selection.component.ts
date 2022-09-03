@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { Campaign } from 'src/app/features/campaigns/models/campaign';
 import { CampaignsService } from 'src/app/features/campaigns/services/campaigns/campaigns.service';
 import { Catalog } from 'src/app/features/catalogs/models/catalog';
@@ -20,18 +21,30 @@ export class OfferSelectionComponent implements OnInit {
   catalogList!:Catalog[];
   searchCampaignForm!:FormGroup;
   searchCatalogForm!:FormGroup;
+  selectedCustomerId!:number;
+  billingAccountId!:number;
 
   constructor(private offerService: OfferService,
     private catalogService:CatalogsService,
     private campaignService:CampaignsService,
-    private formBuilder:FormBuilder) {}
+    private formBuilder:FormBuilder,
+    private activatedRoute:ActivatedRoute) {}
 
     ngOnInit(): void {
+      this.getParams();
     this.getOfferList();
     this.listenBasket();
     this.getCampaignList();
     this.getCatalogList();
     this.createSearchCatalogForm();
+    this.createSearchCampaignsForm();
+  }
+
+  getParams(){
+    this.activatedRoute.params.subscribe((params) => {
+      if (params['id']) this.selectedCustomerId = params['id'];
+      if (params['billingAccountId']) this.billingAccountId = params['billingAccountId'];
+    });
   }
 
   getOfferList() {
@@ -85,6 +98,22 @@ export class OfferSelectionComponent implements OnInit {
     })
   }
 
+  createSearchCampaignsForm(){
+    this.searchCampaignForm = this.formBuilder.group({
+      selectedId : [''],
+      campaignName : [''],
+      campaignId : ['']
+    })
+  }
+
+  searchCampaign(){
+    this.campaignService
+      .getListByFilter(this.searchCampaignForm.value)
+      .subscribe((data) => {
+        this.campaignOffersList = data;
+      });
+  }
+
   createSearchCatalogForm(){
     this.searchCatalogForm = this.formBuilder.group({
       selectedId : [''],
@@ -98,7 +127,6 @@ export class OfferSelectionComponent implements OnInit {
       .getListByFilter(this.searchCatalogForm.value)
       .subscribe((data) => {
         this.catalogOffersList = data;
-        console.log(data)
       });
   }
 

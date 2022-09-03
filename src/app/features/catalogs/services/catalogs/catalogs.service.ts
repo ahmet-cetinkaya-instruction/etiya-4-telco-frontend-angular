@@ -44,7 +44,7 @@ export class CatalogsService {
               .includes(searchCatalog.prodOfferName.toLowerCase())
           );
         }
-        subject.next(filteredCatalogs);
+        subject.next(filteredCatalogs.filter((catalog) => catalog.type.typeName === 'catalog') );
       },
       error: (err) => {
         subject.error(err);
