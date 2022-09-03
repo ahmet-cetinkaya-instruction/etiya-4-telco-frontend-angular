@@ -17,7 +17,7 @@
               <div class="e-dropdown">
                 <select etiyaInput="dark" formControlName="selectedId">
                   <option selected disabled hidden value="">Select</option>
-                  <option *ngFor="let catalog of catalogList">{{catalog.name}}</option>
+                  <option *ngFor="let catalog of catalogList" value="{{catalog.id}}">{{catalog.name}}</option>
                 </select>
               </div>
               <div class="row">
