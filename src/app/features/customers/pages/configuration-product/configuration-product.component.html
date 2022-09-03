@@ -245,57 +245,55 @@
         </ng-template>
       </ng-template>
 
-      <div class="d-flex justify-content-start customer-title mb-5">
+      <div class="d-flex justify-content-center customer-title mb-5">
         <app-info-title [infoTitle]="'Address Info'"></app-info-title>
       </div>
-      <div class="d-flex justify-content-center align-items-center m-3">
-        <div class="e-customer-content1">
-          <div>
-            <div class="row w-100">
-              <table class="e-table table table-bordered table-hidden">
-                <thead>
-                  <tr class="table-title">
-                    <th>City</th>
-                    <th>Street Name</th>
-                    <th>House/Flat Number</th>
-                    <th>Address Description</th>
+      <div class="e-customer-content1">
+        <div>
+          <div class="row w-100">
+            <table class="e-table table table-bordered table-hidden">
+              <thead>
+                <tr class="table-title">
+                  <th>City</th>
+                  <th>Street Name</th>
+                  <th>House/Flat Number</th>
+                  <th>Address Description</th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <tr
+                  *ngIf="
+                    !billingAdress || billingAdress.length == 0;
+                    else customerAddressList
+                  "
+                >
+                  <th>Null</th>
+                  <td>Null</td>
+                  <td>Null</td>
+                  <td>Null</td>
+                </tr>
+                <ng-template #customerAddressList>
+                  <tr *ngFor="let billingadr of billingAdress">
+                    <th style="display: flex">
+                      <!-- <div>
+                        <button etiyaButton="edit"></button>
+                      </div> -->
+                      <div style="margin-left: 65px">
+                        {{ billingadr.city.name }}
+                      </div>
+                    </th>
+                    <td>{{ billingadr.street }}</td>
+                    <td>{{ billingadr.flatNumber }}</td>
+                    <td>{{ billingadr.description }}</td>
                   </tr>
-                </thead>
-                <tbody class="table-body">
-                  <tr
-                    *ngIf="
-                      !billingAdress || billingAdress.length == 0;
-                      else customerAddressList
-                    "
-                  >
-                    <th>Null</th>
-                    <td>Null</td>
-                    <td>Null</td>
-                    <td>Null</td>
-                  </tr>
-                  <ng-template #customerAddressList>
-                    <tr *ngFor="let billingadr of billingAdress">
-                      <th style="display: flex">
-                        <!-- <div>
-                          <button etiyaButton="edit"></button>
-                        </div> -->
-                        <div style="margin-left: 65px">
-                          {{ billingadr.city.name }}
-                        </div>
-                      </th>
-                      <td>{{ billingadr.street }}</td>
-                      <td>{{ billingadr.flatNumber }}</td>
-                      <td>{{ billingadr.description }}</td>
-                    </tr>
-                  </ng-template>
-                </tbody>
-              </table>
-            </div>
-            <button etiyaButton="new-address" >
-              <img src="../../../../assets/img/add_new.png" alt="" />Add New
-              Address
-            </button>
+                </ng-template>
+              </tbody>
+            </table>
           </div>
+          <button etiyaButton="new-address">
+            <img src="../../../../assets/img/add_new.png" alt="" />Add New
+            Address
+          </button>
         </div>
       </div>
 

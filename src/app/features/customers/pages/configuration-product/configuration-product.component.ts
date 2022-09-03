@@ -20,7 +20,8 @@ export class ConfigurationProductComponent implements OnInit {
   selectedCustomerId!: number;
   billingAccountId!: number;
   customer!: Customer;
-  billingAdress!: Address[] 
+  billingAccountList!: BillingAccount[];
+  billingAdress: Address[] = [];
 
   constructor(
     private offerService: OfferService,
@@ -30,7 +31,6 @@ export class ConfigurationProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.getParams();
-
     this.listenBasket();
   }
 
@@ -82,10 +82,7 @@ export class ConfigurationProductComponent implements OnInit {
       if (params['id']) this.selectedCustomerId = params['id'];
       if (params['billingAccountId'])
         this.billingAccountId = params['billingAccountId'];
-
       this.getCustomerById();
-
-      this.getCustomerBiliingAccountAddress();
     });
   }
 
@@ -99,15 +96,15 @@ export class ConfigurationProductComponent implements OnInit {
       this.customersService
         .getCustomerById(this.selectedCustomerId)
         .subscribe((data) => {
-          this.customer = data;
+          this.billingAccountList = data.billingAccounts || [];
+          this.billingAccountList?.forEach((bill) => {
+            if (this.billingAccountId == bill.id) {
+              bill.addresses.forEach((adr) => {
+                this.billingAdress.push(adr);
+              });
+            }
+          });
         });
     }
-  }
-  getCustomerBiliingAccountAddress() {
-    this.customer.billingAccounts?.forEach((data) => {
-      data.addresses.forEach((res) => {
-        console.log(res.city.name);
-      });
-    });
   }
 }
