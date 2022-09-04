@@ -16,7 +16,7 @@ export const orderToAddReducer = createReducer(
   initialState,
   on(createOrder, (state, action) => {
     return { ...state, 
-      ...action.order, id:Math.floor(10000000 + Math.random() * 90000000) };
+      ...action.order};
   }),
   on(addOrderAddress, (state, action) => {
     console.log('address: ', action);
