@@ -4,9 +4,11 @@
 @import url('../src/assets/styles/etiya-check-box.css');
 @import url('../src/assets/styles/etiya-input.css');
 
-
-
 @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap');
 
-
-
+body {
+  background-image: url('../src/assets/img/search_background.png');
+  background-repeat: no-repeat;
+  background-size: 1520px 1610px;
+  overflow-x: hidden;
+}
