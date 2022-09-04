@@ -2,7 +2,7 @@ import {
   addAddressInfo,
   setContactMediumInfo,
   setDemographicInfo,
-} from './../../store/customerToAdd/customerToAdd.actions';
+} from '../../../../shared/store/customers/customerToAdd/customerToAdd.actions';
 import { Customer } from './../../models/customer';
 import { map, Observable, Subject } from 'rxjs';
 import { environment } from './../../../../../environments/environment';
@@ -10,12 +10,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { SearchCustomer } from '../../models/searchCustomer';
 import { Store } from '@ngrx/store';
-import { CustomerState } from '../../store/customer.reducer';
 import { CustomerDemographicInfo } from '../../models/customerDemographicInfo';
 import { Address } from '../../models/address';
 import { ContactMedium } from '../../models/contactMedium';
 import { CustomerBillingAccountComponent } from '../../pages/customer-billing-account/customer-billing-account/customer-billing-account.component';
 import { BillingAccount } from '../../models/billingAccount';
+import { SharedStoreState } from 'src/app/shared/store/shared.reducers';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -28,7 +29,7 @@ export class CustomersService {
 
   constructor(
     private httpClient: HttpClient,
-    private store: Store<CustomerState>
+    private store: Store<SharedStoreState>
   ) {}
 
   getList(): Observable<Customer[]> {

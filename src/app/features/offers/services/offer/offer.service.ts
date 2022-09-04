@@ -10,8 +10,8 @@ import {
   addOfferToBasket,
   changeConfigOfProductInBasket,
   clearBasket,
-} from '../../store/basket/basket.actions';
-import { OffersState } from '../../store/offers.reducer';
+} from '../../../../shared/store/offers/basket/basket.actions';
+import { SharedStoreState } from 'src/app/shared/store/shared.reducers';
 
 @Injectable({
   providedIn: 'root',
@@ -22,7 +22,7 @@ export class OfferService {
 
   constructor(
     private httpClient: HttpClient,
-    private store: Store<OffersState>
+    private store: Store<SharedStoreState>
   ) {}
 
   getList(): Observable<Offer[]> {
@@ -41,6 +41,8 @@ export class OfferService {
     product: Product,
     config: ProductConfigDto
   ) {
-    this.store.dispatch(changeConfigOfProductInBasket({offer, product, config}));
+    this.store.dispatch(
+      changeConfigOfProductInBasket({ offer, product, config })
+    );
   }
 }

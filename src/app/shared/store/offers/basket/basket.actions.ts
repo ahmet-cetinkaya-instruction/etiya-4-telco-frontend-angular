@@ -1,7 +1,7 @@
 import { createAction, props } from '@ngrx/store';
 import { Product } from 'src/app/features/customers/models/product';
 import { ProductConfigDto } from 'src/app/features/products/models/productConfigDto';
-import { Offer } from '../../models/offer';
+import { Offer } from '../../../../features/offers/models/offer';
 
 // Basket state'in güncellenmesine dair istekleri belirtiyoruz
 export const addOfferToBasket = createAction(

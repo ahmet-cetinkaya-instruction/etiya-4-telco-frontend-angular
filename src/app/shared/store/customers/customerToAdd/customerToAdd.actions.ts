@@ -1,7 +1,7 @@
 import { createAction, props } from '@ngrx/store';
-import { Address } from '../../models/address';
-import { ContactMedium } from '../../models/contactMedium';
-import { CustomerDemographicInfo } from '../../models/customerDemographicInfo';
+import { Address } from '../../../../features/customers/models/address';
+import { ContactMedium } from '../../../../features/customers/models/contactMedium';
+import { CustomerDemographicInfo } from '../../../../features/customers/models/customerDemographicInfo';
 
 export const setDemographicInfo = createAction(
   '[CustomerToAdd] Set Demographic Info',

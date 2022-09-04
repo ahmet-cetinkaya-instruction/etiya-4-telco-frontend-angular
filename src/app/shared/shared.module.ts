@@ -32,6 +32,8 @@ import { CheckBoxDirective } from './directives/check-box.directive';
 import { RouterModule } from '@angular/router';
 import { TableScrollComponent } from './components/table-scroll/table-scroll.component';
 import { TableAccordionHeaderComponent } from './components/table-accordion-header/table-accordion-header.component';
+import { StoreModule } from '@ngrx/store';
+import { sharedReducers } from './store/shared.reducers';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,7 @@ import { TableAccordionHeaderComponent } from './components/table-accordion-head
     BrowserAnimationsModule,
     ReactiveFormsModule,
     RouterModule,
+    StoreModule.forRoot(sharedReducers),
   ],
   exports: [
     OverlayTitleComponent,

@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
-import { Address } from '../../models/address';
-import { Customer } from '../../models/customer';
+import { Address } from '../../../../features/customers/models/address';
+import { Customer } from '../../../../features/customers/models/customer';
 import {
   addAddressInfo,
   setContactMediumInfo,

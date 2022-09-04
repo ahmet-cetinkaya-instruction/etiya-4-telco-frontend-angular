@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { Product } from 'src/app/features/customers/models/product';
-import { Offer } from '../../models/offer';
+import { Offer } from '../../../../features/offers/models/offer';
 import {
   addOfferToBasket,
   changeConfigOfProductInBasket,
@@ -23,7 +23,7 @@ export const basketReducer = createReducer(
     return [
       ...state.map((offer) => {
         if (offer.id != action.offer.id) return offer;
-        const newOffer:Offer={...offer,products:[...offer.products]}
+        const newOffer: Offer = { ...offer, products: [...offer.products] };
         const productIndex = newOffer.products.findIndex((product) => {
           return product.id === action.product.id;
         });

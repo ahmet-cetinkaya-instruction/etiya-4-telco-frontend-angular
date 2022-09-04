@@ -4,19 +4,19 @@ import { Observable } from 'rxjs';
 import { Address } from 'src/app/features/customers/models/address';
 import { Offer } from 'src/app/features/offers/models/offer';
 import { Order } from '../../models/order';
-import { OrdersState } from '../../store/orders.reducer';
 import {
   addOrderAddress,
   addOrderOffer,
-} from '../../store/orderToAdd/orderToAdd.actions';
+} from '../../../../shared/store/orders/orderToAdd/orderToAdd.actions';
+import { SharedStoreState } from 'src/app/shared/store/shared.reducers';
 
 @Injectable({
   providedIn: 'root',
 })
 export class OrderService {
-  order$: Observable<Order> = this.store.select((state) => state.order);
+  order$: Observable<Order> = this.store.select((state) => state.orderToAdd);
 
-  constructor(private store: Store<OrdersState>) {}
+  constructor(private store: Store<SharedStoreState>) {}
   addAddressToOrderStore(address: Address) {
     this.store.dispatch(addOrderAddress({ address }));
   }

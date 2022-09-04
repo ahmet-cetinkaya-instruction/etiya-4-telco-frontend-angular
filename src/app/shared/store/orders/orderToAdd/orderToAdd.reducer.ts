@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { Order } from '../../models/order';
+import { Order } from '../../../../features/orders/models/order';
 import {
   addOrderAddress,
   addOrderOffer,
@@ -12,7 +12,7 @@ const initialState: Order = {
   address: undefined,
 };
 
-export const orderReducer = createReducer(
+export const orderToAddReducer = createReducer(
   initialState,
   on(createOrder, (state, action) => {
     return { ...state, ...action.order };
@@ -23,6 +23,6 @@ export const orderReducer = createReducer(
   }),
   on(addOrderOffer, (state, action) => {
     console.log('action: ', action);
-    return { ...state, offers: action.offers };
+    return { ...state, offers: [...action.offers] };
   })
 );
