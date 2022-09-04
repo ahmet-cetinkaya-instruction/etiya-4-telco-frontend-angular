@@ -17,21 +17,23 @@ export class OfferSelectionComponent implements OnInit {
   catalogOffersList!: Offer[];
   campaignOffersList!: Offer[];
   offerList!: Offer[];
-  campaignList!:Campaign[];
-  catalogList!:Catalog[];
-  searchCampaignForm!:FormGroup;
-  searchCatalogForm!:FormGroup;
-  selectedCustomerId!:number;
-  billingAccountId!:number;
+  campaignList!: Campaign[];
+  catalogList!: Catalog[];
+  searchCampaignForm!: FormGroup;
+  searchCatalogForm!: FormGroup;
+  selectedCustomerId!: number;
+  billingAccountId!: number;
 
-  constructor(private offerService: OfferService,
-    private catalogService:CatalogsService,
-    private campaignService:CampaignsService,
-    private formBuilder:FormBuilder,
-    private activatedRoute:ActivatedRoute) {}
+  constructor(
+    private offerService: OfferService,
+    private catalogService: CatalogsService,
+    private campaignService: CampaignsService,
+    private formBuilder: FormBuilder,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
-    ngOnInit(): void {
-      this.getParams();
+  ngOnInit(): void {
+    this.getParams();
     this.getOfferList();
     this.listenBasket();
     this.getCampaignList();
@@ -40,10 +42,11 @@ export class OfferSelectionComponent implements OnInit {
     this.createSearchCampaignsForm();
   }
 
-  getParams(){
+  getParams() {
     this.activatedRoute.params.subscribe((params) => {
       if (params['id']) this.selectedCustomerId = params['id'];
-      if (params['billingAccountId']) this.billingAccountId = params['billingAccountId'];
+      if (params['billingAccountId'])
+        this.billingAccountId = params['billingAccountId'];
     });
   }
 
@@ -81,32 +84,33 @@ export class OfferSelectionComponent implements OnInit {
   }
   listenBasket() {
     this.offerService.basket$.subscribe((basket) => {
+      if (basket === undefined) return;
       this.offerList = [...basket];
       console.log(basket);
     });
   }
 
-  getCampaignList(){
-    this.campaignService.getList().subscribe(data =>{
+  getCampaignList() {
+    this.campaignService.getList().subscribe((data) => {
       this.campaignList = data;
-    })
+    });
   }
 
-  getCatalogList(){
-    this.catalogService.getList().subscribe(data =>{
+  getCatalogList() {
+    this.catalogService.getList().subscribe((data) => {
       this.catalogList = data;
-    })
+    });
   }
 
-  createSearchCampaignsForm(){
+  createSearchCampaignsForm() {
     this.searchCampaignForm = this.formBuilder.group({
-      selectedId : [''],
-      campaignName : [''],
-      campaignId : ['']
-    })
+      selectedId: [''],
+      campaignName: [''],
+      campaignId: [''],
+    });
   }
 
-  searchCampaign(){
+  searchCampaign() {
     this.campaignService
       .getListByFilter(this.searchCampaignForm.value)
       .subscribe((data) => {
@@ -114,20 +118,19 @@ export class OfferSelectionComponent implements OnInit {
       });
   }
 
-  createSearchCatalogForm(){
+  createSearchCatalogForm() {
     this.searchCatalogForm = this.formBuilder.group({
-      selectedId : [''],
-      prodOfferName : [''],
-      prodOfferId : ['']
-    })
+      selectedId: [''],
+      prodOfferName: [''],
+      prodOfferId: [''],
+    });
   }
 
-  searchCatalog(){
+  searchCatalog() {
     this.catalogService
       .getListByFilter(this.searchCatalogForm.value)
       .subscribe((data) => {
         this.catalogOffersList = data;
       });
   }
-
 }

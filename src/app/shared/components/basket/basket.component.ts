@@ -22,6 +22,7 @@ export class BasketComponent implements OnInit {
   }
   get amount(): number {
     let sumAmount: number = 0;
+    if (this.basket === undefined) return sumAmount;
     this.basket.forEach((offer) => {
       sumAmount += offer.products.reduce(
         (beforeAmount, product) => beforeAmount + product.amount,

@@ -24,8 +24,6 @@
   border-bottom: 1px solid #f58220;
 }
 
-
-
 .e-confirugration-product-label {
   height: 20.68px;
   min-width: none;
@@ -62,4 +60,7 @@
   padding: 10px;
   border-radius: 9px;
   background: rgba(13, 43, 80, 0.75);
+}
+.selected {
+  background-color: #1a4981;
 }

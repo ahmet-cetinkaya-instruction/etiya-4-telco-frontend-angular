@@ -50,7 +50,17 @@
     <div class="d-flex justify-content-center">
       <div style="width: 1125px" class="row p-0 pt-4">
         <div class="col-6 d-flex justify-content-lg-start">
-          <button [etiyaButton]="'clear'">Previous</button>
+          <button
+            [etiyaButton]="'clear'"
+            [routerLink]="
+              '/dashboard/customers/' +
+              selectedCustomerId +
+              '/configuration-product/' +
+              billingAccountId
+            "
+          >
+            Previous
+          </button>
         </div>
         <div class="col-6 d-flex justify-content-lg-end">
           <button [etiyaButton]="'clear'">Submit</button>

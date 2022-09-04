@@ -1,5 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 import { Address } from 'src/app/features/customers/models/address';
+import { Offer } from 'src/app/features/offers/models/offer';
 import { Order } from '../../models/order';
 
 export const createOrder = createAction(
@@ -9,5 +10,10 @@ export const createOrder = createAction(
 
 export const addOrderAddress = createAction(
   '[Order] Add Order Address',
-  props<{ address: Order }>()
+  props<{ address: Address }>()
+);
+
+export const addOrderOffer = createAction(
+  '[Order] Add Order Offer',
+  props<{ offers: Offer[] }>()
 );

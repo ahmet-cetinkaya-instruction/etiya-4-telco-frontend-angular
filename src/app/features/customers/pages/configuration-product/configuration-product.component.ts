@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 import { Offer } from 'src/app/features/offers/models/offer';
 import { OfferService } from 'src/app/features/offers/services/offer/offer.service';
+import { OrderService } from 'src/app/features/orders/services/order/order.service';
 import { ProductConfigDto } from 'src/app/features/products/models/productConfigDto';
 import { Address } from '../../models/address';
 import { BillingAccount } from '../../models/billingAccount';
@@ -26,7 +27,8 @@ export class ConfigurationProductComponent implements OnInit {
   constructor(
     private offerService: OfferService,
     private activatedRoute: ActivatedRoute,
-    private customersService: CustomersService
+    private customersService: CustomersService,
+    private orderService: OrderService
   ) {}
 
   ngOnInit(): void {
@@ -87,9 +89,6 @@ export class ConfigurationProductComponent implements OnInit {
   }
 
   getCustomerById() {
-    this.activatedRoute.params.subscribe((params) => {
-      if (params['id']) this.selectedCustomerId = params['id'];
-    });
     if (this.selectedCustomerId == undefined) {
       //toast
     } else {
@@ -106,5 +105,25 @@ export class ConfigurationProductComponent implements OnInit {
           });
         });
     }
+  }
+  isSelected(address: Address): boolean {
+    if (this.billingAccountList === undefined) return false;
+    return Boolean(
+      this.billingAccountList.find((addressInList) =>
+        addressInList.addresses.forEach((data) => {
+          data == address;
+        })
+      )
+    );
+  }
+  getAddressInfo(address: Address) {
+    this.orderService.addAddressToOrderStore(address);
+  }
+  addOfferToOrder() {
+    this.offerService.basket$.subscribe((basket) => {
+      console.log('basket: ', basket);
+      if (basket === undefined) return;
+      this.orderService.addOfferToOrderStore([...basket]);
+    });
   }
 }

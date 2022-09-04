@@ -273,7 +273,11 @@
                   <td>Null</td>
                 </tr>
                 <ng-template #customerAddressList>
-                  <tr *ngFor="let billingadr of billingAdress">
+                  <tr
+                    (click)="getAddressInfo(billingadr)"
+                    [ngClass]="{ selected: isSelected(billingadr) }"
+                    *ngFor="let billingadr of billingAdress"
+                  >
                     <th style="display: flex">
                       <!-- <div>
                         <button etiyaButton="edit"></button>
@@ -321,6 +325,7 @@
                 '/submit-order/' +
                 billingAccountId
               "
+              (click)="addOfferToOrder()"
             >
               NEXT
             </button>

@@ -1,16 +1,28 @@
 import { createReducer, on } from '@ngrx/store';
-import { Address } from 'src/app/features/customers/models/address';
 import { Order } from '../../models/order';
-import { addOrderAddress, createOrder } from './orderToAdd.actions';
+import {
+  addOrderAddress,
+  addOrderOffer,
+  createOrder,
+} from './orderToAdd.actions';
 
-const initialState: Order[] = [];
+const initialState: Order = {
+  id: undefined,
+  offers: [],
+  address: undefined,
+};
 
 export const orderReducer = createReducer(
   initialState,
   on(createOrder, (state, action) => {
-    return [...state, action.order];
+    return { ...state, ...action.order };
   }),
   on(addOrderAddress, (state, action) => {
-    return [...state, action];
+    console.log('address: ', action);
+    return { ...state, address: action.address };
+  }),
+  on(addOrderOffer, (state, action) => {
+    console.log('action: ', action);
+    return { ...state, offers: action.offers };
   })
 );
