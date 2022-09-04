@@ -1,5 +1,5 @@
 import { Address } from './address';
-import { Order } from './order';
+import { Order } from '../../orders/models/order';
 
 export interface BillingAccount {
   id: number;

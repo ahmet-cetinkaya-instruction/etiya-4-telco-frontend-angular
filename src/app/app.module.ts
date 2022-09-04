@@ -12,6 +12,7 @@ import { OffersModule } from './features/offers/offers.module';
 import { CampaignsModule } from './features/campaigns/campaigns.module';
 import { CatalogsModule } from './features/catalogs/catalogs.module';
 import { ProductsModule } from './features/products/products.module';
+import { OrdersModule } from './features/orders/orders.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import { ProductsModule } from './features/products/products.module';
     CampaignsModule,
     CatalogsModule,
     ProductsModule,
+    OrdersModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
