@@ -22,10 +22,8 @@
         <label class="e-frame-label">Order Items:</label>
       </div>
       <div class="col-8">
-        <div class="order-items">
-          <p><span>71233</span>8 mbps’ye kadar /4gb kotalı adsl Internet</p>
-          <p><span>202610</span>Müşteri Modemi PR</p>
-          <p><span>202610</span>Müşteri Modemi PR</p>
+        <div class="order-items" *ngFor="let offer of order.offers">
+          <p><span>{{offer.id}}</span>{{offer.name}}</p>
         </div>
       </div>
     </div>
@@ -35,7 +33,7 @@
       </div>
       <div class="col-8">
         <label class="e-frame-label"
-          >City , Street Name , House/Flat number , Address Description</label
+          >{{order.address?.description}}</label
         >
       </div>
     </div>
@@ -44,7 +42,7 @@
         <label class="e-frame-label">Total Amount:</label>
       </div>
       <div class="col-8">
-        <label class="e-frame-label">139.80 TL</label>
+        <label class="e-frame-label">{{amount}}TL</label>
       </div>
     </div>
     <div class="d-flex justify-content-center">
@@ -63,7 +61,7 @@
           </button>
         </div>
         <div class="col-6 d-flex justify-content-lg-end">
-          <button [etiyaButton]="'clear'">Submit</button>
+          <button [etiyaButton]="'clear'" (click)="submitOrder()">Submit</button>
         </div>
       </div>
     </div>
