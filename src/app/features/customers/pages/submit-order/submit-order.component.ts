@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Order } from 'src/app/features/orders/models/order';
 import { OrderService } from 'src/app/features/orders/services/order/order.service';
 
 @Component({
@@ -9,6 +10,8 @@ import { OrderService } from 'src/app/features/orders/services/order/order.servi
 export class SubmitOrderComponent implements OnInit {
   selectedCustomerId!: number;
   billingAccountId!: number;
+  orderId: number = 12345678;
+  order!: Order;
   constructor(
     private activatedRoute: ActivatedRoute,
     private orderService: OrderService
@@ -28,7 +31,8 @@ export class SubmitOrderComponent implements OnInit {
   }
   getOrderStore() {
     this.orderService.order$.subscribe((data) => {
-      console.log('data: ', data);
+      this.order = data;
+      this.orderService.createOrderOnStore(this.order, this.orderId);
     });
   }
 }

@@ -7,6 +7,7 @@ import { Order } from '../../models/order';
 import {
   addOrderAddress,
   addOrderOffer,
+  createOrder,
 } from '../../../../shared/store/orders/orderToAdd/orderToAdd.actions';
 import { SharedStoreState } from 'src/app/shared/store/shared.reducers';
 
@@ -22,5 +23,8 @@ export class OrderService {
   }
   addOfferToOrderStore(offer: Offer[]) {
     this.store.dispatch(addOrderOffer({ offers: offer }));
+  }
+  createOrderOnStore(order: Order, orderId: number) {
+    this.store.dispatch(createOrder({ order, orderId }));
   }
 }
