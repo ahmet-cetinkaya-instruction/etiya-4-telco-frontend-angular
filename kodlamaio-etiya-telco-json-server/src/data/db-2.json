@@ -1,0 +1,340 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "ADSL İnternet"
+    },
+    {
+      "id": 2,
+      "name": "VDSL İnternet"
+    },
+    {
+      "id": 3,
+      "name": "Fiber İnternet"
+    },
+    {
+      "id": 4,
+      "name": "Faturalı Telefon Hattı"
+    },
+    {
+      "id": 5,
+      "name": "Faturasız Telefon Hattı"
+    },
+    {
+      "id": 6,
+      "name": "Ev Telefonu"
+    },
+    {
+      "id": 7,
+      "name": "TV"
+    },
+    {
+      "id": 8,
+      "name": "Kurumsal İnternet"
+    },
+    {
+      "id": 9,
+      "name": "Güvenli İnternet"
+    },
+    {
+      "id": 10,
+      "name": "Fatura Ödeme"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "customerNumber": 61528312
+    },
+    {
+      "id": 2,
+      "customerNumber": 92701158
+    },
+    {
+      "id": 3,
+      "customerNumber": 6960876
+    },
+    {
+      "id": 4,
+      "customerNumber": 41266329
+    },
+    {
+      "id": 5,
+      "customerNumber": 48634502
+    },
+    {
+      "id": 6,
+      "customerNumber": 60059323
+    },
+    {
+      "id": 7,
+      "customerNumber": 1451498
+    },
+    {
+      "id": 8,
+      "customerNumber": 59742678
+    },
+    {
+      "id": 9,
+      "customerNumber": 49231129
+    },
+    {
+      "id": 10,
+      "customerNumber": 37106027
+    }
+  ],
+  "individualCustomers": [
+    {
+      "customerId": 1,
+      "firstName": "Engin",
+      "lastName": "Demirog",
+      "nationalIdentity": 87812104109
+    },
+    {
+      "customerId": 3,
+      "firstName": "Ahmet",
+      "lastName": "Çetinkaya",
+      "nationalIdentity": 49753031123
+    },
+    {
+      "customerId": 5,
+      "firstName": "Halit",
+      "lastName": "Kalaycı",
+      "nationalIdentity": 13487887126
+    },
+    {
+      "customerId": 7,
+      "firstName": "Mustafa Murat",
+      "lastName": "Çoşkun",
+      "nationalIdentity": 56459709203
+    },
+    {
+      "customerId": 9,
+      "firstName": "Kerem",
+      "lastName": "Varış",
+      "nationalIdentity": 63892576561
+    }
+  ],
+  "corporateCustomers": [
+    {
+      "customerId": 2,
+      "companyName": "Kodlamaio",
+      "taxNumber": 88680242
+    },
+    {
+      "customerId": 4,
+      "companyName": "Etiya",
+      "taxNumber": 71290239
+    },
+    {
+      "customerId": 6,
+      "companyName": "SolidTeam",
+      "taxNumber": 43461282
+    },
+    {
+      "customerId": 8,
+      "companyName": "DevArchitecture",
+      "taxNumber": 95278792
+    },
+    {
+      "customerId": 10,
+      "companyName": "Hepsiburada",
+      "taxNumber": 53569170
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "serviceId": 9,
+      "dateStarted": "2022-05-01"
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "serviceId": 1,
+      "dateStarted": "2022-07-01"
+    },
+    {
+      "id": 3,
+      "customerId": 3,
+      "serviceId": 2,
+      "dateStarted": "2022-06-06"
+    },
+    {
+      "id": 4,
+      "customerId": 4,
+      "serviceId": 3,
+      "dateStarted": "2022-06-01"
+    },
+    {
+      "id": 5,
+      "customerId": 4,
+      "serviceId": 6,
+      "dateStarted": "2022-07-01"
+    },
+    {
+      "id": 6,
+      "customerId": 5,
+      "serviceId": 4,
+      "dateStarted": "2022-04-06"
+    },
+    {
+      "id": 7,
+      "customerId": 6,
+      "serviceId": 5,
+      "dateStarted": "2022-07-01"
+    },
+    {
+      "id": 8,
+      "customerId": 6,
+      "serviceId": 2,
+      "dateStarted": "2022-07-01"
+    },
+    {
+      "id": 9,
+      "customerId": 7,
+      "serviceId": 6,
+      "dateStarted": "2022-07-01"
+    },
+    {
+      "id": 10,
+      "customerId": 8,
+      "serviceId": 7,
+      "dateStarted": "2022-07-01"
+    },
+    {
+      "id": 11,
+      "customerId": 8,
+      "serviceId": 2,
+      "dateStarted": "2022-07-01"
+    },
+    {
+      "id": 12,
+      "customerId": 8,
+      "serviceId": 4,
+      "dateStarted": "2022-07-01"
+    },
+    {
+      "id": 13,
+      "customerId": 9,
+      "serviceId": 9,
+      "dateStarted": "2022-07-01"
+    },
+    {
+      "id": 14,
+      "customerId": 10,
+      "serviceId": 8,
+      "dateStarted": "2022-04-05"
+    },
+    {
+      "id": 15,
+      "customerId": 10,
+      "serviceId": 1,
+      "dateStarted": "2022-06-03"
+    },
+    {
+      "id": 16,
+      "customerId": 10,
+      "serviceId": 7,
+      "dateStarted": "2022-06-09"
+    }
+  ],
+  "invoices": [
+    {
+      "id": 1,
+      "subscriptionId": 1,
+      "dateCreated": "2022-05-30",
+      "dateDue": "2022-06-28"
+    },
+    {
+      "id": 2,
+      "subscriptionId": 1,
+      "dateCreated": "2022-06-30",
+      "dateDue": "2022-07-28"
+    },
+    {
+      "id": 3,
+      "subscriptionId": 3,
+      "dateCreated": "2022-06-30",
+      "dateDue": "2022-07-28"
+    },
+
+    {
+      "id": 4,
+      "subscriptionId": 4,
+      "dateCreated": "2022-06-30",
+      "dateDue": "2022-07-28"
+    },
+
+    {
+      "id": 5,
+      "subscriptionId": 6,
+      "dateCreated": "2022-04-30",
+      "dateDue": "2022-05-28"
+    },
+
+    {
+      "id": 6,
+      "subscriptionId": 6,
+      "dateCreated": "2022-05-30",
+      "dateDue": "2022-06-28"
+    },
+
+    {
+      "id": 7,
+      "subscriptionId": 6,
+      "dateCreated": "2022-06-30",
+      "dateDue": "2022-07-28"
+    },
+    {
+      "id": 8,
+      "subscriptionId": 14,
+      "dateCreated": "2022-04-30",
+      "dateDue": "2022-05-28"
+    },
+    {
+      "id": 9,
+      "subscriptionId": 14,
+      "dateCreated": "2022-05-30",
+      "dateDue": "2022-06-28"
+    },
+    {
+      "id": 8,
+      "subscriptionId": 15,
+      "dateCreated": "2022-06-30",
+      "dateDue": "2022-07-28"
+    },
+    {
+      "id": 9,
+      "subscriptionId": 16,
+      "dateCreated": "2022-06-30",
+      "dateDue": "2022-07-28"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "admin",
+      "password": "admin"
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "id": 2
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "admin"
+    }
+  ],
+  "userRoles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "roleId": 1
+    }
+  ]
+}
