@@ -15,8 +15,7 @@ const initialState: Order = {
 export const orderToAddReducer = createReducer(
   initialState,
   on(createOrder, (state, action) => {
-    return { ...state, 
-      ...action.order};
+    return { ...state, ...action.order };
   }),
   on(addOrderAddress, (state, action) => {
     console.log('address: ', action);

@@ -20,7 +20,7 @@ export class CustomerBillingAccountComponent implements OnInit {
   selectedCustomerId!: number;
   customer!: Customer;
   billingAccount!: BillingAccount;
-  
+
   billingAdress: Address[] = [];
 
   constructor(

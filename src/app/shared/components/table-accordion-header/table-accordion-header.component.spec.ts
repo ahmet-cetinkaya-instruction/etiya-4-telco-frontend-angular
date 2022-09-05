@@ -8,9 +8,8 @@ describe('TableAccordionHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TableAccordionHeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [TableAccordionHeaderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TableAccordionHeaderComponent);
     component = fixture.componentInstance;

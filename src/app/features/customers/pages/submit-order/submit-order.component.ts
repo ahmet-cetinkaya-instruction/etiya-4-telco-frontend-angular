@@ -13,12 +13,12 @@ export class SubmitOrderComponent implements OnInit {
   selectedCustomerId!: number;
   billingAccountId!: number;
   order!: Order;
-  customer!:Customer;
+  customer!: Customer;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private orderService: OrderService,
-    private customerService:CustomersService
+    private customerService: CustomersService
   ) {}
 
   ngOnInit(): void {
@@ -31,7 +31,7 @@ export class SubmitOrderComponent implements OnInit {
       if (params['id']) this.selectedCustomerId = params['id'];
       if (params['billingAccountId'])
         this.billingAccountId = params['billingAccountId'];
-        this.getCustomerById()
+      this.getCustomerById();
     });
   }
 
@@ -68,7 +68,9 @@ export class SubmitOrderComponent implements OnInit {
     return sumAmount;
   }
 
-  submitOrder(){
-    this.orderService.addOrder(this.order,this.customer,this.billingAccountId)?.subscribe()
+  submitOrder() {
+    this.orderService
+      .addOrder(this.order, this.customer, this.billingAccountId)
+      ?.subscribe();
   }
 }

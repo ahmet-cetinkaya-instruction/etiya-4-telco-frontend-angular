@@ -23,7 +23,10 @@
       </div>
       <div class="col-8">
         <div class="order-items" *ngFor="let offer of order.offers">
-          <p><span>{{offer.id}}</span>{{offer.name}}</p>
+          <p>
+            <span>{{ offer.id }}</span
+            >{{ offer.name }}
+          </p>
         </div>
       </div>
     </div>
@@ -32,9 +35,7 @@
         <label class="e-frame-label">Service Address:</label>
       </div>
       <div class="col-8">
-        <label class="e-frame-label"
-          >{{order.address?.description}}</label
-        >
+        <label class="e-frame-label">{{ order.address?.description }}</label>
       </div>
     </div>
     <div class="row">
@@ -42,7 +43,7 @@
         <label class="e-frame-label">Total Amount:</label>
       </div>
       <div class="col-8">
-        <label class="e-frame-label">{{amount}}TL</label>
+        <label class="e-frame-label">{{ amount }}TL</label>
       </div>
     </div>
     <div class="d-flex justify-content-center">
@@ -61,7 +62,9 @@
           </button>
         </div>
         <div class="col-6 d-flex justify-content-lg-end">
-          <button [etiyaButton]="'clear'" (click)="submitOrder()">Submit</button>
+          <button [etiyaButton]="'clear'" (click)="submitOrder()">
+            Submit
+          </button>
         </div>
       </div>
     </div>

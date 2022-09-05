@@ -7,12 +7,11 @@ import { Catalog } from '../../models/catalog';
 import { searchCatalog } from '../../models/searchCatalog';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CatalogsService {
   apiControllerUrl: string = `${environment.apiUrl}/catalogs`;
   apiUrl: string = `${environment.apiUrl}/offers`;
-
 
   constructor(private httpClient: HttpClient) {}
 
@@ -27,9 +26,9 @@ export class CatalogsService {
         let filteredCatalogs = response;
         if (searchCatalog.selectedId) {
           filteredCatalogs = filteredCatalogs.filter(
-            (item) => item.type.id == searchCatalog.selectedId           
+            (item) => item.type.id == searchCatalog.selectedId
           );
-          console.log(response)
+          console.log(response);
         }
 
         if (searchCatalog.prodOfferId) {
@@ -44,7 +43,11 @@ export class CatalogsService {
               .includes(searchCatalog.prodOfferName.toLowerCase())
           );
         }
-        subject.next(filteredCatalogs.filter((catalog) => catalog.type.typeName === 'catalog') );
+        subject.next(
+          filteredCatalogs.filter(
+            (catalog) => catalog.type.typeName === 'catalog'
+          )
+        );
       },
       error: (err) => {
         subject.error(err);

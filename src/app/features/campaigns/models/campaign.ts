@@ -1,4 +1,4 @@
-export interface Campaign{
-    id:number;
-    name:string;
+export interface Campaign {
+  id: number;
+  name: string;
 }

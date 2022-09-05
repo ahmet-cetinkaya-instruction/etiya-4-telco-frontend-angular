@@ -22,8 +22,10 @@ export class OrderService {
 
   order$: Observable<Order> = this.store.select((state) => state.orderToAdd);
 
-  constructor(private store: Store<SharedStoreState>,
-    private httpClient:HttpClient) {}
+  constructor(
+    private store: Store<SharedStoreState>,
+    private httpClient: HttpClient
+  ) {}
 
   addAddressToOrderStore(address: Address) {
     this.store.dispatch(addOrderAddress({ address }));
@@ -32,14 +34,26 @@ export class OrderService {
     this.store.dispatch(addOrderOffer({ offers: offer }));
   }
   createOrderOnStore(order: Order) {
-    this.store.dispatch(createOrder({ order}));
+    this.store.dispatch(createOrder({ order }));
   }
 
-  addOrder(order: Order, customer: Customer,billingAccountId:number): Observable<Customer> | null {
+  addOrder(
+    order: Order,
+    customer: Customer,
+    billingAccountId: number
+  ): Observable<Customer> | null {
     const newCustomer: Customer = {
-      ...customer,      
+      ...customer,
     };
-    newCustomer.billingAccounts?.find(account => account.id == billingAccountId)?.orders.push({...order,id:Math.floor(10000000 + Math.random() * 90000000)})
-    return this.httpClient.put<Customer>(`${this.apiControllerUrl}/${customer.id}`,newCustomer);
+    newCustomer.billingAccounts
+      ?.find((account) => account.id == billingAccountId)
+      ?.orders.push({
+        ...order,
+        id: Math.floor(10000000 + Math.random() * 90000000),
+      });
+    return this.httpClient.put<Customer>(
+      `${this.apiControllerUrl}/${customer.id}`,
+      newCustomer
+    );
   }
 }

@@ -7,7 +7,7 @@ import { Campaign } from '../../models/campaign';
 import { SearchCampaign } from '../../models/searchCampaign';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CampaignsService {
   apiControllerUrl: string = `${environment.apiUrl}/campaigns`;
@@ -26,9 +26,9 @@ export class CampaignsService {
         let filteredCampaigns = response;
         if (searchCampaign.selectedId) {
           filteredCampaigns = filteredCampaigns.filter(
-            (item) => item.type.id == searchCampaign.selectedId           
+            (item) => item.type.id == searchCampaign.selectedId
           );
-          console.log(response)
+          console.log(response);
         }
 
         if (searchCampaign.campaignId) {
@@ -43,7 +43,11 @@ export class CampaignsService {
               .includes(searchCampaign.campaignName.toLowerCase())
           );
         }
-        subject.next(filteredCampaigns.filter((campaign) => campaign.type.typeName === 'campaign') );
+        subject.next(
+          filteredCampaigns.filter(
+            (campaign) => campaign.type.typeName === 'campaign'
+          )
+        );
       },
       error: (err) => {
         subject.error(err);

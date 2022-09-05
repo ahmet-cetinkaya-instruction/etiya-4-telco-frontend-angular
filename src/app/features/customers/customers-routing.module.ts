@@ -37,7 +37,10 @@ const routes: Routes = [
     path: 'customer-billing-account-detail/:id',
     component: CustomerBillingAccountDetailComponent,
   },
-  { path: ':id/submit-order/:billingAccountId', component: SubmitOrderComponent },
+  {
+    path: ':id/submit-order/:billingAccountId',
+    component: SubmitOrderComponent,
+  },
   {
     path: 'customer-contact-medium/:id',
     component: CustomerContactMediumComponent,
@@ -46,7 +49,10 @@ const routes: Routes = [
     path: ':id/offer-selection/:billingAccountId',
     component: OfferSelectionComponent,
   },
-  { path: ':id/configuration-product/:billingAccountId', component: ConfigurationProductComponent },
+  {
+    path: ':id/configuration-product/:billingAccountId',
+    component: ConfigurationProductComponent,
+  },
   { path: ':id/address/add', component: AddCustomerAddressComponent },
   {
     path: ':id/address/update/:addressId',

@@ -1,4 +1,4 @@
-export interface ProductConfigDto{
-    key:string
-    value:string
+export interface ProductConfigDto {
+  key: string;
+  value: string;
 }

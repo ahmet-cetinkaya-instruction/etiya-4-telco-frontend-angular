@@ -3,5 +3,5 @@ export interface Product {
   name: string;
   description: string;
   amount: number;
-  config:any
+  config: any;
 }

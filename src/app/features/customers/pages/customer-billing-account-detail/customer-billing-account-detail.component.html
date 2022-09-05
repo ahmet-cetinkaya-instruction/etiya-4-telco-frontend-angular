@@ -30,7 +30,10 @@
     <div class="m-3">
       <app-table-accordion-header></app-table-accordion-header>
       <ng-template ngFor let-bill [ngForOf]="billingAccountList">
-        <app-table-accordion [billingAccount]="bill" [customerId]="selectedCustomerId"></app-table-accordion>
+        <app-table-accordion
+          [billingAccount]="bill"
+          [customerId]="selectedCustomerId"
+        ></app-table-accordion>
       </ng-template>
     </div>
   </div>
