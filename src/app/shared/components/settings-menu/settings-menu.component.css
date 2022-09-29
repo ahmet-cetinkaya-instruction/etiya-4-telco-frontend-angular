@@ -1,50 +1,45 @@
 @import '../../../../styles.css';
 
 .e-label-set {
+  width: 38.59px;
+  height: 18.64px;
 
-    width: 38.59px;
-    height: 18.64px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
 
-
-    font-family: 'Anybody';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 21px;
-
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .e-settings-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 77px;
+  height: 70px;
 }
 
 .e-settings-items img {
-    width: 70px;
-    height: 70px;
-    
+  width: 42px;
+  height: 40px;
 }
 
 .e-settings-items.active,
 .e-settings-items:hover {
-    background: #061F3E;
-    border: 1px solid #F58220;
-    box-shadow: inset -6px -6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 0px
+  background: #061f3e;
+  border: 1px solid #f58220;
+  box-shadow: inset -6px -6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 0px;
 }
 
-
 .e-settings-container {
-    display: flex;
-    background: rgba(44, 90, 148, 0.5);
-    border: 1px solid #F58220;
-    border-radius: 0px;
-    float: right;
-    
+  display: flex;
+  background: rgba(44, 90, 148, 0.5);
+  border: 1px solid #f58220;
+  border-radius: 0px;
+  float: right !important;
+  /* margin-right: -11px; */
 }

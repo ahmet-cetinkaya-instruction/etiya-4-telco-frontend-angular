@@ -1,0 +1,111 @@
+<div class="e-contact-medium-container">
+  <app-navbar></app-navbar>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="d-flex justify-content-end p-0">
+        <app-user-info></app-user-info>
+      </div>
+    </div>
+  </div>
+  <app-main-layout [layoutTitle]="'CREATE CUSTOMER'">
+    <div class="e-customer-content">
+      <div class="e-contact-center mb-5">
+        <app-info-title [infoTitle]="'Contact Medium'"></app-info-title>
+      </div>
+      <div class="e-contact-center">
+        <form [formGroup]="contactForm" class="e-contact-form">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="row e-customer-input">
+                <div class="col-12 col-lg-4 e-contact-col-center">
+                  <label for="first-name"
+                    >Email<span class="e-star">*</span>
+                  </label>
+                </div>
+                <div class="col-12 col-lg-8 e-contact-col-center">
+                  <input
+                    type="email"
+                    etiyaInput="dark"
+                    class="e-contact-input"
+                    formControlName="email"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 mb-5">
+              <div class="row e-customer-input">
+                <div class="col-12 col-lg-4 e-contact-col-center">
+                  <label for="middle-name">Home Phone </label>
+                </div>
+                <div class="col-12 col-lg-8 e-contact-col-center">
+                  <input
+                    type="text"
+                    etiyaInput="dark"
+                    class="e-contact-input"
+                    formControlName="homePhone"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 mb-5">
+              <div class="row e-customer-input">
+                <div class="col-12 col-lg-4 e-contact-col-center">
+                  <label for="last-name"
+                    >Mobile Phone<span class="e-star">*</span>
+                  </label>
+                </div>
+                <div class="col-12 col-lg-8 e-contact-col-center">
+                  <input
+                    type="text"
+                    etiyaInput="dark"
+                    class="e-contact-input"
+                    formControlName="mobilePhone"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 mb-5">
+              <div class="row e-customer-input">
+                <div class="col-12 col-lg-4 e-contact-col-center">
+                  <label for="birth-date">Fax </label>
+                </div>
+                <div class="col-12 col-lg-8 e-contact-col-center">
+                  <input
+                    type="text"
+                    etiyaInput="dark"
+                    class="e-contact-input"
+                    formControlName="fax"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2 e-contact-center">
+            <div class="col-2">
+              <button
+                etiyaButton="clear"
+                style="width: 164px"
+                (click)="saveCustomer()"
+              >
+                Create
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="e-contact-center">
+        <div class="row w-75" style="margin-top: 100px">
+          <div class="col-12 col-lg-6 d-flex justify-content-lg-start">
+            <button
+              etiyaButton="clear"
+              routerLink="/dashboard/customers/list-address-info"
+              (click)="goToPreviousPage()"
+            >
+              Previous
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </app-main-layout>
+</div>

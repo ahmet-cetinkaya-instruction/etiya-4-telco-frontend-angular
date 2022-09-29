@@ -1,0 +1,23 @@
+.app-user-info {
+  width: 264px;
+  margin-left: 35px;
+}
+
+.bar-menu {
+  margin-left: 30%;
+  margin-top: -55px;
+}
+
+::ng-deep.e-table {
+  margin-top: 55px;
+}
+
+.e-new-address {
+  margin-top: -15px;
+  margin-left: 30px;
+}
+
+::ng-deep .e-btn-edit {
+  width: 35px;
+  height: 39px;
+}

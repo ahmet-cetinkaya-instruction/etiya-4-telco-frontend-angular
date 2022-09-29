@@ -1,18 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('../src/assets/styles/etiya-button.css');
-@import url('../src/assets/styles/etiya-table.css');
-@import url('../src/assets/styles/etiya-navbar.css');
 @import url('../src/assets/styles/etiya-check-box.css');
 @import url('../src/assets/styles/etiya-input.css');
-@import url('../src/assets/styles/etiya-title.css');
-@import url('../src/assets/styles/etiya-menu.css');
-@import url('../src/assets/styles/etiya-toast.css');
-@import url('../src/assets/styles/etiya-accordion.css');
-
-
 
 @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap');
 
-
-
+body {
+  background-image: url('../src/assets/img/search_background.png');
+  background-repeat: no-repeat;
+  background-size: 1520px 1610px;
+  overflow-x: hidden;
+}

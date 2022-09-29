@@ -11,21 +11,17 @@ import { StorageService } from './storage/services/local-storage/storageService'
 import { JwtModule, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { LocalStorageService } from './storage/services/local-storage/local-storage.service';
 
-export function jwtOptionsFactory(storageService:StorageService) {
+export function jwtOptionsFactory(storageService: StorageService) {
   return {
     tokenGetter: () => {
       return storageService.get('token');
     },
-    allowedDomains: ['localhost:3000']
-  }
+    allowedDomains: ['localhost:3000'],
+  };
 }
 
 @NgModule({
-  declarations: [
-    CreateFakeArrayPipe,
-    PaginationPipe,
-    OverlayLoadingComponent
-  ],
+  declarations: [CreateFakeArrayPipe, PaginationPipe, OverlayLoadingComponent],
   imports: [
     CommonModule,
     CoreRoutingModule,
@@ -35,14 +31,10 @@ export function jwtOptionsFactory(storageService:StorageService) {
       jwtOptionsProvider: {
         provide: JWT_OPTIONS,
         useFactory: jwtOptionsFactory,
-        deps: [LocalStorageService]
-      }
-    })
+        deps: [LocalStorageService],
+      },
+    }),
   ],
-  exports:[
-    CreateFakeArrayPipe,
-    PaginationPipe,
-    OverlayLoadingComponent
-  ]
+  exports: [CreateFakeArrayPipe, PaginationPipe, OverlayLoadingComponent],
 })
-export class CoreModule { }
+export class CoreModule {}

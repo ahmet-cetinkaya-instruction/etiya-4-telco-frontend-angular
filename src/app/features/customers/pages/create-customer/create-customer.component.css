@@ -1,0 +1,68 @@
+.e-customer-content {
+  height: 774px;
+  margin-left: 30px;
+  top: 216px;
+  border-right: none;
+  color: #fff;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 31px;
+}
+
+.customer-title {
+  display: flex;
+  justify-content: center;
+}
+.e-customer-input {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.e-dropdown {
+  box-sizing: border-box;
+  width: 299px;
+  height: 51.17px;
+  left: 254.11px;
+  top: 332.06px;
+  background: rgba(13, 43, 80, 0.8);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+.e-dropdown select {
+  box-sizing: border-box;
+  width: 299px;
+  height: 49px;
+  left: 535.53px;
+  top: 333px;
+  color: #f58220;
+  background-image: url('../../../../../assets/img/arrow.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: right !important;
+  background: #061f3e;
+  border: 1px solid #f58220;
+
+  border-radius: 1px;
+  float: right;
+}
+.info {
+  overflow: hidden;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  background: url('../../../../../assets/img/Calendar.png') center/80% no-repeat;
+  color: white !important;
+  position: absolute;
+  right: -40px;
+  background-size: cover;
+  z-index: 99;
+}
+
+input[type='date'] {
+  position: relative;
+  overflow: visible;
+}
+input::placeholder {
+  color: #fff;
+}

@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-6"></div>
+    <div class="col-12 col-lg-6 d-flex justify-content-end p-0">
+      <app-user-info></app-user-info>
+    </div>
+  </div>
+</div>
+<app-main-layout [layoutTitle]="'Submit Order'">
+  <div class="container overflow-hidden">
+    <div class="row">
+      <div class="col-4">
+        <label class="e-frame-label">Order ID:</label>
+      </div>
+      <div class="col-8">
+        <label class="e-frame-label">02291123</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <label class="e-frame-label">Order Items:</label>
+      </div>
+      <div class="col-8">
+        <div class="order-items" *ngFor="let offer of order.offers">
+          <p>
+            <span>{{ offer.id }}</span
+            >{{ offer.name }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <label class="e-frame-label">Service Address:</label>
+      </div>
+      <div class="col-8">
+        <label class="e-frame-label">{{ order.address?.description }}</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <label class="e-frame-label">Total Amount:</label>
+      </div>
+      <div class="col-8">
+        <label class="e-frame-label">{{ amount }}TL</label>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div style="width: 1125px" class="row p-0 pt-4">
+        <div class="col-6 d-flex justify-content-lg-start">
+          <button
+            [etiyaButton]="'clear'"
+            [routerLink]="
+              '/dashboard/customers/' +
+              selectedCustomerId +
+              '/configuration-product/' +
+              billingAccountId
+            "
+          >
+            Previous
+          </button>
+        </div>
+        <div class="col-6 d-flex justify-content-lg-end">
+          <button [etiyaButton]="'clear'" (click)="submitOrder()">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-main-layout>

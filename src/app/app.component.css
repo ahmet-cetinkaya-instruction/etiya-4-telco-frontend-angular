@@ -1,6 +1,5 @@
 @import '../styles.css';
 
-
 /* frame in css değerleri */
 /* .e-frame-container {
     position: relative;
@@ -64,18 +63,10 @@
     float: right;
 } */
 
-
-
-
-
-
-
 /* User-info çağrıldığı yerdeki css */
 /* .app-user-info{
     width: 332px;
 } */
-
-
 
 /* login input ve butonu */
 
@@ -135,7 +126,7 @@
     border-radius: 17px;
 }
 
-.e-check-box {
+.e-check-box-dark {
     box-sizing: border-box;
 
 
@@ -174,9 +165,6 @@
     width: 40%;
     margin-left: 30px;
 } */
-
-
-
 
 /* .mc1{
     color: white !important;

@@ -1,0 +1,36 @@
+.e-address-info-container {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+.e-address-info-content {
+  min-height: 100%;
+  position: relative;
+}
+.table-title {
+  color: #fff;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+}
+.table-body {
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.e-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 5rem;
+  width: 100%;
+  padding: 0 4rem;
+}
+.e-btn-new-address {
+  margin-left: 20px;
+}

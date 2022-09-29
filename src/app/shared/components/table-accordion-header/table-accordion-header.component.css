@@ -1,0 +1,19 @@
+.e-accordion-header {
+  background: #191847;
+  border: 1px solid #f58220;
+  box-shadow: inset 0px 4px 16px rgba(0, 0, 0, 0.25);
+  height: 63px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.e-accordion-text {
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+
+  color: #ffffff;
+}

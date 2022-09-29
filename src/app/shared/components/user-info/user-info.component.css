@@ -1,41 +1,43 @@
 div {
-    color: white;
+  color: white;
 }
+
 .user-info-container {
-    width: 100%;
-    margin: 20px;
+  width: 100%;
 }
+
 .info-title {
-    width: 148px;
-height: 21px;
-left: 17px;
-top: 98px;
+  width: 148px;
+  height: 6px;
+  left: 17px;
+  top: 98px;
 
-font-family: 'Anybody';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 21px;
-/* identical to box height */
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+  /* identical to box height */
 
-
-color: #FFFFFF;
+  color: #ffffff;
 }
+
 .image {
-width: 60px;
-height: 60px;
+  width: 60px;
+  height: 60px;
 }
+
 .user-info {
-    width: 145px;
-height: 27px;
-left: 122px;
-top: 144px;
+  width: 145px;
+  height: 27px;
+  left: 122px;
+  top: 144px;
 
-font-family: 'Anybody';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 14px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
 
-color: #FFFFFF;
-} 
+  color: #ffffff;
+}

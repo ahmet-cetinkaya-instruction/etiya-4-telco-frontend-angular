@@ -1,0 +1,23 @@
+.search-background {
+  background-image: url('../../../../../assets/img/search_background.png');
+  background-repeat: no-repeat;
+  background-size: 1524px 1620px;
+  /* background-color: #061f3e !important; */
+}
+
+.app-user-info {
+  width: 264px;
+}
+
+.e-search-container {
+  margin: 65px 0px 0px 25px;
+  height: 100vh !important;
+}
+
+::ng-deep .e-input-dark {
+  margin-left: 15px;
+}
+
+::ng-deep .table.e-table .table-body tr th a {
+  cursor: pointer;
+}

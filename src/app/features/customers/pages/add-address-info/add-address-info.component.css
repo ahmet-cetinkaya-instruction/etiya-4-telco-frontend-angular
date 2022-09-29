@@ -1,0 +1,105 @@
+.e-address-container {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+.e-address-content {
+  color: #fff;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 31px;
+  min-height: 100%;
+}
+
+.address-title {
+  display: flex;
+  justify-content: center;
+}
+.e-address-input {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.e-dropdown {
+  box-sizing: border-box;
+  height: 51.17px;
+  left: 254.11px;
+  top: 332.06px;
+  background: rgba(13, 43, 80, 0.8);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+.e-dropdown select {
+  box-sizing: border-box;
+  height: 100%;
+  left: 535.53px;
+  top: 333px;
+  color: #f58220;
+  background-image: url('../../../../../assets/img/arrow.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: right !important;
+  background: rgba(13, 43, 80, 0.8);
+  border: 1px solid #f58220;
+
+  border-radius: 1px;
+  float: right;
+}
+
+.e-address-input-height {
+  height: 50px;
+}
+.e-input-dark {
+  margin: 0;
+}
+.e-address-desc {
+  display: flex;
+  margin-right: 60px;
+  width: 100%;
+  height: 269px;
+  background: #0d2b50;
+  border: 1px solid rgba(245, 130, 32, 0.8);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  color: #ffffff;
+}
+.e-address-form-container {
+  margin-bottom: 40px;
+  background: rgba(42, 81, 131, 0.92);
+  padding: 30px;
+  max-width: 1328.31px;
+  min-height: 649.83px;
+  border: 4px solid #f58220;
+  border-radius: 7px;
+}
+.e-form-close {
+  display: flex;
+  justify-content: flex-end;
+  color: #f58220;
+  text-decoration: none;
+}
+.e-star {
+  font-weight: bold;
+  font-size: 40px;
+}
+.e-btn-clear {
+  width: 164px;
+  font-weight: 700;
+}
+.e-address-col-center {
+  display: flex;
+  align-items: center;
+}
+::ng-deep .e-info-title {
+  display: flex;
+  justify-content: center;
+  margin: 0 !important;
+}
+.e-input-dark {
+  background-color: #0d2b50;
+  height: 50px;
+}
+
+::ng-deep .main-box {
+  height: auto !important;
+}

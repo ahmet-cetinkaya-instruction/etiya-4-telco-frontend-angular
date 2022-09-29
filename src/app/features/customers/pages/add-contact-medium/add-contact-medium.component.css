@@ -1,0 +1,72 @@
+.e-contact-medium-container {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+.e-customer-content {
+  color: #fff;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 31px;
+  min-height: 100%;
+}
+
+.e-contact-center {
+  display: flex;
+  justify-content: center;
+}
+.e-customer-input {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.e-dropdown {
+  box-sizing: border-box;
+  width: 299px;
+  height: 51.17px;
+  left: 254.11px;
+  top: 332.06px;
+  background: rgba(13, 43, 80, 0.8);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+.e-dropdown select {
+  box-sizing: border-box;
+  width: 299px;
+  height: 49px;
+  left: 535.53px;
+  top: 333px;
+  color: #f58220;
+  background-image: url('../../../../../assets/img/arrow.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: right !important;
+  background: #061f3e;
+  border: 1px solid #f58220;
+
+  border-radius: 1px;
+  float: right;
+}
+.info {
+  overflow: hidden;
+}
+.e-contact-input {
+  height: 50px;
+}
+.e-contact-form {
+  width: 80%;
+}
+.e-input-dark {
+  margin: 0;
+}
+.e-star {
+  font-weight: bold;
+  font-size: 40px;
+}
+.e-contact-col-center {
+  display: flex;
+  align-items: center;
+}
+::ng-deep .main-box {
+  height: auto !important;
+}

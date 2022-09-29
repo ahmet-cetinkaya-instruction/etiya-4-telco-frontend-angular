@@ -1,0 +1,85 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-3">
+      <div class="col-12 app-user-info">
+        <app-user-info></app-user-info>
+      </div>
+    </div>
+    <div class="col-12 col-lg-9 d-flex justify-content-end p-0">
+      <app-settings-menu></app-settings-menu>
+    </div>
+  </div>
+</div>
+
+<app-main-layout [layoutTitle]="'Address'">
+  <div class="bar-menu">
+    <app-bar-menu></app-bar-menu>
+  </div>
+
+  <div class="d-flex justify-content-center overflow-hidden">
+    <div class="e-customer-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <label class="e-frame-label">First Name:</label>
+          </div>
+          <div class="col-4">
+            <label class="e-frame-label">{{ customer.firstName }}</label>
+          </div>
+          <div class="col-2">
+            <label class="e-frame-label">Middle Name:</label>
+          </div>
+          <div class="col-4">
+            <label class="e-frame-label">{{ customer.middleName }}</label>
+          </div>
+          <div class="col-2">
+            <label class="e-frame-label">Last Name:</label>
+          </div>
+          <div class="col-4">
+            <label class="e-frame-label">{{ customer.lastName }}</label>
+          </div>
+          <div class="col-2">
+            <label class="e-frame-label">Birth Date:</label>
+          </div>
+          <div class="col-4">
+            <label class="e-frame-label">{{ customer.birthDate }}</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-2">
+            <label class="e-frame-label">Gender:</label>
+          </div>
+          <div class="col-4">
+            <label class="e-frame-label">{{ customer.gender }}</label>
+          </div>
+          <div class="col-2">
+            <label class="e-frame-label">Father Name:</label>
+          </div>
+          <div class="col-4">
+            <label class="e-frame-label">{{ customer.fatherName }}</label>
+          </div>
+          <div class="col-2">
+            <label class="e-frame-label">Mother Name</label>
+          </div>
+          <div class="col-4">
+            <label class="e-frame-label">{{ customer.motherName }}</label>
+          </div>
+          <div class="col-2">
+            <label class="e-frame-label">Nationality ID:</label>
+          </div>
+          <div class="col-4">
+            <label class="e-frame-label">{{ customer.nationalityId }}</label>
+          </div>
+        </div>
+        <button etiyaButton="remove"></button>
+        <button
+          etiyaButton="edit"
+          (click)="getCustomerId(customer)"
+          routerLink="/dashboard/customers/update-customer"
+        ></button>
+      </div>
+    </div>
+  </div>
+</app-main-layout>

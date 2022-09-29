@@ -1,0 +1,58 @@
+.e-customer-content {
+  padding-left: 30px;
+  top: 216px;
+  border-right: none;
+  color: #fff;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 31px;
+}
+.e-address-desc {
+  display: flex;
+  width: 100%;
+  height: 181px;
+  background: #0d2b50;
+  border: 1px solid rgba(245, 130, 32, 0.8);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  color: #ffffff;
+}
+.customer-title {
+  display: flex;
+  justify-content: center;
+}
+.e-customer-input {
+  display: flex;
+  align-items: center;
+}
+.info {
+  overflow: hidden;
+}
+
+.e-customer-content1 table {
+  border: 2px solid #f58220 !important;
+  color: #fff !important;
+}
+.table-title {
+  background-color: #191847;
+  font-family: 'Anybody';
+  font-size: 14px;
+}
+.table-body {
+  background-color: #2a5183;
+}
+
+.e-new-address {
+  background-color: #061f3e;
+}
+.e-new-address-btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+::ng-deep .main-box {
+  height: auto !important;
+}

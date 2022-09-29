@@ -1,0 +1,100 @@
+.e-offer-selection-container {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+.e-offer-selection-content {
+  min-height: 100%;
+}
+.e-buttons {
+  padding: 2rem 4rem;
+}
+.e-offer-selection-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer-title {
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+  color: #ffffff;
+}
+.offer-input {
+  width: 184px;
+  height: 33px;
+}
+.e-dropdown {
+  margin: 0;
+  height: 51.17px;
+  width: 134.68px;
+  height: 33px;
+  background: #0d2b50;
+
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+.e-dropdown select {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+  padding-left: 7px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+  background: rgba(13, 43, 80, 0.8);
+  border: 1px solid #f58220;
+  border-radius: 1px;
+  float: right;
+}
+.e-input-dark {
+  margin-bottom: 5px;
+}
+.e-offer-label {
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.e-offer-button {
+  width: 99px;
+  height: 27px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #000000;
+  margin-right: 35px;
+  margin-bottom: 20px;
+}
+
+.e-offer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* ::ng-deep .e-tab{
+  min-height: 540px !important;
+} */
+.e-offer-table {
+  margin-left: 30px;
+}
+::ng-deep .e-table {
+  width: 710px !important;
+  height: 262px;
+}
+::ng-deep .main-box {
+  height: auto !important;
+}
+
+.selected {
+  background-color: #1a4981;
+}

@@ -1,56 +1,58 @@
 .e-tabs {
-    margin: 50px;
-    width: 820px;
-    display: flex;
-    flex-wrap: wrap;
+  margin: 50px;
+  width: 820px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .e-tab {
-    height: 526px;
-    color: #fff;
-    background: rgba(6, 31, 62, 0.85);
-    border: 1px solid #f58220;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
+  min-height: 526px;
+  color: #fff;
+  background: rgba(6, 31, 62, 0.85);
+  border: 1px solid #f58220;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
 }
 .e-tabs label {
-    color: #fff;
-    position: relative;
-    display: block;
-    padding: 8px 15px;
-    cursor: pointer;
-    font-family: 'Anybody';
-    font-style: normal;
-    width: 155px;
-    height: 47px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 25px;
+  color: #fff;
+  position: relative;
+  display: block;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-family: 'Anybody';
+  font-style: normal;
+  width: 155px;
+  height: 47px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
 
-    background: #83a6d1;
-    color: #ffff;
-    border: 1px solid #f58220;
-    box-shadow: -8px -3px 4px rgba(0, 0, 0, 0.25);
+  background: #83a6d1;
+  color: #ffff;
+  border: 1px solid #f58220;
+  box-shadow: -8px -3px 4px rgba(0, 0, 0, 0.25);
 
-    /* border-radius: 8px 8px 0 0; */
-    transition: background ease 0.2s;
+  /* border-radius: 8px 8px 0 0; */
+  transition: background ease 0.2s;
 }
 .e-tabs .e-tab {
-    order: 99;
-    flex-grow: 1;
-    width: 100%;
-    display: none;
-    padding: 1rem;
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 1rem;
 }
 .e-tabs input[type='radio'] {
-    display: none;
+  display: none;
 }
 .e-tabs input[type='radio']:checked + label {
-    background-color: rgba(6, 31, 62, 0.85);
-    border: 1px solid #f58220;
-    border-bottom: 0;
-    box-shadow: inset -10px -4px 7px 2px rgba(0, 0, 0, 0.25), inset 5px 10px 6px -3px rgba(0, 0, 0, 0.25);
+  background-color: rgba(6, 31, 62, 0.85);
+  border: 1px solid #f58220;
+  border-bottom: 0;
+  box-shadow: inset -10px -4px 7px 2px rgba(0, 0, 0, 0.25),
+    inset 5px 10px 6px -3px rgba(0, 0, 0, 0.25);
 }
 .e-tabs input[type='radio']:checked + label + .e-tab {
-    display: block;
+  display: block;
 }

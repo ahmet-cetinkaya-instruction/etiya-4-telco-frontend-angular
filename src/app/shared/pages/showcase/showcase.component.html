@@ -1,367 +1,101 @@
-<br>
-<header class="e-nav-container">
-  <div>
-    <img class="e-nav-img" src="./assets/img/etiya_logo_black.png">
-  </div>
-  <div>
-    <label class="e-nav-lang">EN</label>
-  </div>
-</header>
+<br />
+<app-navbar></app-navbar>
 <div class="container">
   <div class="row">
     <div class="col-5">
-      <br>
-      <h3 style="color: white;">BUTTONS</h3>
-      <br>
-      <button class="e-btn-login">BUTTON</button>
-      <br>
-      <button class="e-btn-create"><img class="e-btn-create-logo"
-          src="../../../../assets/img/create_btn_logo.png">BUTTON</button>
-      <br><br>
-      <button class="e-btn-clear">BUTTON</button>
-      <br><br>
-      <button class="e-btn-clear-disabled">BUTTON</button>
-      <br><br>
-      <button type="button" class="e-btn-search">BUTTON<img class="e-img-search"
-          src="../../../../assets/img/search-btn-logo.png"></button>
-      <br><br>
-      <button class="e-new-address-btn"> <img src="../../../../assets/img/add_new.png">BUTTON</button>
-      <br><br>
-      <h3 style="color: white;">CHECKBOX</h3>
-      <input type="checkbox" class="form-check-input e-check-box" id="exampleCheck1" />
-      <br><br>
-      <h3 style="color: white;">TOAST</h3>
-      <br>
-      <h5 style="color: white;">Warning</h5>
-      <button (click)="warningMessage()" class="btn btn-warning">Warning Message</button>
-      <br><br>
-      <button (click)="customToast()" class="btn btn-primary">Custom Toast</button>
-      <br><br>
-      <h5 style="color: white;">Confirm</h5>
+      <br />
+      <h3 style="color: white">BUTTONS</h3>
+      <br />
+      <button etiyaButton="login">BUTTON</button>
+      <br />
+      <button etiyaButton="create">
+        <img
+          etiyaButton="create-logo"
+          src="../../../../assets/img/create_btn_logo.png"
+        />BUTTON
+      </button>
+      <br /><br />
+      <button etiyaButton="clear">BUTTON</button>
+      <br /><br />
+      <button etiyaButton="clear-disabled">BUTTON</button>
+      <br /><br />
+      <button type="button" etiyaButton="search">
+        BUTTON<img
+          etiyaButton="img-search"
+          src="../../../../assets/img/search-btn-logo.png"
+        />
+      </button>
+      <br /><br />
+      <button etiyaButton="new-address">
+        <img src="../../../../assets/img/add_new.png" />BUTTON
+      </button>
+      <br /><br />
+      <h3 style="color: white">CHECKBOX</h3>
+      <input type="checkbox" etiyaCheckBox="dark" id="exampleCheck1" />
+      <br /><br />
+      <h3 style="color: white">TOAST</h3>
+      <br />
+      <h5 style="color: white">Warning</h5>
+      <button (click)="warningMessage()" class="btn btn-warning">
+        Warning Message
+      </button>
+      <br /><br />
+      <button (click)="customToast()" class="btn btn-primary">
+        Custom Toast
+      </button>
+      <br /><br />
+      <h5 style="color: white">Confirm</h5>
       <button (click)="confirm()" class="btn btn-info">Confirm</button>
-      <br><br>
+      <br /><br />
       <app-basket></app-basket>
-      <br>
-      <h5 style="color: white;">Offer Selection</h5>
-      <br>
-      <app-offer-selection></app-offer-selection>
     </div>
     <div class="col-7">
-      <br>
-      <h3 style="color: white;">HEADERS</h3>
-      <br>
-      <div class="e-title-container">
-        <span class="e-title" style="color: white;">WELCOME</span>
-      </div>
-      <br>
+      <br />
+      <h3 style="color: white">HEADERS</h3>
+      <br />
+      <etiya-overlay-title
+        [title]="'WELCOME'"
+        class="mc1"
+      ></etiya-overlay-title>
+      <etiya-overlay-title [title]="'TO'" class="mc1"></etiya-overlay-title>
+      <etiya-overlay-title [title]="'ETİYA'" class="mc"></etiya-overlay-title>
+      <br />
       <div class="e-title-container-info">
-        <span class="mini-horizontalLine-info"></span><span class="mini-verticalLine-info"></span>
+        <span class="mini-horizontalLine-info"></span
+        ><span class="mini-verticalLine-info"></span>
         <span class="e-info-title">Demographic Info</span>
-        <span class="verticalLine-info"></span> <span class="horizontalLine-info"></span>
+        <span class="verticalLine-info"></span>
+        <span class="horizontalLine-info"></span>
       </div>
-      <br>
-      <h3 style="color: white;">TABLES</h3>
-      <br>
-      <table class="e-table table table-bordered">
-        <thead>
-          <tr class="table-title">
-            <th class="col-2">Customer ID</th>
-            <th class="col-2">First Name</th>
-            <th class="col-2">Second Name</th>
-            <th class="col-2">Last Name</th>
-            <th class="col-2">Role</th>
-            <th class="col-2">ID Number</th>
-          </tr>
-        </thead>
-        <tbody class="table-body">
-          <tr>
-            <th>306789</th>
-            <td>Mert</td>
-            <td>Metin</td>
-            <td>Özkan</td>
-            <td>Customer</td>
-            <td>2314324</td>
-          </tr>
-          <tr>
-            <th></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <br>
-      <h3 style="color: white;">INPUT</h3>
-      <br>
-      <input type="text" class="e-input-white" placeholder="PlaceHolder" />
-      <br>
-      <input type="text" class="e-input-dark w-100" />
-      <br>
-      <h3 style="color: white;">MENU</h3>
-      <br>
-      <h5 style="color: white;">Hover Menu</h5>
-      <br>
-      <div class="e-settings-container">
-        <div class="e-settings-items active">
-          <img src="../../../../assets/img/b2c_logo.png">
-          <label class="e-label-set">B2C</label>
-        </div>
-        <div class="e-settings-items">
-          <img src="../../../../assets/img/b2b_logo.png">
-          <label class="e-label-set">B2B</label>
-        </div>
-        <div class="e-settings-items">
-          <img src="../../../../assets/img/hands_right_logo.png">
-        </div>
-        <div class="e-settings-items">
-          <img src="../../../../assets/img/power_logo.png">
-        </div>
-      </div>
-      <br><br><br><br>
-      <h5 class="mt-5" style="color: white;">Bar Menu</h5>
-      <br>
-      <div class="e-bar-buttons">
-        <div class="first-bar-button"><button>Customer Info</button></div>
-        <div><button>Customer Info</button></div>
-        <div><button>Customer Info</button></div>
-        <div class="last-bar-button"><button>Customer Info</button></div>
-
-      </div>
-      <br>
-      <h5 class="mt-5" style="color: white;">Tab Menu</h5>
-      <br>
+      <br />
+      <h3 style="color: white">INPUT</h3>
+      <br />
+      <input type="text" etiyaInput="white" placeholder="PlaceHolder" />
+      <br />
+      <input type="text" etiyaInput="dark" class="w-100" />
+      <br />
+      <h3 style="color: white">MENU</h3>
+      <br />
+      <h5 style="color: white">Hover Menu</h5>
+      <br />
+      <app-settings-menu></app-settings-menu>
+      <br /><br /><br /><br />
+      <h5 class="mt-5" style="color: white">Bar Menu</h5>
+      <br />
+      <app-bar-menu></app-bar-menu>
+      <br />
+      <h5 class="mt-5" style="color: white">Tab Menu</h5>
+      <br />
       <app-tab-menu></app-tab-menu>
-
     </div>
   </div>
-  <br>
+  <br />
   <div class="row">
-    <br>
-      <h3 style="color: white;">Accordion</h3>
-    <br>
+    <br />
+    <h3 style="color: white">Accordion</h3>
+    <br />
     <div class="col-12">
-      <div class="e-accordion-header">
-        <div class="col-1"></div>
-        <div class="col-2 e-accordion-text">Account Status</div>
-        <div class="col-2 e-accordion-text">Account Number</div>
-        <div class="col-2 e-accordion-text">Account Name</div>
-        <div class="col-3 e-accordion-text">Account Type</div>
-        <div class="col-2 e-accordion-text">Action</div>
-      </div>
-      <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
-              <div class="col-12 e-accordion-cols">
-                <div class="col-1 e-accordion-text"><img src="../assets/img/down_arrow.png" alt=""></div>
-                <div class="col-2 e-accordion-text">Active</div>
-                <div class="col-2 e-accordion-text">1001223241</div>
-                <div class="col-2 e-accordion-text">1001223241</div>
-                <div class="col-3 e-accordion-text">Billing Account</div>
-                <div class="col-2 e-accordion-text"><img src="../assets/img/delete_accordion.png"><img
-                    src="../assets/img/pencil_accordion.png"></div>
-              </div>
-            </button>
-          </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <div class="row">
-                <div class="col-9">
-                  <table class="table e-accordion-table">
-                    <thead>
-                      <tr class="e-accordion-table-title">
-                        <th scope="col">Product ID</th>
-                        <th scope="col">Product Name Action</th>
-                        <th scope="col">Compaign Name</th>
-                        <th scope="col">Compaign ID</th>
-                        <th scope="col">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody class="e-accordion-table-body">
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td scope="row">001</td>
-                        <td>ADsL8MB</td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="../assets/img/delete_accordion.png"><img src="../assets/img/eye_accordion.png">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row">002</td>
-                        <td>ADSL Data Modem</td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="../assets/img/delete_accordion.png"><img src="../assets/img/eye_accordion.png">
-                        </td>
-                      </tr>
-                      <br><br><br><br><br><br>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="col-3 e-accordion-body-buttons">
-                  <button class="e-accordion-body-button">Start New Sale</button>
-                  <button class="e-accordion-body-button">Transfer</button>
-                  <button class="e-accordion-body-button">Service Address Page</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseTwo" aria-expanded="true" aria-controls="flush-collapseTwo">
-              <div class="col-12 e-accordion-cols">
-                <div class="col-1 e-accordion-text"><img src="../assets/img/down_arrow.png" alt=""></div>
-                <div class="col-2 e-accordion-text">Active</div>
-                <div class="col-2 e-accordion-text">1001223241</div>
-                <div class="col-2 e-accordion-text">1001223241</div>
-                <div class="col-3 e-accordion-text">Billing Account</div>
-                <div class="col-2 e-accordion-text"><img src="../assets/img/delete_accordion.png"><img
-                    src="../assets/img/pencil_accordion.png"></div>
-              </div>
-            </button>
-          </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <div class="row">
-                <div class="col-9">
-                  <table class="table e-accordion-table">
-                    <thead>
-                      <tr class="e-accordion-table-title">
-                        <th scope="col">Product ID</th>
-                        <th scope="col">Product Name Action</th>
-                        <th scope="col">Compaign Name</th>
-                        <th scope="col">Compaign ID</th>
-                        <th scope="col">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody class="e-accordion-table-body">
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td scope="row">001</td>
-                        <td>ADsL8MB</td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="../assets/img/delete_accordion.png"><img src="../assets/img/eye_accordion.png">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row">002</td>
-                        <td>ADSL Data Modem</td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="../assets/img/delete_accordion.png"><img src="../assets/img/eye_accordion.png">
-                        </td>
-                      </tr>
-                      <br><br><br><br><br><br>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="col-3 e-accordion-body-buttons">
-                  <button class="e-accordion-body-button">Start New Sale</button>
-                  <button class="e-accordion-body-button">Transfer</button>
-                  <button class="e-accordion-body-button">Service Address Page</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseThree" aria-expanded="true" aria-controls="flush-collapseThree">
-              <div class="col-12 e-accordion-cols">
-                <div class="col-1 e-accordion-text"><img src="../assets/img/down_arrow.png" alt=""></div>
-                <div class="col-2 e-accordion-text">Active</div>
-                <div class="col-2 e-accordion-text">1001223241</div>
-                <div class="col-2 e-accordion-text">1001223241</div>
-                <div class="col-3 e-accordion-text">Billing Account</div>
-                <div class="col-2 e-accordion-text"><img src="../assets/img/delete_accordion.png"><img
-                    src="../assets/img/pencil_accordion.png"></div>
-              </div>
-            </button>
-          </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <div class="row">
-                <div class="col-9">
-                  <table class="table e-accordion-table">
-                    <thead>
-                      <tr class="e-accordion-table-title">
-                        <th scope="col">Product ID</th>
-                        <th scope="col">Product Name Action</th>
-                        <th scope="col">Compaign Name</th>
-                        <th scope="col">Compaign ID</th>
-                        <th scope="col">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody class="e-accordion-table-body">
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td scope="row">001</td>
-                        <td>ADsL8MB</td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="../assets/img/delete_accordion.png"><img src="../assets/img/eye_accordion.png">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row">002</td>
-                        <td>ADSL Data Modem</td>
-                        <td></td>
-                        <td></td>
-                        <td><img src="../assets/img/delete_accordion.png"><img src="../assets/img/eye_accordion.png">
-                        </td>
-                      </tr>
-                      <br><br><br><br><br><br>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="col-3 e-accordion-body-buttons">
-                  <button class="e-accordion-body-button">Start New Sale</button>
-                  <button class="e-accordion-body-button">Transfer</button>
-                  <button class="e-accordion-body-button">Service Address Page</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <app-table-accordion></app-table-accordion>
     </div>
-
   </div>
 </div>

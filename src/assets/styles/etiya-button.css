@@ -11,7 +11,7 @@ add new adress */
     width: 100%;
     height: 50px;
     background-color: #F58220 !important;
-    
+
     font-family: 'Anybody';
     font-weight: bold;
     font-size: 22px;
@@ -39,7 +39,7 @@ add new adress */
     font-size: 20px;
     line-height: 21px;
 
-    background: rgba(245, 130, 32, 0.7);
+    background: rgba(245, 130, 32, 0.3);
     border: 1px solid #F58220;
     box-shadow: 4px 6px 2px rgba(0, 0, 0, 0.25), inset -1px 1px 2px 2px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
@@ -87,7 +87,7 @@ add new adress */
     color: #FFFFFF;
 }
 
-.e-img-search {
+.e-btn-img-search {
     width: 36px;
 }
 
@@ -115,8 +115,62 @@ add new adress */
 }
 
 /* new adress butonu veya ekleme butonu */
-.e-new-address-btn {
+.e-btn-new-address {
     background-color: transparent;
     border: none;
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 25px;
     color: #fff;
-  }
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 25px;
+}
+
+
+.e-btn-edit {
+    box-sizing: border-box;
+    width: 42px;
+    height: 47px;
+    background: url("../../assets/img/edit-btn-img.png");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #F58220;
+    margin-right: 15px;
+}
+
+.e-btn-remove {
+    box-sizing: border-box;
+    width: 41px;
+    height: 47px;
+    background: url("../../assets/img/remove-btn-img.png");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #F58220;
+}
+
+
+.e-btn-accordion-body {
+    box-sizing: border-box;
+
+    width: 232px;
+    height: 43px;
+
+    background: #061F3E;
+    border: 4px solid #F58220;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 10px 4px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    margin: 15px 0px;
+
+    color: #FFFFFF;
+}

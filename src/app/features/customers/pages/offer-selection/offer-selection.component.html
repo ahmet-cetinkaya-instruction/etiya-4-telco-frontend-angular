@@ -1,0 +1,215 @@
+<div class="e-offer-selection-container">
+  <app-navbar></app-navbar>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="d-flex justify-content-end p-0">
+        <app-user-info></app-user-info>
+      </div>
+    </div>
+  </div>
+  <app-main-layout [layoutTitle]="'Offer Selection'">
+    <div class="e-offer-selection-content">
+      <div class="row">
+        <div class="col-12 col-xl-8 e-offer-selection-center">
+          <app-tab-menu class="e-tab">
+            <div one>
+              <div class="offer-title mb-3">Catalog Selection</div>
+              <form [formGroup]="searchCatalogForm">
+                <div class="e-dropdown">
+                  <select etiyaInput="dark" formControlName="selectedId">
+                    <option selected value="">Select</option>
+                    <option
+                      *ngFor="let catalog of catalogList"
+                      value="{{ catalog.id }}"
+                    >
+                      {{ catalog.name }}
+                    </option>
+                  </select>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-xl-6">
+                    <div class="row m-2 e-offer-selection-center">
+                      <div class="col-12 col-lg-5 p-0">
+                        <label class="e-offer-label" for="prodOfferId"
+                          >Prod Offer ID
+                        </label>
+                      </div>
+                      <div class="col-12 col-lg-7 p-0">
+                        <input
+                          type="text"
+                          class="offer-input"
+                          etiyaInput="dark"
+                          formControlName="prodOfferId"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-xl-6">
+                    <div class="row e-offer-selection-center">
+                      <div class="col-12 col-lg-5 p-0">
+                        <label class="e-offer-label" for="prodOfferName"
+                          >Prod Offer Name
+                        </label>
+                      </div>
+                      <div class="col-12 col-lg-7 p-0">
+                        <input
+                          type="text"
+                          class="offer-input"
+                          etiyaInput="dark"
+                          formControlName="prodOfferName"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="col-12 d-flex justify-content-end">
+                <button
+                  class="e-offer-button"
+                  etiyaButton="clear"
+                  (click)="searchCatalog()"
+                >
+                  Search
+                </button>
+              </div>
+              <div class="e-offer-table">
+                <app-table-scroll class="e-table">
+                  <thead>
+                    <tr class="table-title">
+                      <th>Prod Offer ID</th>
+                      <th>Prod Offer Name</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                    <tr
+                      *ngFor="let catalogOffer of catalogOffersList"
+                      (click)="addBasket(catalogOffer)"
+                      [ngClass]="{ selected: isSelected(catalogOffer) }"
+                    >
+                      <td>{{ catalogOffer.id }}</td>
+                      <td>
+                        <span *ngIf="isSelected(catalogOffer)"
+                          >{{ getOfferCount(catalogOffer) }}x</span
+                        >
+                        {{ catalogOffer.name }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </app-table-scroll>
+              </div>
+            </div>
+
+            <div two>
+              <div class="offer-title mb-3">Campaign Selection</div>
+              <form [formGroup]="searchCampaignForm">
+                <div class="e-dropdown">
+                  <select etiyaInput="dark" formControlName="selectedId">
+                    <option selected disabled hidden value="">Select</option>
+                    <option *ngFor="let campaign of campaignList">
+                      {{ campaign.name }}
+                    </option>
+                  </select>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-xl-6">
+                    <div class="row m-2 e-offer-selection-center">
+                      <div class="col-12 col-lg-5 p-0">
+                        <label class="e-offer-label" for="prodOfferId"
+                          >Campaign ID
+                        </label>
+                      </div>
+                      <div class="col-12 col-lg-7 p-0">
+                        <input
+                          type="text"
+                          class="offer-input"
+                          etiyaInput="dark"
+                          formControlName="campaignId"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-xl-6">
+                    <div class="row e-offer-selection-center">
+                      <div class="col-12 col-lg-5 p-0">
+                        <label class="e-offer-label" for="prodOfferName"
+                          >Campaign Name
+                        </label>
+                      </div>
+                      <div class="col-12 col-lg-7 p-0">
+                        <input
+                          type="text"
+                          class="offer-input"
+                          etiyaInput="dark"
+                          formControlName="campaignName"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="col-12 d-flex justify-content-end">
+                <button
+                  class="e-offer-button"
+                  etiyaButton="clear"
+                  (click)="searchCampaign()"
+                >
+                  Search
+                </button>
+              </div>
+              <div class="e-offer-table">
+                <app-table-scroll class="e-table">
+                  <thead>
+                    <tr class="table-title">
+                      <th>Campaign ID</th>
+                      <th>Prod Offer ID</th>
+                      <th>Prod Offer Name</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                    <tr
+                      *ngFor="let campaignOffer of campaignOffersList"
+                      (click)="addBasket(campaignOffer)"
+                      [ngClass]="{ selected: isSelected(campaignOffer) }"
+                    >
+                      <td>{{ campaignOffer.type.id }}</td>
+                      <td>{{ campaignOffer.id }}</td>
+                      <td>
+                        <span *ngIf="isSelected(campaignOffer)"
+                          >{{ getOfferCount(campaignOffer) }}x</span
+                        >
+                        {{ campaignOffer.name }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </app-table-scroll>
+              </div>
+            </div>
+          </app-tab-menu>
+        </div>
+        <div class="col-12 col-xl-4 e-offer-selection-center">
+          <app-basket></app-basket>
+        </div>
+      </div>
+      <div class="row e-buttons">
+        <div class="col-8 d-flex justify-content-end align-items-center">
+          <button etiyaButton="accordion-body" (click)="saveBasket()">
+            Add Basket
+          </button>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+          <button
+            etiyaButton="clear"
+            [routerLink]="
+              '/dashboard/customers/' +
+              selectedCustomerId +
+              '/configuration-product/' +
+              billingAccountId
+            "
+          >
+            NEXT
+          </button>
+        </div>
+      </div>
+    </div>
+  </app-main-layout>
+</div>

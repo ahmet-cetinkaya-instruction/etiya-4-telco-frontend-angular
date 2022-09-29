@@ -1,0 +1,5 @@
+{
+  "port": 3000,
+  "snapshots": "./src/data",
+  "no-cors": false
+}
