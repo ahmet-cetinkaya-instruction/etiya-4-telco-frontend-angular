@@ -37,12 +37,14 @@ Start project
 ```sh
 npm start
 ```
+
 ### 🔀 Routes
+
 **Check [json-server routes](https://github.com/typicode/json-server/blob/master/README.md#routes).**
 
 **In addition:**
-| Route           | Comment                               | Body                                   | Header                                   | Return                                   |
+| Route | Comment | Body | Header | Return |
 | --------------- | ------------------------------------- | -------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| auth/login      | Login process                         | `{userName: string, password: string}` |                                          | `{success:boolean, access_token:string}` |
-| auth/test       | Test your access token                |                                        | Authorization: `"Bearer <access_token>"` | `{success:boolean, message:string}`      |
-| auth/test-admin | Test your access token has admin role |                                        | Authorization: `"Bearer <access_token>"` | `{success:boolean, message:string}`      |
+| auth/login | Login process | `{userName: string, password: string}` | | `{success:boolean, access_token:string}` |
+| auth/test | Test your access token | | Authorization: `"Bearer <access_token>"` | `{success:boolean, message:string}` |
+| auth/test-admin | Test your access token has admin role | | Authorization: `"Bearer <access_token>"` | `{success:boolean, message:string}` |
